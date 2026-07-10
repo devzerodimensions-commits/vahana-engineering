@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment files (never commit secrets)
+.env
+.env.local
+.env.*.local
+
+# Local tooling / editor
+.claude/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log

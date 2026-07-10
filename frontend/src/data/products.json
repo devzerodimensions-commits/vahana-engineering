@@ -1,0 +1,534 @@
+{
+  "categories": [
+    {
+      "slug": "universal-tensile",
+      "name": "Universal & Tensile Testing",
+      "blurb": "Precision tensile, compression and universal test frames for plastics, films, tapes, geomembranes and welded joints.",
+      "standards": [
+        "ASTM D638",
+        "ASTM D882",
+        "ISO 527",
+        "IS 13360"
+      ],
+      "count": 6
+    },
+    {
+      "slug": "impact",
+      "name": "Impact Testing",
+      "blurb": "Instruments that measure toughness and impact resistance of polymers and films under sudden load.",
+      "standards": [
+        "ASTM D256",
+        "ASTM D1709",
+        "ISO 179",
+        "ISO 180"
+      ],
+      "count": 2
+    },
+    {
+      "slug": "melt-flow",
+      "name": "Melt Flow & Rheology",
+      "blurb": "Melt flow index and flow-variation apparatus for quality control of thermoplastic resins.",
+      "standards": [
+        "ASTM D1238",
+        "ISO 1133"
+      ],
+      "count": 2
+    },
+    {
+      "slug": "thermal-ageing",
+      "name": "Thermal & Ageing",
+      "blurb": "Ovens, baths and chambers for conditioning, thermal ageing, softening point and oxidation-induction testing.",
+      "standards": [
+        "ASTM D1525",
+        "ISO 306",
+        "ASTM D3895",
+        "ISO 11357"
+      ],
+      "count": 8
+    },
+    {
+      "slug": "composition-optical",
+      "name": "Composition & Optical",
+      "blurb": "Apparatus to determine carbon-black content, ash content and optical opacity of polymer compounds.",
+      "standards": [
+        "ASTM D1603",
+        "ISO 6964",
+        "ASTM D2244"
+      ],
+      "count": 2
+    },
+    {
+      "slug": "pressure-pipe",
+      "name": "Pressure & Pipe Testing",
+      "blurb": "Hydrostatic pressure rigs for long-term and short-term strength testing of pipes and fittings.",
+      "standards": [
+        "ASTM D1598",
+        "ISO 1167",
+        "IS 4984"
+      ],
+      "count": 1
+    },
+    {
+      "slug": "specimen-prep",
+      "name": "Specimen Preparation & Cutters",
+      "blurb": "Notch cutters and contour cutters that prepare accurate, standard-compliant test specimens.",
+      "standards": [
+        "ISO 2818",
+        "ASTM D4703"
+      ],
+      "count": 2
+    },
+    {
+      "slug": "moulding-processing",
+      "name": "Moulding & Processing",
+      "blurb": "Laboratory presses, mills and extrusion plant for compounding and preparing test sheets and films.",
+      "standards": [
+        "ASTM D4703",
+        "ISO 293"
+      ],
+      "count": 4
+    }
+  ],
+  "products": [
+    {
+      "name": "V-Notch Cutter for HDPE Pipe",
+      "slug": "v-notch-cutter-for-hdpe-pipe",
+      "category": "specimen-prep",
+      "categoryName": "Specimen Preparation & Cutters",
+      "image": "/products/v-notch-cutter-for-hdpe-pipe.jpg",
+      "summary": "Cuts precise V-notches in HDPE pipe specimens for notched-pipe and slow-crack-growth testing.",
+      "description": "Cuts precise V-notches in HDPE pipe specimens for notched-pipe and slow-crack-growth testing. Manufactured by Vihana Engineering, the V-Notch Cutter for HDPE Pipe is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ISO 2818",
+        "ASTM D4703"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Ash Content Tester (Muffle Furnace)",
+      "slug": "ash-content-tester-muffle-furnace",
+      "category": "thermal-ageing",
+      "categoryName": "Thermal & Ageing",
+      "image": "/products/ash-content-tester-muffle-furnace.jpg",
+      "summary": "High-temperature muffle furnace for determining ash and filler content of polymers by incineration.",
+      "description": "High-temperature muffle furnace for determining ash and filler content of polymers by incineration. Manufactured by Vihana Engineering, the Ash Content Tester (Muffle Furnace) is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D1525",
+        "ISO 306",
+        "ASTM D3895",
+        "ISO 11357"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Blown Film Extrusion Plant – Laboratory Model",
+      "slug": "blown-film-extrusion-plant-laboratory-model",
+      "category": "moulding-processing",
+      "categoryName": "Moulding & Processing",
+      "image": "/products/blown-film-extrusion-plant-laboratory-model.jpg",
+      "summary": "Compact lab-scale blown-film line for producing trial films and studying processability of resins.",
+      "description": "Compact lab-scale blown-film line for producing trial films and studying processability of resins. Manufactured by Vihana Engineering, the Blown Film Extrusion Plant – Laboratory Model is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D4703",
+        "ISO 293"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Carbon Black Content Test Apparatus",
+      "slug": "carbon-black-content-test-apparatus",
+      "category": "composition-optical",
+      "categoryName": "Composition & Optical",
+      "image": "/products/carbon-black-content-test-apparatus.jpg",
+      "summary": "Determines carbon-black content of polyethylene compounds by pyrolysis in an inert atmosphere.",
+      "description": "Determines carbon-black content of polyethylene compounds by pyrolysis in an inert atmosphere. Manufactured by Vihana Engineering, the Carbon Black Content Test Apparatus is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D1603",
+        "ISO 6964",
+        "ASTM D2244"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Compression Moulding Press",
+      "slug": "compression-moulding-press",
+      "category": "moulding-processing",
+      "categoryName": "Moulding & Processing",
+      "image": "/products/compression-moulding-press.jpg",
+      "summary": "Heated hydraulic press for moulding standard test sheets and plaques from thermoplastic granules.",
+      "description": "Heated hydraulic press for moulding standard test sheets and plaques from thermoplastic granules. Manufactured by Vihana Engineering, the Compression Moulding Press is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D4703",
+        "ISO 293"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Contour Cutter",
+      "slug": "contour-cutter",
+      "category": "specimen-prep",
+      "categoryName": "Specimen Preparation & Cutters",
+      "image": "/products/contour-cutter.jpg",
+      "summary": "Cuts dumbbell and contour test specimens cleanly from moulded sheets for tensile testing.",
+      "description": "Cuts dumbbell and contour test specimens cleanly from moulded sheets for tensile testing. Manufactured by Vihana Engineering, the Contour Cutter is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ISO 2818",
+        "ASTM D4703"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Cooling Chamber",
+      "slug": "cooling-chamber",
+      "category": "thermal-ageing",
+      "categoryName": "Thermal & Ageing",
+      "image": "/products/cooling-chamber.jpg",
+      "summary": "Controlled low-temperature chamber for conditioning specimens prior to impact and brittleness tests.",
+      "description": "Controlled low-temperature chamber for conditioning specimens prior to impact and brittleness tests. Manufactured by Vihana Engineering, the Cooling Chamber is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D1525",
+        "ISO 306",
+        "ASTM D3895",
+        "ISO 11357"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Dart Impact Testing Machine",
+      "slug": "dart-impact-testing-machine",
+      "category": "impact",
+      "categoryName": "Impact Testing",
+      "image": "/products/dart-impact-testing-machine.jpg",
+      "summary": "Free-falling dart apparatus measuring the impact failure weight of plastic films and sheeting.",
+      "description": "Free-falling dart apparatus measuring the impact failure weight of plastic films and sheeting. Manufactured by Vihana Engineering, the Dart Impact Testing Machine is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D256",
+        "ASTM D1709",
+        "ISO 179",
+        "ISO 180"
+      ],
+      "featured": true,
+      "price": "On Request"
+    },
+    {
+      "name": "Emission Flow Variation Test Apparatus",
+      "slug": "emission-flow-variation-test-apparatus",
+      "category": "melt-flow",
+      "categoryName": "Melt Flow & Rheology",
+      "image": "/products/emission-flow-variation-test-apparatus.jpg",
+      "summary": "Evaluates flow-rate variation of thermoplastics to monitor batch-to-batch consistency.",
+      "description": "Evaluates flow-rate variation of thermoplastics to monitor batch-to-batch consistency. Manufactured by Vihana Engineering, the Emission Flow Variation Test Apparatus is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D1238",
+        "ISO 1133"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Hot Air Oven",
+      "slug": "hot-air-oven",
+      "category": "thermal-ageing",
+      "categoryName": "Thermal & Ageing",
+      "image": "/products/hot-air-oven.jpg",
+      "summary": "Forced-air oven for drying, curing and heat-ageing of polymer specimens at set temperatures.",
+      "description": "Forced-air oven for drying, curing and heat-ageing of polymer specimens at set temperatures. Manufactured by Vihana Engineering, the Hot Air Oven is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D1525",
+        "ISO 306",
+        "ASTM D3895",
+        "ISO 11357"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Hot Oil Bath",
+      "slug": "hot-oil-bath",
+      "category": "thermal-ageing",
+      "categoryName": "Thermal & Ageing",
+      "image": "/products/hot-oil-bath.jpg",
+      "summary": "Stirred oil bath giving stable high-temperature conditioning for reversion and thermal tests.",
+      "description": "Stirred oil bath giving stable high-temperature conditioning for reversion and thermal tests. Manufactured by Vihana Engineering, the Hot Oil Bath is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D1525",
+        "ISO 306",
+        "ASTM D3895",
+        "ISO 11357"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Hot Water Bath",
+      "slug": "hot-water-bath",
+      "category": "thermal-ageing",
+      "categoryName": "Thermal & Ageing",
+      "image": "/products/hot-water-bath.jpg",
+      "summary": "Thermostatically controlled water bath for conditioning and immersion testing of specimens.",
+      "description": "Thermostatically controlled water bath for conditioning and immersion testing of specimens. Manufactured by Vihana Engineering, the Hot Water Bath is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D1525",
+        "ISO 306",
+        "ASTM D3895",
+        "ISO 11357"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Humidity Chamber",
+      "slug": "humidity-chamber",
+      "category": "thermal-ageing",
+      "categoryName": "Thermal & Ageing",
+      "image": "/products/humidity-chamber.jpg",
+      "summary": "Temperature and humidity controlled chamber for conditioning and environmental ageing of materials.",
+      "description": "Temperature and humidity controlled chamber for conditioning and environmental ageing of materials. Manufactured by Vihana Engineering, the Humidity Chamber is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D1525",
+        "ISO 306",
+        "ASTM D3895",
+        "ISO 11357"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Hydrostatic Pressure Testing Machine – 3 Station",
+      "slug": "hydrostatic-pressure-testing-machine-3-station",
+      "category": "pressure-pipe",
+      "categoryName": "Pressure & Pipe Testing",
+      "image": "/products/hydrostatic-pressure-testing-machine-3-station.jpg",
+      "summary": "Three-station rig for long-term hydrostatic strength and burst testing of plastic pipes.",
+      "description": "Three-station rig for long-term hydrostatic strength and burst testing of plastic pipes. Manufactured by Vihana Engineering, the Hydrostatic Pressure Testing Machine – 3 Station is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D1598",
+        "ISO 1167",
+        "IS 4984"
+      ],
+      "featured": true,
+      "price": "On Request"
+    },
+    {
+      "name": "Izod & Charpy Impact Test Apparatus",
+      "slug": "izod-and-charpy-impact-test-apparatus",
+      "category": "impact",
+      "categoryName": "Impact Testing",
+      "image": "/products/izod-and-charpy-impact-test-apparatus.jpg",
+      "summary": "Pendulum impact tester for Izod and Charpy notched-bar toughness measurement of plastics.",
+      "description": "Pendulum impact tester for Izod and Charpy notched-bar toughness measurement of plastics. Manufactured by Vihana Engineering, the Izod & Charpy Impact Test Apparatus is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D256",
+        "ASTM D1709",
+        "ISO 179",
+        "ISO 180"
+      ],
+      "featured": true,
+      "price": "On Request"
+    },
+    {
+      "name": "Melt Flow Index (MFI) Test Apparatus",
+      "slug": "melt-flow-index-mfi-test-apparatus",
+      "category": "melt-flow",
+      "categoryName": "Melt Flow & Rheology",
+      "image": "/products/melt-flow-index-mfi-test-apparatus.jpg",
+      "summary": "Extrusion plastometer measuring melt mass-flow rate (MFR) and volume-flow rate (MVR) of resins.",
+      "description": "Extrusion plastometer measuring melt mass-flow rate (MFR) and volume-flow rate (MVR) of resins. Manufactured by Vihana Engineering, the Melt Flow Index (MFI) Test Apparatus is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D1238",
+        "ISO 1133"
+      ],
+      "featured": true,
+      "price": "On Request"
+    },
+    {
+      "name": "Opacity Test Apparatus",
+      "slug": "opacity-test-apparatus",
+      "category": "composition-optical",
+      "categoryName": "Composition & Optical",
+      "image": "/products/opacity-test-apparatus.jpg",
+      "summary": "Measures light transmission and opacity of pipes and films for carbon-black dispersion checks.",
+      "description": "Measures light transmission and opacity of pipes and films for carbon-black dispersion checks. Manufactured by Vihana Engineering, the Opacity Test Apparatus is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D1603",
+        "ISO 6964",
+        "ASTM D2244"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Oxidation Induction Time (OIT) Test Apparatus",
+      "slug": "oxidation-induction-time-oit-test-apparatus",
+      "category": "thermal-ageing",
+      "categoryName": "Thermal & Ageing",
+      "image": "/products/oxidation-induction-time-oit-test-apparatus.jpg",
+      "summary": "Determines oxidation induction time of polyolefins to assess antioxidant/stabiliser levels.",
+      "description": "Determines oxidation induction time of polyolefins to assess antioxidant/stabiliser levels. Manufactured by Vihana Engineering, the Oxidation Induction Time (OIT) Test Apparatus is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D1525",
+        "ISO 306",
+        "ASTM D3895",
+        "ISO 11357"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Sheet Moulding Press",
+      "slug": "sheet-moulding-press",
+      "category": "moulding-processing",
+      "categoryName": "Moulding & Processing",
+      "image": "/products/sheet-moulding-press.jpg",
+      "summary": "Hydraulic heated platen press for preparing uniform moulded sheets for downstream testing.",
+      "description": "Hydraulic heated platen press for preparing uniform moulded sheets for downstream testing. Manufactured by Vihana Engineering, the Sheet Moulding Press is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D4703",
+        "ISO 293"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Tensile Testing Machine – Tape & Fabric",
+      "slug": "tensile-testing-machine-tape-and-fabric",
+      "category": "universal-tensile",
+      "categoryName": "Universal & Tensile Testing",
+      "image": "/products/tensile-testing-machine-tape-and-fabric.jpg",
+      "summary": "Tensile tester configured for tapes, woven fabrics and technical textiles with grip options.",
+      "description": "Tensile tester configured for tapes, woven fabrics and technical textiles with grip options. Manufactured by Vihana Engineering, the Tensile Testing Machine – Tape & Fabric is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D638",
+        "ASTM D882",
+        "ISO 527",
+        "IS 13360"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Tensile Testing Machine – WST",
+      "slug": "tensile-testing-machine-wst",
+      "category": "universal-tensile",
+      "categoryName": "Universal & Tensile Testing",
+      "image": "/products/tensile-testing-machine-wst.jpg",
+      "summary": "Weld-strength tensile tester for evaluating butt-fusion and electrofusion joints in pipes.",
+      "description": "Weld-strength tensile tester for evaluating butt-fusion and electrofusion joints in pipes. Manufactured by Vihana Engineering, the Tensile Testing Machine – WST is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D638",
+        "ASTM D882",
+        "ISO 527",
+        "IS 13360"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Tensile Testing Machine",
+      "slug": "tensile-testing-machine",
+      "category": "universal-tensile",
+      "categoryName": "Universal & Tensile Testing",
+      "image": "/products/tensile-testing-machine.jpg",
+      "summary": "Motorised tensile tester for tensile strength, elongation and yield of plastics and elastomers.",
+      "description": "Motorised tensile tester for tensile strength, elongation and yield of plastics and elastomers. Manufactured by Vihana Engineering, the Tensile Testing Machine is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D638",
+        "ASTM D882",
+        "ISO 527",
+        "IS 13360"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Two Roll Mill",
+      "slug": "two-roll-mill",
+      "category": "moulding-processing",
+      "categoryName": "Moulding & Processing",
+      "image": "/products/two-roll-mill.jpg",
+      "summary": "Laboratory two-roll mixing mill for compounding polymers, masterbatches and rubber blends.",
+      "description": "Laboratory two-roll mixing mill for compounding polymers, masterbatches and rubber blends. Manufactured by Vihana Engineering, the Two Roll Mill is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D4703",
+        "ISO 293"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Universal Testing Machine – 10 Ton",
+      "slug": "universal-testing-machine-10-ton",
+      "category": "universal-tensile",
+      "categoryName": "Universal & Tensile Testing",
+      "image": "/products/universal-testing-machine-10-ton.jpg",
+      "summary": "10-ton (100 kN) computerised universal testing machine for tension, compression and flexure.",
+      "description": "10-ton (100 kN) computerised universal testing machine for tension, compression and flexure. Manufactured by Vihana Engineering, the Universal Testing Machine – 10 Ton is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D638",
+        "ASTM D882",
+        "ISO 527",
+        "IS 13360"
+      ],
+      "featured": true,
+      "price": "On Request"
+    },
+    {
+      "name": "Universal Testing Machine – 2 Ton",
+      "slug": "universal-testing-machine-2-ton",
+      "category": "universal-tensile",
+      "categoryName": "Universal & Tensile Testing",
+      "image": "/products/universal-testing-machine-2-ton.jpg",
+      "summary": "2-ton (20 kN) computerised universal testing machine for plastics, films and small components.",
+      "description": "2-ton (20 kN) computerised universal testing machine for plastics, films and small components. Manufactured by Vihana Engineering, the Universal Testing Machine – 2 Ton is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D638",
+        "ASTM D882",
+        "ISO 527",
+        "IS 13360"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Universal Testing Machine – Geomembrane & Fabric",
+      "slug": "universal-testing-machine-geomembrane-and-fabric",
+      "category": "universal-tensile",
+      "categoryName": "Universal & Tensile Testing",
+      "image": "/products/universal-testing-machine-geomembrane-and-fabric.jpg",
+      "summary": "UTM configured for geomembranes, geotextiles and fabrics with wide-width grips and extensometry.",
+      "description": "UTM configured for geomembranes, geotextiles and fabrics with wide-width grips and extensometry. Manufactured by Vihana Engineering, the Universal Testing Machine – Geomembrane & Fabric is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D638",
+        "ASTM D882",
+        "ISO 527",
+        "IS 13360"
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Vicat Softening Point Test Apparatus",
+      "slug": "vicat-softening-point-test-apparatus",
+      "category": "thermal-ageing",
+      "categoryName": "Thermal & Ageing",
+      "image": "/products/vicat-softening-point-test-apparatus.jpg",
+      "summary": "Determines Vicat softening temperature (VST) and heat-deflection behaviour of thermoplastics.",
+      "description": "Determines Vicat softening temperature (VST) and heat-deflection behaviour of thermoplastics. Manufactured by Vihana Engineering, the Vicat Softening Point Test Apparatus is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "ASTM D1525",
+        "ISO 306",
+        "ASTM D3895",
+        "ISO 11357"
+      ],
+      "featured": true,
+      "price": "On Request"
+    }
+  ]
+}
