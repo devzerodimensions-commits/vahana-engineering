@@ -63,6 +63,34 @@ git push -u origin main
 
 ---
 
+## Option C — Render (Static Site) 🟣
+
+You have two ways on Render. Both need the code on GitHub first (steps B1 & B2 above).
+
+### C1. Easiest on Render — Blueprint (uses the included `render.yaml`)
+1. Go to **https://dashboard.render.com** → **New +** → **Blueprint**.
+2. Connect your GitHub and pick the `vihana-engineering` repo.
+3. Render reads `render.yaml` automatically → click **Apply**.
+4. In ~1–2 minutes you get a link like `https://vihana-engineering.onrender.com`.
+   **That's the link to share.** It redeploys automatically on every `git push`.
+
+### C2. Manual — New Static Site
+1. Go to **https://dashboard.render.com** → **New +** → **Static Site**.
+2. Connect your GitHub and pick the `vihana-engineering` repo.
+3. Enter these settings:
+   - **Root Directory:** `frontend`
+   - **Build Command:** `npm install && npm run build`
+   - **Publish Directory:** `dist`
+4. Click **Create Static Site** and wait for the build to finish.
+5. **Add the SPA rewrite** (so links like `/products/…` work on refresh):
+   Site → **Settings → Redirects/Rewrites → Add Rule**
+   - Source: `/*`  ·  Destination: `/index.html`  ·  Action: **Rewrite**
+
+> Tip: if Render can't find the publish folder, leave Root Directory blank and use
+> Build Command `cd frontend && npm install && npm run build`, Publish Directory `frontend/dist`.
+
+---
+
 ## Later: making the admin panel + forms work (optional)
 
 The public site above does everything a brochure/catalog site needs. If you also

@@ -1,0 +1,14 @@
+# Render Blueprint — deploys the Vihana Engineering website as a free Static Site.
+# In Render: New + → Blueprint → connect this repo → Apply.
+services:
+  - type: web
+    name: vihana-engineering
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    # SPA rewrite so deep links (e.g. /products/…) work on refresh.
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
