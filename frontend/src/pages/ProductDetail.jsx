@@ -58,6 +58,11 @@ export default function ProductDetail() {
               </Link>
             )}
             <h1 className="mt-3 text-3xl font-extrabold text-brand-navy">{product.name}</h1>
+            {product.model && (
+              <p className="mt-2 inline-block rounded-md bg-brand-red/10 px-3 py-1 text-sm font-bold text-brand-red">
+                Model: {product.model}
+              </p>
+            )}
             <p className="mt-4 leading-relaxed text-slate-600">{product.description || product.summary}</p>
 
             {product.standards?.length > 0 && (
@@ -76,7 +81,11 @@ export default function ProductDetail() {
             )}
 
             {product.specifications?.length > 0 && (
-              <div className="mt-6 overflow-hidden rounded-xl ring-1 ring-slate-200">
+              <div className="mt-6">
+                <h3 className="mb-3 text-sm font-bold uppercase tracking-wider text-slate-500">
+                  Technical Specifications
+                </h3>
+                <div className="overflow-hidden rounded-xl ring-1 ring-slate-200">
                 <table className="w-full text-sm">
                   <tbody>
                     {product.specifications.map((spec, i) => (
@@ -87,6 +96,7 @@ export default function ProductDetail() {
                     ))}
                   </tbody>
                 </table>
+                </div>
               </div>
             )}
 

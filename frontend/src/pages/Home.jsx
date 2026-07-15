@@ -22,20 +22,18 @@ export default function Home() {
 
   return (
     <>
-      {/* ---------------- Hero ---------------- */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-brand-navy via-brand-navy to-brand-navy-dark">
-        <div className="absolute inset-0 opacity-[0.15]" style={gridBg} />
-        <div className="absolute -left-32 top-10 h-96 w-96 rounded-full bg-brand-red/20 blur-3xl" />
-        <div className="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-brand-navy-light/40 blur-3xl" />
-        <div className="container-x relative grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
+      {/* ---------------- Hero (clean / minimal) ---------------- */}
+      <section className="bg-white">
+        <div className="container-x grid items-center gap-12 py-16 lg:grid-cols-2 lg:gap-16 lg:py-24">
           <div className="animate-fade-up">
-            <span className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white ring-1 ring-white/20">
-              <span className="h-2 w-2 rounded-full bg-brand-red" /> {site.tagline}
-            </span>
-            <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
-              Precision <span className="text-brand-red">Testing Instruments</span> for Plastics &amp; Pipes
+            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.15em] text-brand-red">
+              {site.businessLine || site.tagline}
+            </p>
+            <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-brand-navy sm:text-5xl lg:text-6xl">
+              Precision Testing Instruments for{" "}
+              <span className="text-brand-red">Plastics &amp; Pipes</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-200">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-500">
               {site.name} designs and manufactures universal testing machines, melt-flow, impact,
               thermal and hydrostatic pressure equipment — engineered for accurate, standard-compliant results.
             </p>
@@ -43,30 +41,26 @@ export default function Home() {
               <Link to="/products" className="btn-primary">
                 Explore Products <Icon name="arrowRight" className="h-4 w-4" />
               </Link>
-              <Link to="/contact" className="btn-ghost-white">
+              <Link to="/contact" className="btn-outline">
                 Request a Quote
               </Link>
             </div>
-            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
+            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-slate-100 pt-6">
               {["ASTM / ISO / IS compliant", "In-house manufacturing", "Pan-India service"].map((t) => (
-                <span key={t} className="flex items-center gap-2 text-sm font-medium text-slate-200">
+                <span key={t} className="flex items-center gap-2 text-sm font-medium text-slate-600">
                   <Icon name="check" className="h-4 w-4 text-brand-red" /> {t}
                 </span>
               ))}
             </div>
           </div>
 
-          <div className="relative animate-fade-up">
-            <div className="overflow-hidden rounded-2xl bg-white/5 p-2 ring-1 ring-white/10 backdrop-blur">
+          <div className="animate-fade-up">
+            <div className="overflow-hidden rounded-2xl bg-slate-50 ring-1 ring-slate-100">
               <img
                 src="/products/universal-testing-machine-10-ton.jpg"
-                alt="Universal Testing Machine"
-                className="aspect-[4/3] w-full rounded-xl object-cover"
+                alt="Universal Testing Machine by Vihana Engineering"
+                className="aspect-[4/3] w-full object-cover"
               />
-            </div>
-            <div className="absolute -bottom-5 -left-5 hidden rounded-xl bg-white p-4 shadow-xl sm:block">
-              <p className="text-3xl font-extrabold text-brand-navy">25+</p>
-              <p className="text-xs font-semibold text-slate-500">Testing Instruments</p>
             </div>
           </div>
         </div>
