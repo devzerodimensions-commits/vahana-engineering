@@ -22,38 +22,34 @@ const BANNERS = [
   { file: "banner-oven", slug: "hot-air-oven" },
 ];
 
-// Premium navy background with a soft central spotlight + brand accents. No text.
+// Clean WHITE background with subtle brand accents. No text.
 const bgSvg = () => `
 <svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1C2F80"/><stop offset="0.55" stop-color="#16256B"/><stop offset="1" stop-color="#0E1846"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eef2f7"/>
     </linearGradient>
-    <radialGradient id="spot" cx="50%" cy="44%" r="52%">
-      <stop offset="0" stop-color="#3C55B5" stop-opacity="0.55"/><stop offset="1" stop-color="#3C55B5" stop-opacity="0"/>
-    </radialGradient>
   </defs>
   <rect width="${W}" height="${H}" fill="url(#bg)"/>
-  <rect width="${W}" height="${H}" fill="url(#spot)"/>
-  <g stroke="#ffffff" stroke-opacity="0.05">
+  <g stroke="#16256B" stroke-opacity="0.04">
     ${Array.from({ length: 20 }, (_, i) => `<line x1="${i * 80}" y1="0" x2="${i * 80}" y2="${H}"/>`).join("")}
     ${Array.from({ length: 8 }, (_, i) => `<line x1="0" y1="${i * 80}" x2="${W}" y2="${i * 80}"/>`).join("")}
   </g>
-  <circle cx="1470" cy="90" r="240" fill="#E11F27" opacity="0.10"/>
+  <circle cx="1470" cy="90" r="240" fill="#16256B" opacity="0.04"/>
   <!-- brand corner triangles -->
-  <polygon points="0,0 300,0 0,150" fill="#E11F27" opacity="0.9"/>
-  <polygon points="0,0 165,0 0,85" fill="#26398F"/>
-  <polygon points="${W},${H} ${W - 300},${H} ${W},${H - 150}" fill="#E11F27" opacity="0.9"/>
-  <polygon points="${W},${H} ${W - 165},${H} ${W},${H - 85}" fill="#26398F"/>
+  <polygon points="0,0 300,0 0,150" fill="#16256B" opacity="0.95"/>
+  <polygon points="0,0 165,0 0,85" fill="#E11F27"/>
+  <polygon points="${W},${H} ${W - 300},${H} ${W},${H - 150}" fill="#16256B" opacity="0.95"/>
+  <polygon points="${W},${H} ${W - 165},${H} ${W},${H - 85}" fill="#E11F27"/>
   <rect x="0" y="${H - 7}" width="${W}" height="7" fill="#E11F27"/>
 </svg>`;
 
 const shadowSvg = (w) => Buffer.from(`
 <svg width="${w}" height="90" xmlns="http://www.w3.org/2000/svg">
   <defs><radialGradient id="s" cx="50%" cy="50%" r="50%">
-    <stop offset="0" stop-color="#000" stop-opacity="0.45"/><stop offset="1" stop-color="#000" stop-opacity="0"/>
+    <stop offset="0" stop-color="#0F1A4D" stop-opacity="0.28"/><stop offset="1" stop-color="#0F1A4D" stop-opacity="0"/>
   </radialGradient></defs>
-  <ellipse cx="${w / 2}" cy="45" rx="${w / 2}" ry="42" fill="url(#s)"/>
+  <ellipse cx="${w / 2}" cy="45" rx="${w / 2}" ry="40" fill="url(#s)"/>
 </svg>`);
 
 for (const b of BANNERS) {
