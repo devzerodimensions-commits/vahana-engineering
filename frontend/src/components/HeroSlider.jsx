@@ -2,12 +2,14 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Icon from "./ui/Icon.jsx";
 
-// Designed hero banners (brand graphics + machine photo). Auto-play slider.
+// Text-free hero image banners (machine on a clean branded background). Auto-play.
 const SLIDES = [
-  { image: "/banners/banner-utm.jpg", alt: "Universal Testing Machines — Vihana Engineering", to: "/products?category=universal-tensile" },
-  { image: "/banners/banner-mfi.jpg", alt: "Melt Flow Index Testers — Vihana Engineering", to: "/products?category=melt-flow" },
+  { image: "/banners/banner-utm.jpg", alt: "Universal Testing Machine — Vihana Engineering", to: "/products?category=universal-tensile" },
+  { image: "/banners/banner-mfi.jpg", alt: "Melt Flow Index Tester — Vihana Engineering", to: "/products?category=melt-flow" },
   { image: "/banners/banner-hydro.jpg", alt: "Hydrostatic Pressure Testing — Vihana Engineering", to: "/products?category=pressure-pipe" },
-  { image: "/banners/banner-impact.jpg", alt: "Impact Testing Solutions — Vihana Engineering", to: "/products?category=impact" },
+  { image: "/banners/banner-impact.jpg", alt: "Izod & Charpy Impact Tester — Vihana Engineering", to: "/products?category=impact" },
+  { image: "/banners/banner-dart.jpg", alt: "Dart Impact Testing Machine — Vihana Engineering", to: "/products?category=impact" },
+  { image: "/banners/banner-oven.jpg", alt: "Hot Air Oven — Vihana Engineering", to: "/products?category=thermal-ageing" },
 ];
 
 const INTERVAL = 4500;
