@@ -12,6 +12,7 @@ import { categoryIcon, serviceIcon } from "../lib/ui.js";
 import Icon from "../components/ui/Icon.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
 import ProductCard from "../components/ProductCard.jsx";
+import HeroSlider from "../components/HeroSlider.jsx";
 
 export default function Home() {
   const { data: categories } = useFetch(getCategories, []);
@@ -22,49 +23,8 @@ export default function Home() {
 
   return (
     <>
-      {/* ---------------- Hero (clean / minimal) ---------------- */}
-      <section className="bg-white">
-        <div className="container-x grid items-center gap-12 py-16 lg:grid-cols-2 lg:gap-16 lg:py-24">
-          <div className="animate-fade-up">
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.15em] text-brand-red">
-              {site.businessLine || site.tagline}
-            </p>
-            <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-brand-navy sm:text-5xl lg:text-6xl">
-              Precision Testing Instruments for{" "}
-              <span className="text-brand-red">Plastics &amp; Pipes</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-500">
-              {site.name} designs and manufactures universal testing machines, melt-flow, impact,
-              thermal and hydrostatic pressure equipment — engineered for accurate, standard-compliant results.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link to="/products" className="btn-primary">
-                Explore Products <Icon name="arrowRight" className="h-4 w-4" />
-              </Link>
-              <Link to="/contact" className="btn-outline">
-                Request a Quote
-              </Link>
-            </div>
-            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-slate-100 pt-6">
-              {["ASTM / ISO / IS compliant", "In-house manufacturing", "Pan-India service"].map((t) => (
-                <span key={t} className="flex items-center gap-2 text-sm font-medium text-slate-600">
-                  <Icon name="check" className="h-4 w-4 text-brand-red" /> {t}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="animate-fade-up">
-            <div className="overflow-hidden rounded-2xl bg-slate-50 ring-1 ring-slate-100">
-              <img
-                src="/products/universal-testing-machine-10-ton.jpg"
-                alt="Universal Testing Machine by Vihana Engineering"
-                className="aspect-[4/3] w-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ---------------- Hero (image slider — no text, per client) ---------------- */}
+      <HeroSlider />
 
       {/* ---------------- Stats ---------------- */}
       <section className="border-b border-slate-100 bg-white">
