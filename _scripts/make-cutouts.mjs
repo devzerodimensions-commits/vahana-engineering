@@ -17,6 +17,12 @@ const MACHINES = [
   "izod-and-charpy-impact-test-apparatus",
   "dart-impact-testing-machine",
   "hot-air-oven",
+  "universal-testing-machine-2-ton",
+  "tensile-testing-machine",
+  "vicat-softening-point-test-apparatus",
+  "two-roll-mill",
+  "compression-moulding-press",
+  "oxidation-induction-time-oit-test-apparatus",
 ];
 
 for (const slug of MACHINES) {

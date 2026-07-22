@@ -1,35 +1,68 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import manifest from "../data/products.json";
 import Icon from "./ui/Icon.jsx";
 
-// Text-free hero image banners (machine on a clean branded background). Auto-play.
-const SLIDES = [
-  { image: "/banners/banner-utm.jpg", alt: "Universal Testing Machine — Vihana Engineering", to: "/products?category=universal-tensile" },
-  { image: "/banners/banner-mfi.jpg", alt: "Melt Flow Index Tester — Vihana Engineering", to: "/products?category=melt-flow" },
-  { image: "/banners/banner-hydro.jpg", alt: "Hydrostatic Pressure Testing — Vihana Engineering", to: "/products?category=pressure-pipe" },
-  { image: "/banners/banner-impact.jpg", alt: "Izod & Charpy Impact Tester — Vihana Engineering", to: "/products?category=impact" },
-  { image: "/banners/banner-dart.jpg", alt: "Dart Impact Testing Machine — Vihana Engineering", to: "/products?category=impact" },
-  { image: "/banners/banner-oven.jpg", alt: "Hot Air Oven — Vihana Engineering", to: "/products?category=thermal-ageing" },
+// Machines shown in the hero carousel (must have a /machines/<slug>.webp cutout).
+const SLUGS = [
+  "universal-testing-machine-10-ton",
+  "melt-flow-index-mfi-test-apparatus",
+  "hydrostatic-pressure-testing-machine-3-station",
+  "izod-and-charpy-impact-test-apparatus",
+  "dart-impact-testing-machine",
+  "hot-air-oven",
+  "universal-testing-machine-2-ton",
+  "tensile-testing-machine",
+  "vicat-softening-point-test-apparatus",
+  "two-roll-mill",
+  "compression-moulding-press",
+  "oxidation-induction-time-oit-test-apparatus",
 ];
 
-const INTERVAL = 4500;
+const bySlug = Object.fromEntries(manifest.products.map((p) => [p.slug, p]));
+const ITEMS = SLUGS.map((slug) => ({
+  slug,
+  name: bySlug[slug]?.name || slug,
+  image: `/machines/${slug}.webp`,
+  to: `/products/${slug}`,
+}));
+
+const perViewFor = (w) => (w >= 1024 ? 3 : w >= 640 ? 2 : 1);
+const INTERVAL = 3500;
 
 export default function HeroSlider() {
+  const [perView, setPerView] = useState(
+    typeof window !== "undefined" ? perViewFor(window.innerWidth) : 3
+  );
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
-  const n = SLIDES.length;
   const touchX = useRef(null);
 
-  const goTo = (i) => setIndex(((i % n) + n) % n);
-  const next = () => goTo(index + 1);
-  const prev = () => goTo(index - 1);
+  const n = ITEMS.length;
+  const maxIndex = Math.max(0, n - perView);
+  const basis = 100 / perView;
 
-  // Auto-advance; re-arms on slide change, pauses on hover.
+  // Responsive columns.
+  useEffect(() => {
+    const onResize = () => setPerView(perViewFor(window.innerWidth));
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  // Keep index valid when column count changes.
+  useEffect(() => {
+    setIndex((i) => Math.min(i, Math.max(0, n - perView)));
+  }, [perView, n]);
+
+  // Auto-play.
   useEffect(() => {
     if (paused) return;
-    const t = setTimeout(() => setIndex((p) => (p + 1) % n), INTERVAL);
+    const t = setTimeout(() => setIndex((i) => (i >= maxIndex ? 0 : i + 1)), INTERVAL);
     return () => clearTimeout(t);
-  }, [index, paused, n]);
+  }, [index, paused, maxIndex]);
+
+  const prev = () => setIndex((i) => (i <= 0 ? maxIndex : i - 1));
+  const next = () => setIndex((i) => (i >= maxIndex ? 0 : i + 1));
 
   const onTouchStart = (e) => (touchX.current = e.touches[0].clientX);
   const onTouchEnd = (e) => {
@@ -40,65 +73,70 @@ export default function HeroSlider() {
   };
 
   return (
-    <section
-      className="relative w-full overflow-hidden border-b border-slate-100 bg-brand-navy"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      aria-roledescription="carousel"
-    >
-      {/* Track — each slide keeps the 8:3 banner aspect ratio */}
+    <section className="border-b border-slate-100 bg-slate-50 py-8 sm:py-10">
       <div
-        className="flex transition-transform duration-700 ease-out"
-        style={{ transform: `translateX(-${index * 100}%)` }}
+        className="container-x relative"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+        aria-roledescription="carousel"
       >
-        {SLIDES.map((s, i) => (
-          <Link
-            key={s.image}
-            to={s.to}
-            className="block w-full flex-none"
-            aria-label={s.alt}
-            tabIndex={i === index ? 0 : -1}
+        <div className="overflow-hidden">
+          <div
+            className="flex transition-transform duration-700 ease-out"
+            style={{ transform: `translateX(-${index * basis}%)` }}
           >
-            <img
-              src={s.image}
-              alt={s.alt}
-              loading={i === 0 ? "eager" : "lazy"}
-              className="aspect-[8/3] w-full object-cover"
+            {ITEMS.map((it, i) => (
+              <div key={it.slug} className="flex-none px-2 sm:px-3" style={{ width: `${basis}%` }}>
+                <Link
+                  to={it.to}
+                  aria-label={it.name}
+                  className="group block overflow-hidden rounded-2xl bg-white shadow-card ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-card-hover"
+                >
+                  <div className="flex h-56 items-center justify-center p-5 sm:h-64 lg:h-72">
+                    <img
+                      src={it.image}
+                      alt={it.name}
+                      loading={i < 3 ? "eager" : "lazy"}
+                      className="max-h-full w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Arrows */}
+        <button
+          onClick={prev}
+          aria-label="Previous"
+          className="absolute -left-1 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-brand-navy shadow-md ring-1 ring-slate-200 transition hover:bg-brand-navy hover:text-white sm:-left-3 sm:h-12 sm:w-12"
+        >
+          <Icon name="arrowLeft" className="h-5 w-5" />
+        </button>
+        <button
+          onClick={next}
+          aria-label="Next"
+          className="absolute -right-1 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-brand-navy shadow-md ring-1 ring-slate-200 transition hover:bg-brand-navy hover:text-white sm:-right-3 sm:h-12 sm:w-12"
+        >
+          <Icon name="arrowRight" className="h-5 w-5" />
+        </button>
+
+        {/* Dots */}
+        <div className="mt-6 flex items-center justify-center gap-2">
+          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              aria-label={`Go to position ${i + 1}`}
+              className={`h-2.5 rounded-full transition-all ${
+                i === index ? "w-7 bg-brand-red" : "w-2.5 bg-slate-300 hover:bg-slate-400"
+              }`}
             />
-          </Link>
-        ))}
-      </div>
-
-      {/* Arrows */}
-      <button
-        onClick={prev}
-        aria-label="Previous slide"
-        className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-brand-navy shadow-md ring-1 ring-white/40 transition hover:bg-white sm:left-5 sm:h-12 sm:w-12"
-      >
-        <Icon name="arrowLeft" className="h-5 w-5" />
-      </button>
-      <button
-        onClick={next}
-        aria-label="Next slide"
-        className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-brand-navy shadow-md ring-1 ring-white/40 transition hover:bg-white sm:right-5 sm:h-12 sm:w-12"
-      >
-        <Icon name="arrowRight" className="h-5 w-5" />
-      </button>
-
-      {/* Dots */}
-      <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-2 sm:bottom-5">
-        {SLIDES.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => goTo(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`h-2.5 rounded-full transition-all ${
-              i === index ? "w-7 bg-brand-red" : "w-2.5 bg-white/60 hover:bg-white"
-            }`}
-          />
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
