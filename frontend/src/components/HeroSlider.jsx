@@ -94,7 +94,7 @@ export default function HeroSlider() {
                   aria-label={it.name}
                   className="group block overflow-hidden rounded-2xl bg-white shadow-card ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-card-hover"
                 >
-                  <div className="flex h-56 items-center justify-center p-5 sm:h-64 lg:h-72">
+                  <div className="flex h-72 items-center justify-center p-5 sm:h-80 lg:h-[440px]">
                     <img
                       src={it.image}
                       alt={it.name}
