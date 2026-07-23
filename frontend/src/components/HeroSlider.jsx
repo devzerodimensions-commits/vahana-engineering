@@ -2,14 +2,13 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Icon from "./ui/Icon.jsx";
 
-// Premium full-width hero banners (one big machine per slide, no text).
+// Full-width hero banners built from industrial stock photos + brand overlay (no text).
 const SLIDES = [
-  { image: "/banners/banner-utm.jpg", alt: "Universal Testing Machine — Vihana Engineering", to: "/products/universal-testing-machine-10-ton" },
-  { image: "/banners/banner-mfi.jpg", alt: "Melt Flow Index Tester — Vihana Engineering", to: "/products/melt-flow-index-mfi-test-apparatus" },
-  { image: "/banners/banner-hydro.jpg", alt: "Hydrostatic Pressure Testing — Vihana Engineering", to: "/products/hydrostatic-pressure-testing-machine-3-station" },
-  { image: "/banners/banner-impact.jpg", alt: "Izod & Charpy Impact Tester — Vihana Engineering", to: "/products/izod-and-charpy-impact-test-apparatus" },
-  { image: "/banners/banner-vicat.jpg", alt: "Vicat Softening Point Apparatus — Vihana Engineering", to: "/products/vicat-softening-point-test-apparatus" },
-  { image: "/banners/banner-oven.jpg", alt: "Hot Air Oven — Vihana Engineering", to: "/products/hot-air-oven" },
+  { image: "/banners/banner-1.jpg", alt: "Precision engineering — Vihana Engineering", to: "/products" },
+  { image: "/banners/banner-2.jpg", alt: "Advanced machining — Vihana Engineering", to: "/products" },
+  { image: "/banners/banner-3.jpg", alt: "Quality testing & control — Vihana Engineering", to: "/products" },
+  { image: "/banners/banner-4.jpg", alt: "Manufacturing precision — Vihana Engineering", to: "/products" },
+  { image: "/banners/banner-5.jpg", alt: "Production & inspection — Vihana Engineering", to: "/products" },
 ];
 
 const INTERVAL = 4500;
