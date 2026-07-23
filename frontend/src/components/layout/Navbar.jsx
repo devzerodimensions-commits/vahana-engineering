@@ -51,12 +51,12 @@ export default function Navbar() {
       <nav
         className={`bg-white transition-shadow ${scrolled ? "shadow-md" : "shadow-sm"}`}
       >
-        <div className="container-x flex h-20 items-center justify-between">
+        <div className="container-x flex h-24 items-center justify-between lg:h-28">
           <Link to="/" className="flex items-center gap-3">
             <img
               src={site.logoHeader}
               alt={site.name}
-              className="h-14 w-auto md:h-16"
+              className="h-16 w-auto sm:h-20 lg:h-24"
             />
           </Link>
 
