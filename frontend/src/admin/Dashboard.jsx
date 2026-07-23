@@ -11,7 +11,6 @@ const CARDS = [
   { key: "services", label: "Services", icon: "wrench", to: "/admin/services", color: "bg-amber-500" },
   { key: "inquiries", label: "Inquiries", icon: "briefcase", to: "/admin/inquiries", color: "bg-indigo-600" },
   { key: "contacts", label: "Messages", icon: "mail", to: "/admin/contacts", color: "bg-sky-600" },
-  { key: "gallery", label: "Gallery", icon: "layers", to: "/admin/gallery", color: "bg-fuchsia-600" },
 ];
 
 export default function Dashboard() {

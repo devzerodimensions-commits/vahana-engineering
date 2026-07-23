@@ -16,12 +16,6 @@ api.interceptors.request.use((config) => {
 // ---- Fallback datasets (used when the API is unreachable) -------------------
 const localProducts = manifest.products.map((p) => ({ _id: p.slug, ...p }));
 const localCategories = manifest.categories.map((c) => ({ _id: c.slug, ...c }));
-const localGallery = manifest.products.slice(0, 18).map((p, i) => ({
-  _id: `g${i}`,
-  title: p.name,
-  image: p.image,
-  category: p.categoryName,
-}));
 
 // Try the API; on any network/DB failure — or a response that doesn't match
 // this API's contract ({ success, data }) — resolve with local data instead.
@@ -60,7 +54,6 @@ export const getBlog = (slug) =>
   withFallback(() => api.get(`/blogs/${slug}`), fb.blogs.find((b) => b.slug === slug) || null);
 export const getTestimonials = () => withFallback(() => api.get("/testimonials"), fb.testimonials);
 export const getClients = () => withFallback(() => api.get("/clients"), fb.clients);
-export const getGallery = () => withFallback(() => api.get("/gallery"), localGallery);
 export const getCertifications = () =>
   withFallback(() => api.get("/certifications"), fb.certifications);
 

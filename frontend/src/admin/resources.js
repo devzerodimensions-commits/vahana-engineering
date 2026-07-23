@@ -90,18 +90,6 @@ export const resources = {
       { key: "order", label: "Order", type: "number" },
     ],
   },
-  gallery: {
-    label: "Gallery",
-    api: "gallery",
-    icon: "layers",
-    columns: ["title", "category"],
-    fields: [
-      { key: "title", label: "Title", type: "text" },
-      { key: "image", label: "Image URL", type: "image", required: true },
-      { key: "category", label: "Category", type: "text" },
-      { key: "order", label: "Order", type: "number" },
-    ],
-  },
   certifications: {
     label: "Certifications",
     api: "certifications",
@@ -123,7 +111,6 @@ export const contentNav = [
   "testing-categories",
   "services",
   "blogs",
-  "gallery",
   "certifications",
   "clients",
   "testimonials",

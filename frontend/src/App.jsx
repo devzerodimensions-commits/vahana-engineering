@@ -8,9 +8,7 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Products from "./pages/Products.jsx";
 import ProductDetail from "./pages/ProductDetail.jsx";
-import TestingCategories from "./pages/TestingCategories.jsx";
 import Services from "./pages/Services.jsx";
-import Gallery from "./pages/Gallery.jsx";
 import Certifications from "./pages/Certifications.jsx";
 import Blog from "./pages/Blog.jsx";
 import BlogDetail from "./pages/BlogDetail.jsx";
@@ -36,9 +34,7 @@ export default function App() {
           <Route path="about" element={<About />} />
           <Route path="products" element={<Products />} />
           <Route path="products/:slug" element={<ProductDetail />} />
-          <Route path="testing-categories" element={<TestingCategories />} />
           <Route path="services" element={<Services />} />
-          <Route path="gallery" element={<Gallery />} />
           <Route path="certifications" element={<Certifications />} />
           <Route path="blog" element={<Blog />} />
           <Route path="blog/:slug" element={<BlogDetail />} />

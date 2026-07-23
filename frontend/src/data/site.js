@@ -38,9 +38,7 @@ export const navLinks = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Products", path: "/products" },
-  { name: "Testing", path: "/testing-categories" },
   { name: "Services", path: "/services" },
-  { name: "Gallery", path: "/gallery" },
   { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
 ];
