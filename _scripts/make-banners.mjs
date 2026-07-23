@@ -1,5 +1,5 @@
-// Builds hexaplast-style hero banners: a clean CUTOUT machine (transparent PNG)
-// floating on a premium navy background with a soft shadow + brand accents.
+// Premium full-width hero banners: ONE big machine cutout per slide on a clean,
+// elegant light background with a soft realistic shadow + subtle brand accents.
 // TEXT-FREE. Output: frontend/public/banners/*.jpg
 import sharp from "sharp";
 import fs from "node:fs";
@@ -10,51 +10,56 @@ const CUT = path.resolve("_cutouts");
 const OUT = path.join(PUB, "banners");
 fs.mkdirSync(OUT, { recursive: true });
 
-const W = 1600, H = 600;
-const MAXW = 980, MAXH = 470; // machine max size
+const W = 1600, H = 560;
+const MAXW = 900, MAXH = 470;
 
 const BANNERS = [
   { file: "banner-utm", slug: "universal-testing-machine-10-ton" },
   { file: "banner-mfi", slug: "melt-flow-index-mfi-test-apparatus" },
   { file: "banner-hydro", slug: "hydrostatic-pressure-testing-machine-3-station" },
   { file: "banner-impact", slug: "izod-and-charpy-impact-test-apparatus" },
-  { file: "banner-dart", slug: "dart-impact-testing-machine" },
+  { file: "banner-vicat", slug: "vicat-softening-point-test-apparatus" },
   { file: "banner-oven", slug: "hot-air-oven" },
 ];
 
-// Clean WHITE background with subtle brand accents. No text.
+// Elegant light background with a soft halo, geometric depth + brand accents.
 const bgSvg = () => `
 <svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
-      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eef2f7"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6ecf6"/>
     </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="34%" r="52%">
+      <stop offset="0" stop-color="#d5e0f5" stop-opacity="0.85"/><stop offset="1" stop-color="#d5e0f5" stop-opacity="0"/>
+    </radialGradient>
   </defs>
   <rect width="${W}" height="${H}" fill="url(#bg)"/>
-  <g stroke="#16256B" stroke-opacity="0.04">
+  <rect width="${W}" height="${H}" fill="url(#halo)"/>
+  <g stroke="#16256B" stroke-opacity="0.035">
     ${Array.from({ length: 20 }, (_, i) => `<line x1="${i * 80}" y1="0" x2="${i * 80}" y2="${H}"/>`).join("")}
-    ${Array.from({ length: 8 }, (_, i) => `<line x1="0" y1="${i * 80}" x2="${W}" y2="${i * 80}"/>`).join("")}
+    ${Array.from({ length: 7 }, (_, i) => `<line x1="0" y1="${i * 80}" x2="${W}" y2="${i * 80}"/>`).join("")}
   </g>
-  <circle cx="1470" cy="90" r="240" fill="#16256B" opacity="0.04"/>
-  <!-- brand corner triangles -->
-  <polygon points="0,0 300,0 0,150" fill="#16256B" opacity="0.95"/>
-  <polygon points="0,0 165,0 0,85" fill="#E11F27"/>
-  <polygon points="${W},${H} ${W - 300},${H} ${W},${H - 150}" fill="#16256B" opacity="0.95"/>
-  <polygon points="${W},${H} ${W - 165},${H} ${W},${H - 85}" fill="#E11F27"/>
+  <circle cx="1330" cy="70" r="250" fill="none" stroke="#16256B" stroke-opacity="0.06" stroke-width="2"/>
+  <circle cx="250" cy="470" r="170" fill="none" stroke="#E11F27" stroke-opacity="0.12" stroke-width="2"/>
+  <!-- brand diagonal accents (left) -->
+  <polygon points="0,0 150,0 60,${H} 0,${H}" fill="#16256B" opacity="0.96"/>
+  <polygon points="150,0 205,0 115,${H} 60,${H}" fill="#E11F27"/>
+  <!-- brand triangles bottom-right -->
+  <polygon points="${W},${H} ${W - 280},${H} ${W},${H - 140}" fill="#16256B" opacity="0.95"/>
+  <polygon points="${W},${H} ${W - 150},${H} ${W},${H - 78}" fill="#E11F27"/>
   <rect x="0" y="${H - 7}" width="${W}" height="7" fill="#E11F27"/>
 </svg>`;
 
 const shadowSvg = (w) => Buffer.from(`
-<svg width="${w}" height="90" xmlns="http://www.w3.org/2000/svg">
+<svg width="${w}" height="80" xmlns="http://www.w3.org/2000/svg">
   <defs><radialGradient id="s" cx="50%" cy="50%" r="50%">
-    <stop offset="0" stop-color="#0F1A4D" stop-opacity="0.28"/><stop offset="1" stop-color="#0F1A4D" stop-opacity="0"/>
+    <stop offset="0" stop-color="#0F1A4D" stop-opacity="0.32"/><stop offset="1" stop-color="#0F1A4D" stop-opacity="0"/>
   </radialGradient></defs>
-  <ellipse cx="${w / 2}" cy="45" rx="${w / 2}" ry="40" fill="url(#s)"/>
+  <ellipse cx="${w / 2}" cy="40" rx="${w / 2}" ry="36" fill="url(#s)"/>
 </svg>`);
 
 for (const b of BANNERS) {
   const cutPath = path.join(CUT, `${b.slug}.png`);
-  // Trim transparent border, then fit into the machine box.
   const m = await sharp(cutPath)
     .trim({ threshold: 1 })
     .resize({ width: MAXW, height: MAXH, fit: "inside", withoutEnlargement: false })
@@ -63,13 +68,12 @@ for (const b of BANNERS) {
 
   const mw = m.info.width, mh = m.info.height;
   const left = Math.round((W - mw) / 2);
-  const top = Math.round((H - mh) / 2 - 18);
+  const top = Math.round((H - mh) / 2 - 16);
 
-  // Soft ground shadow under the machine.
-  const shW = Math.round(mw * 0.8);
+  const shW = Math.round(mw * 0.82);
   const shadow = await sharp(shadowSvg(shW)).png().toBuffer();
   const shLeft = Math.round((W - shW) / 2);
-  const shTop = Math.min(top + mh - 30, H - 90);
+  const shTop = Math.min(top + mh - 26, H - 80);
 
   const out = path.join(OUT, `${b.file}.jpg`);
   await sharp(Buffer.from(bgSvg()))
@@ -77,7 +81,7 @@ for (const b of BANNERS) {
       { input: shadow, left: shLeft, top: shTop },
       { input: m.data, left, top },
     ])
-    .jpeg({ quality: 84, mozjpeg: true })
+    .jpeg({ quality: 86, mozjpeg: true })
     .toFile(out);
   console.log(`banners/${b.file}.jpg  machine ${mw}x${mh}  ${(fs.statSync(out).size / 1024).toFixed(0)}KB`);
 }
