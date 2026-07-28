@@ -11,6 +11,21 @@ export default function ProductDetail() {
   const { slug } = useParams();
   const { data: product, loading } = useFetch(() => getProduct(slug), [slug]);
   const { data: all } = useFetch(getProducts, []);
+  const [pdfBusy, setPdfBusy] = useState(false);
+
+  // Generate & download a branded PDF datasheet (pdf library loads only on click).
+  const handleDownload = async () => {
+    setPdfBusy(true);
+    try {
+      const { downloadProductPdf } = await import("../lib/pdf.js");
+      await downloadProductPdf(product);
+    } catch (e) {
+      console.error(e);
+      alert("Sorry, could not generate the PDF. Please try again.");
+    } finally {
+      setPdfBusy(false);
+    }
+  };
 
   if (loading) return <Loader label="Loading product…" />;
   if (!product)
@@ -109,6 +124,12 @@ export default function ProductDetail() {
                 <Icon name="phone" className="h-4 w-4" /> Call Us
               </a>
             </div>
+
+            {/* Download the full product datasheet as a PDF */}
+            <button onClick={handleDownload} disabled={pdfBusy} className="btn-navy mt-3 w-full">
+              <Icon name="download" className="h-4 w-4" />
+              {pdfBusy ? "Preparing PDF…" : "Download PDF Datasheet"}
+            </button>
 
             <InquiryForm productName={product.name} />
           </div>
