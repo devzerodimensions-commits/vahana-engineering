@@ -4,6 +4,7 @@
 // - Emits frontend/src/data/products.json (also used by the backend seed)
 import fs from "node:fs";
 import path from "node:path";
+import sharp from "sharp";
 
 const SRC_DIR = "C:/Users/Admin/Desktop/Vihaana Engineering";
 const PROD_SRC_DIR = path.join(SRC_DIR, "Vihaana Machine Photo");
@@ -416,7 +417,12 @@ for (const [base, meta] of Object.entries(PRODUCTS)) {
   const slug = slugify(meta.name);
   const imageFile = `${slug}.jpg`;
   if (match) {
-    fs.copyFileSync(path.join(PROD_SRC_DIR, match), path.join(PROD_IMG_DIR, imageFile));
+    // Web-optimise: resize huge studio photos (some 8000px / 6 MB) down to a
+    // sensible size and compress — fixes slow loading & garbled rendering.
+    await sharp(path.join(PROD_SRC_DIR, match))
+      .resize({ width: 1100, height: 1100, fit: "inside", withoutEnlargement: true })
+      .jpeg({ quality: 82, mozjpeg: true })
+      .toFile(path.join(PROD_IMG_DIR, imageFile));
   } else {
     missing.push(base);
   }
