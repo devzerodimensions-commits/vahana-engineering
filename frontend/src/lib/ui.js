@@ -18,3 +18,15 @@ export const serviceIcon = (icon) =>
     wrench: "wrench",
     graduation: "graduation",
   }[icon] || "check");
+
+// Icon for an "industry we serve" card, chosen from the client's industry/name.
+export const industryIcon = (industry = "", name = "") => {
+  const s = `${industry} ${name}`.toLowerCase();
+  if (/pip|hdpe|pressure/.test(s)) return "gauge";
+  if (/geo|membrane|synthetic/.test(s)) return "layers";
+  if (/polymer|plastic|compound|resin/.test(s)) return "flask";
+  if (/govern|public|lab/.test(s)) return "building";
+  if (/academ|research|r&d|institute|univ/.test(s)) return "graduation";
+  if (/film|packag/.test(s)) return "briefcase";
+  return "target";
+};

@@ -8,7 +8,7 @@ import {
   getClients,
 } from "../services/api.js";
 import { site } from "../data/site.js";
-import { categoryIcon, serviceIcon } from "../lib/ui.js";
+import { categoryIcon, serviceIcon, industryIcon } from "../lib/ui.js";
 import Icon from "../components/ui/Icon.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
 import ProductCard from "../components/ProductCard.jsx";
@@ -179,18 +179,25 @@ export default function Home() {
           </div>
 
           {clients?.length > 0 && (
-            <div className="mt-14">
-              <p className="mb-6 text-center text-sm font-semibold uppercase tracking-wider text-slate-400">
-                Industries we serve
-              </p>
-              <div className="flex flex-wrap items-center justify-center gap-3">
+            <div className="mt-16">
+              <div className="mx-auto mb-9 max-w-xl text-center">
+                <span className="mb-2 inline-block rounded-full bg-brand-red/10 px-4 py-1 text-xs font-bold uppercase tracking-wider text-brand-red">
+                  Industries We Serve
+                </span>
+                <h3 className="text-2xl font-extrabold text-brand-navy">Trusted across the polymer &amp; pipe industry</h3>
+              </div>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
                 {clients.map((c) => (
-                  <span
+                  <div
                     key={c._id}
-                    className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-brand-navy shadow-sm ring-1 ring-slate-100"
+                    className="group flex flex-col items-center rounded-2xl bg-white p-5 text-center shadow-card ring-1 ring-slate-100 transition duration-300 hover:-translate-y-1 hover:shadow-card-hover"
                   >
-                    {c.name}
-                  </span>
+                    <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-navy/5 text-brand-navy transition group-hover:bg-brand-red group-hover:text-white">
+                      <Icon name={industryIcon(c.industry, c.name)} className="h-7 w-7" />
+                    </div>
+                    <p className="text-sm font-bold leading-snug text-brand-navy">{c.name}</p>
+                    {c.industry && <p className="mt-1 text-xs font-medium text-slate-400">{c.industry}</p>}
+                  </div>
                 ))}
               </div>
             </div>
