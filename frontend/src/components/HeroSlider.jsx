@@ -73,7 +73,7 @@ export default function HeroSlider() {
   return (
     <section
       className="relative overflow-hidden border-b-4 border-brand-red bg-brand-navy bg-cover bg-center"
-      style={{ backgroundImage: "linear-gradient(rgba(12,20,60,0.55), rgba(12,20,60,0.72)), url(/hero-bg.jpg)" }}
+      style={{ backgroundImage: "linear-gradient(rgba(15,26,77,0.30), rgba(11,19,56,0.46)), url(/hero-bg.jpg)" }}
     >
       <div
         className="container-x relative py-16 sm:py-24"
