@@ -57,8 +57,12 @@ export default function ProductDetail() {
         <div className="container-x grid gap-10 lg:grid-cols-2">
           {/* Image */}
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <div className="overflow-hidden rounded-2xl bg-slate-50 ring-1 ring-slate-100">
-              <img src={product.image} alt={product.name} className="aspect-[4/3] w-full object-cover" />
+            <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-white p-6 ring-1 ring-slate-100">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="max-h-full max-w-full object-contain"
+              />
             </div>
           </div>
 
