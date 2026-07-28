@@ -76,7 +76,7 @@ export default function HeroSlider() {
       style={{ backgroundImage: "linear-gradient(rgba(12,20,60,0.55), rgba(12,20,60,0.72)), url(/hero-bg.jpg)" }}
     >
       <div
-        className="container-x relative py-10 sm:py-14"
+        className="container-x relative py-14 sm:py-20"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
         onTouchStart={onTouchStart}
@@ -96,7 +96,7 @@ export default function HeroSlider() {
                   className="group block"
                 >
                   {/* equal-size box; machine is contained (never cropped) */}
-                  <div className="flex h-52 items-center justify-center sm:h-60 lg:h-72">
+                  <div className="flex h-64 items-center justify-center sm:h-80 lg:h-[420px]">
                     <img
                       src={it.image}
                       alt={it.name}
