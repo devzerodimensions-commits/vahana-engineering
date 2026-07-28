@@ -1,6 +1,6 @@
-// Optimises the transparent machine cutouts into small WebP images used by the
-// 3-per-view hero carousel cards. (Separate process from @imgly to avoid the
-// sharp/libvips version clash.)
+// Normalises the machine cutouts to a UNIFORM canvas so they all display at the
+// same height & size (no crop) in the hero carousel. Each machine is scaled to a
+// fixed height and centred on an identical transparent canvas.
 import sharp from "sharp";
 import fs from "node:fs";
 import path from "node:path";
@@ -8,6 +8,9 @@ import path from "node:path";
 const CUT = path.resolve("_cutouts");
 const OUT = path.resolve("../frontend/public/machines");
 fs.mkdirSync(OUT, { recursive: true });
+
+// Uniform canvas: every output image is exactly CW x CH, machine height = MH.
+const CW = 660, CH = 600, MH = 500;
 
 const MACHINES = [
   "universal-testing-machine-10-ton",
@@ -30,12 +33,23 @@ for (const slug of MACHINES) {
     console.log("missing cutout:", slug);
     continue;
   }
-  const out = path.join(OUT, `${slug}.webp`);
-  const info = await sharp(src)
+  // Scale machine to a uniform height (fit inside so very wide ones don't overflow).
+  const m = await sharp(src)
     .trim({ threshold: 1 })
-    .resize({ width: 620, height: 540, fit: "inside", withoutEnlargement: false })
-    .webp({ quality: 84 })
+    .resize({ height: MH, width: CW - 20, fit: "inside", withoutEnlargement: false })
+    .toBuffer({ resolveWithObject: true });
+
+  const w = m.info.width, h = m.info.height;
+  const left = Math.round((CW - w) / 2);
+  const top = Math.round((CH - h) / 2);
+
+  const out = path.join(OUT, `${slug}.webp`);
+  await sharp({
+    create: { width: CW, height: CH, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
+  })
+    .composite([{ input: m.data, left, top }])
+    .webp({ quality: 86 })
     .toFile(out);
-  console.log(`machines/${slug}.webp  ${info.width}x${info.height}  ${(fs.statSync(out).size / 1024).toFixed(0)}KB`);
+  console.log(`machines/${slug}.webp  ${CW}x${CH} (machine ${w}x${h})`);
 }
 console.log("Done.");

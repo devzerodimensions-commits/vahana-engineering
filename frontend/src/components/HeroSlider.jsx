@@ -76,7 +76,7 @@ export default function HeroSlider() {
       style={{ backgroundImage: "linear-gradient(rgba(12,20,60,0.55), rgba(12,20,60,0.72)), url(/hero-bg.jpg)" }}
     >
       <div
-        className="container-x relative py-14 sm:py-20"
+        className="container-x relative py-16 sm:py-24"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
         onTouchStart={onTouchStart}
@@ -95,13 +95,13 @@ export default function HeroSlider() {
                   aria-label={it.name}
                   className="group block"
                 >
-                  {/* equal-size box; machine is contained (never cropped) */}
-                  <div className="flex h-64 items-center justify-center sm:h-80 lg:h-[420px]">
+                  {/* uniform box — all machines are normalised to the same size (no crop) */}
+                  <div className="flex aspect-[11/10] items-center justify-center">
                     <img
                       src={it.image}
                       alt={it.name}
                       loading={i < 4 ? "eager" : "lazy"}
-                      className="max-h-full max-w-full w-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.45)] transition-transform duration-500 group-hover:scale-105"
+                      className="h-full w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.45)] transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                 </Link>
