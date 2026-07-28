@@ -71,7 +71,7 @@ export default function HeroSlider() {
   };
 
   return (
-    <section className="relative overflow-hidden border-b-4 border-brand-red bg-gradient-to-br from-brand-navy via-brand-navy to-brand-navy-dark">
+    <section className="relative overflow-hidden border-b-4 border-brand-red bg-gradient-to-b from-slate-100 to-slate-200">
       <div
         className="container-x relative py-16 sm:py-24"
         onMouseEnter={() => setPaused(true)}
@@ -111,14 +111,14 @@ export default function HeroSlider() {
         <button
           onClick={prev}
           aria-label="Previous"
-          className="absolute -left-1 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-brand-navy shadow-md ring-1 ring-white/30 transition hover:bg-brand-red hover:text-white sm:left-1 sm:h-12 sm:w-12"
+          className="absolute -left-1 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-brand-navy shadow-md ring-1 ring-slate-300 transition hover:bg-brand-red hover:text-white sm:left-1 sm:h-12 sm:w-12"
         >
           <Icon name="arrowLeft" className="h-5 w-5" />
         </button>
         <button
           onClick={next}
           aria-label="Next"
-          className="absolute -right-1 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-brand-navy shadow-md ring-1 ring-white/30 transition hover:bg-brand-red hover:text-white sm:right-1 sm:h-12 sm:w-12"
+          className="absolute -right-1 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-brand-navy shadow-md ring-1 ring-slate-300 transition hover:bg-brand-red hover:text-white sm:right-1 sm:h-12 sm:w-12"
         >
           <Icon name="arrowRight" className="h-5 w-5" />
         </button>
