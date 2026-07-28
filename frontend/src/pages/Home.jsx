@@ -13,6 +13,7 @@ import Icon from "../components/ui/Icon.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
 import ProductCard from "../components/ProductCard.jsx";
 import HeroSlider from "../components/HeroSlider.jsx";
+import Counter from "../components/ui/Counter.jsx";
 
 export default function Home() {
   const { data: categories } = useFetch(getCategories, []);
@@ -31,7 +32,9 @@ export default function Home() {
         <div className="container-x grid grid-cols-2 gap-6 py-10 lg:grid-cols-4">
           {site.stats.map((s) => (
             <div key={s.label} className="text-center">
-              <p className="text-3xl font-extrabold text-brand-navy sm:text-4xl">{s.value}</p>
+              <p className="text-3xl font-extrabold text-brand-navy sm:text-4xl">
+                <Counter value={s.value} />
+              </p>
               <p className="mt-1 text-sm font-medium text-slate-500">{s.label}</p>
             </div>
           ))}
