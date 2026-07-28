@@ -71,10 +71,7 @@ export default function HeroSlider() {
   };
 
   return (
-    <section
-      className="relative overflow-hidden border-b-4 border-brand-red bg-brand-navy bg-cover bg-center"
-      style={{ backgroundImage: "linear-gradient(rgba(15,26,77,0.30), rgba(11,19,56,0.46)), url(/hero-bg.jpg)" }}
-    >
+    <section className="relative overflow-hidden border-b-4 border-brand-red bg-gradient-to-br from-brand-navy via-brand-navy to-brand-navy-dark">
       <div
         className="container-x relative py-16 sm:py-24"
         onMouseEnter={() => setPaused(true)}
