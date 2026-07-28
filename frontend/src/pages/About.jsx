@@ -37,7 +37,7 @@ export default function About() {
                 Our range spans universal &amp; tensile testing machines, impact testers, melt-flow
                 index apparatus, hydrostatic pressure rigs, ovens, baths, chambers and specimen
                 preparation equipment — all engineered for accuracy, repeatability and compliance with
-                ASTM, ISO and IS methods.
+                Indian Standards (IS / BIS).
               </p>
               <p>
                 From single instruments to complete turnkey laboratories, we support our customers with

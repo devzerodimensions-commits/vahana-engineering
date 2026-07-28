@@ -29,49 +29,49 @@ const CATEGORIES = {
     name: "Universal & Tensile Testing",
     blurb:
       "Precision tensile, compression and universal test frames for plastics, films, tapes, geomembranes and welded joints.",
-    standards: ["ASTM D638", "ASTM D882", "ISO 527", "IS 13360"],
+    standards: ["IS 13360-5-1", "IS 8543", "IS 13360"],
   },
   impact: {
     name: "Impact Testing",
     blurb:
       "Instruments that measure toughness and impact resistance of polymers and films under sudden load.",
-    standards: ["ASTM D256", "ASTM D1709", "ISO 179", "ISO 180"],
+    standards: ["IS 13360-5-3", "IS 13360-5-4", "IS 2508"],
   },
   "melt-flow": {
     name: "Melt Flow & Rheology",
     blurb:
       "Melt flow index and flow-variation apparatus for quality control of thermoplastic resins.",
-    standards: ["ASTM D1238", "ISO 1133"],
+    standards: ["IS 2530", "IS 13360-4-1"],
   },
   "thermal-ageing": {
     name: "Thermal & Ageing",
     blurb:
       "Ovens, baths and chambers for conditioning, thermal ageing, softening point and oxidation-induction testing.",
-    standards: ["ASTM D1525", "ISO 306", "ASTM D3895", "ISO 11357"],
+    standards: ["IS 6307", "IS 4984", "IS 13360"],
   },
   "composition-optical": {
     name: "Composition & Optical",
     blurb:
       "Apparatus to determine carbon-black content, ash content and optical opacity of polymer compounds.",
-    standards: ["ASTM D1603", "ISO 6964", "ASTM D2244"],
+    standards: ["IS 2530", "IS 4984"],
   },
   "pressure-pipe": {
     name: "Pressure & Pipe Testing",
     blurb:
       "Hydrostatic pressure rigs for long-term and short-term strength testing of pipes and fittings.",
-    standards: ["ASTM D1598", "ISO 1167", "IS 4984"],
+    standards: ["IS 4984", "IS 12235", "IS 4985"],
   },
   "specimen-prep": {
     name: "Specimen Preparation & Cutters",
     blurb:
       "Notch cutters and contour cutters that prepare accurate, standard-compliant test specimens.",
-    standards: ["ISO 2818", "ASTM D4703"],
+    standards: ["IS 13360-2-1", "IS 8543"],
   },
   "moulding-processing": {
     name: "Moulding & Processing",
     blurb:
       "Laboratory presses, mills and extrusion plant for compounding and preparing test sheets and films.",
-    standards: ["ASTM D4703", "ISO 293"],
+    standards: ["IS 13360-2-1", "IS 2530"],
   },
 };
 
@@ -247,10 +247,10 @@ const S = (label, value) => ({ label, value });
 const SPECS = {
   "melt-flow-index-mfi-test-apparatus": {
     model: "VE-MFI-01",
-    standards: ["ASTM D1238", "IS 2530"],
+    standards: ["IS 2530", "IS 13360-4-1"],
     specs: [
       S("Model No.", "VE-MFI-01"),
-      S("Reference Standards", "ASTM D1238, IS 2530"),
+      S("Reference Standards", "IS 2530, IS 13360 (Part 4/Sec 1)"),
       S("Test Method", "A"),
       S("System", "Digital"),
       S("Temperature Controller", "Microprocessor-based double-display digital PID controller"),
@@ -348,11 +348,11 @@ const SPECS = {
   },
   "oxidation-induction-time-oit-test-apparatus": {
     model: "VE-OIT-01",
-    standards: ["IS 4984", "ASTM D3895"],
+    standards: ["IS 4984", "IS 13360"],
     specs: [
       S("Model No.", "VE-OIT-01"),
       S("Method", "Differential Thermal Analyzer (DTA)"),
-      S("Reference Standards", "IS 4984, ASTM D3895"),
+      S("Reference Standards", "IS 4984 (Annex), IS 13360"),
       S("System", "Windows-based software; PC connectivity via RS-232; graphical reports"),
       S("Temperature Controller", "Microprocessor PID; shows process temp & Delta T"),
       S("Range", "Ambient to 300 °C (0.1 °C resolution)"),

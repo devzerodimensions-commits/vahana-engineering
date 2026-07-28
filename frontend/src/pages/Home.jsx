@@ -202,7 +202,7 @@ export default function Home() {
 }
 
 const WHY = [
-  { icon: "target", title: "Standard Compliant", text: "Built to ASTM, ISO and IS test methods for audit-ready results." },
+  { icon: "target", title: "Standard Compliant", text: "Built to Indian Standards (IS / BIS) test methods for audit-ready results." },
   { icon: "wrench", title: "Robust Build", text: "Industrial-grade construction for years of dependable service." },
   { icon: "gauge", title: "Digital Precision", text: "Accurate load, temperature and speed control with digital readouts." },
   { icon: "shield", title: "After-Sales Support", text: "Calibration, AMC and genuine spares across India." },

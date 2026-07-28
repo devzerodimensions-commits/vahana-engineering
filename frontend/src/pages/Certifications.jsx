@@ -38,7 +38,7 @@ export default function Certifications() {
             <h2 className="text-2xl font-extrabold">Quality You Can Measure</h2>
             <p className="mx-auto mt-3 max-w-2xl text-slate-200">
               Every instrument is tested and calibrated before dispatch, with traceable calibration
-              support to help you maintain NABL and ISO compliance in your own laboratory.
+              support to help you maintain NABL and BIS compliance in your own laboratory.
             </p>
           </div>
         </div>

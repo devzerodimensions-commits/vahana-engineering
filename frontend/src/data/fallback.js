@@ -69,8 +69,8 @@ export const blogs = [
     author: "Vihana Engineering",
     excerpt: "Why MFI is the fastest indicator of thermoplastic consistency and how to test it right.",
     content:
-      "Melt Flow Index (MFI), measured per ASTM D1238 / ISO 1133, indicates the flow of a molten polymer and is one of the quickest ways to verify batch-to-batch consistency of resins. This article covers test setup, load selection, and common pitfalls.",
-    tags: ["MFI", "Quality Control", "ASTM D1238"],
+      "Melt Flow Index (MFI), measured per IS 2530 / IS 13360, indicates the flow of a molten polymer and is one of the quickest ways to verify batch-to-batch consistency of resins. This article covers test setup, load selection, and common pitfalls.",
+    tags: ["MFI", "Quality Control", "IS 2530"],
     publishedAt: "2025-03-10",
   },
   {
@@ -78,10 +78,10 @@ export const blogs = [
     title: "Hydrostatic Pressure Testing of HDPE Pipes Explained",
     slug: "hydrostatic-pressure-testing-of-hdpe-pipes-explained",
     author: "Vihana Engineering",
-    excerpt: "A practical guide to long-term strength testing of plastic pipes to ISO 1167.",
+    excerpt: "A practical guide to long-term strength testing of plastic pipes to IS 4984.",
     content:
-      "Hydrostatic pressure testing evaluates the long-term strength of plastic pipes under sustained internal pressure. Following ISO 1167 / ASTM D1598, multi-station rigs allow several specimens to be tested simultaneously at controlled temperature.",
-    tags: ["HDPE", "Pipes", "ISO 1167"],
+      "Hydrostatic pressure testing evaluates the long-term strength of plastic pipes under sustained internal pressure. Following IS 4984 / IS 12235, multi-station rigs allow several specimens to be tested simultaneously at controlled temperature.",
+    tags: ["HDPE", "Pipes", "IS 4984"],
     publishedAt: "2025-02-02",
   },
   {
@@ -91,7 +91,7 @@ export const blogs = [
     author: "Vihana Engineering",
     excerpt: "Capacity, grips, and software — how to match a UTM to your application.",
     content:
-      "Selecting a UTM means matching load capacity, crosshead speed, grip type and extensometry to the materials you test. Whether tensile, compression or flexural, the right configuration ensures compliance with ASTM D638 / ISO 527.",
+      "Selecting a UTM means matching load capacity, crosshead speed, grip type and extensometry to the materials you test. Whether tensile, compression or flexural, the right configuration ensures compliance with IS 13360 / IS 8543.",
     tags: ["UTM", "Tensile", "Buying Guide"],
     publishedAt: "2025-01-15",
   },
