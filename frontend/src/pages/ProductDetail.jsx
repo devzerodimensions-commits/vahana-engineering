@@ -128,7 +128,7 @@ export default function ProductDetail() {
             {/* Download the full product datasheet as a PDF */}
             <button onClick={handleDownload} disabled={pdfBusy} className="btn-navy mt-3 w-full">
               <Icon name="download" className="h-4 w-4" />
-              {pdfBusy ? "Preparing PDF…" : "Download PDF Datasheet"}
+              {pdfBusy ? "Preparing…" : "Download Catalogue"}
             </button>
 
             <InquiryForm productName={product.name} />
