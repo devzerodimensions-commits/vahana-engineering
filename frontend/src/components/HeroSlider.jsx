@@ -125,20 +125,6 @@ export default function HeroSlider() {
         >
           <Icon name="arrowRight" className="h-5 w-5" />
         </button>
-
-        {/* Dots */}
-        <div className="mt-6 flex items-center justify-center gap-2">
-          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setIndex(i)}
-              aria-label={`Go to position ${i + 1}`}
-              className={`h-2.5 rounded-full transition-all ${
-                i === index ? "w-7 bg-brand-red" : "w-2.5 bg-white/40 hover:bg-white/70"
-              }`}
-            />
-          ))}
-        </div>
       </div>
     </section>
   );
