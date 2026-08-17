@@ -4,19 +4,21 @@ import manifest from "../data/products.json";
 import Icon from "./ui/Icon.jsx";
 
 // Machines shown in the carousel (transparent cutouts on the industrial background).
+// Order is client-specified — keep in sync with _scripts/make-cutouts.mjs and
+// _scripts/make-machine-cards.mjs, which generate /machines/<slug>.webp for each.
 const SLUGS = [
-  "universal-testing-machine-10-ton",
-  "melt-flow-index-mfi-test-apparatus",
-  "hydrostatic-pressure-testing-machine-3-station",
-  "izod-and-charpy-impact-test-apparatus",
-  "dart-impact-testing-machine",
-  "hot-air-oven",
   "universal-testing-machine-2-ton",
-  "tensile-testing-machine",
-  "vicat-softening-point-test-apparatus",
-  "two-roll-mill",
-  "compression-moulding-press",
+  "tensile-testing-machine-wst",
+  "hydrostatic-pressure-testing-machine-3-station",
+  "universal-testing-machine-geomembrane-and-fabric",
+  "melt-flow-index-mfi-test-apparatus",
+  "carbon-black-content-test-apparatus",
   "oxidation-induction-time-oit-test-apparatus",
+  "vicat-softening-point-test-apparatus",
+  "emission-flow-variation-test-apparatus",
+  "contour-cutter",
+  "hot-air-oven",
+  "two-roll-mill",
 ];
 
 const bySlug = Object.fromEntries(manifest.products.map((p) => [p.slug, p]));

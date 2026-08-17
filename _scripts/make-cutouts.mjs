@@ -10,19 +10,20 @@ const SRC_REL = "../frontend/public/products"; // relative path (imgly rejects C
 const OUT = path.resolve("_cutouts");
 fs.mkdirSync(OUT, { recursive: true });
 
+// Keep in sync with make-machine-cards.mjs and HeroSlider.jsx (client-chosen order).
 const MACHINES = [
-  "universal-testing-machine-10-ton",
-  "melt-flow-index-mfi-test-apparatus",
-  "hydrostatic-pressure-testing-machine-3-station",
-  "izod-and-charpy-impact-test-apparatus",
-  "dart-impact-testing-machine",
-  "hot-air-oven",
   "universal-testing-machine-2-ton",
-  "tensile-testing-machine",
-  "vicat-softening-point-test-apparatus",
-  "two-roll-mill",
-  "compression-moulding-press",
+  "tensile-testing-machine-wst",
+  "hydrostatic-pressure-testing-machine-3-station",
+  "universal-testing-machine-geomembrane-and-fabric",
+  "melt-flow-index-mfi-test-apparatus",
+  "carbon-black-content-test-apparatus",
   "oxidation-induction-time-oit-test-apparatus",
+  "vicat-softening-point-test-apparatus",
+  "emission-flow-variation-test-apparatus",
+  "contour-cutter",
+  "hot-air-oven",
+  "two-roll-mill",
 ];
 
 for (const slug of MACHINES) {

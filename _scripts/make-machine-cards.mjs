@@ -16,19 +16,20 @@ const CW = 660, CH = 600, MH = 500; // uniform canvas + machine height
 // light-coloured surfaces stay solid (not see-through). Smooth edge in between.
 const LOW = 45, HIGH = 115, SPAN = HIGH - LOW;
 
+// Keep in sync with make-cutouts.mjs and HeroSlider.jsx (client-chosen order).
 const MACHINES = [
-  "universal-testing-machine-10-ton",
-  "melt-flow-index-mfi-test-apparatus",
-  "hydrostatic-pressure-testing-machine-3-station",
-  "izod-and-charpy-impact-test-apparatus",
-  "dart-impact-testing-machine",
-  "hot-air-oven",
   "universal-testing-machine-2-ton",
-  "tensile-testing-machine",
-  "vicat-softening-point-test-apparatus",
-  "two-roll-mill",
-  "compression-moulding-press",
+  "tensile-testing-machine-wst",
+  "hydrostatic-pressure-testing-machine-3-station",
+  "universal-testing-machine-geomembrane-and-fabric",
+  "melt-flow-index-mfi-test-apparatus",
+  "carbon-black-content-test-apparatus",
   "oxidation-induction-time-oit-test-apparatus",
+  "vicat-softening-point-test-apparatus",
+  "emission-flow-variation-test-apparatus",
+  "contour-cutter",
+  "hot-air-oven",
+  "two-roll-mill",
 ];
 
 for (const slug of MACHINES) {
