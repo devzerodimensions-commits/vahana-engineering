@@ -68,7 +68,7 @@ export default function Navbar() {
                   to={l.path}
                   end={l.path === "/"}
                   className={({ isActive }) =>
-                    `rounded-lg px-3.5 py-2 text-sm font-semibold transition-colors ${
+                    `rounded-lg px-4 py-2 text-base font-semibold transition-colors ${
                       isActive
                         ? "text-brand-red"
                         : "text-brand-navy hover:bg-slate-50 hover:text-brand-red"
@@ -107,7 +107,7 @@ export default function Navbar() {
                     to={l.path}
                     end={l.path === "/"}
                     className={({ isActive }) =>
-                      `block rounded-lg px-3 py-2.5 text-sm font-semibold ${
+                      `block rounded-lg px-3 py-3 text-base font-semibold ${
                         isActive ? "bg-brand-navy/5 text-brand-red" : "text-brand-navy"
                       }`
                     }
