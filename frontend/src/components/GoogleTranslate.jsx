@@ -1,20 +1,20 @@
 import { useEffect } from "react";
 
-// Loads the Google Translate engine into a HIDDEN container. The visible UI is
-// the custom LanguageSelect dropdown, which drives this engine. Render once.
+// Native Google Website Translator "Select Language" dropdown (same as the
+// reference site). Renders a visible container that Google populates with the
+// full language list. Supports multiple instances (desktop + mobile).
 let requested = false;
 
-export default function GoogleTranslate() {
+export default function GoogleTranslate({ id = "google_translate_element", className = "" }) {
   useEffect(() => {
     window.googleTranslateElementInit = () => {
       if (!window.google?.translate?.TranslateElement) return;
-      const el = document.getElementById("google_translate_element");
-      if (el && !el.childElementCount) {
-        new window.google.translate.TranslateElement(
-          { pageLanguage: "en", autoDisplay: false },
-          "google_translate_element"
-        );
-      }
+      document.querySelectorAll(".gt-el").forEach((el) => {
+        if (!el.childElementCount) {
+          // Default combo layout = the "Select Language" dropdown with all languages.
+          new window.google.translate.TranslateElement({ pageLanguage: "en", autoDisplay: false }, el.id);
+        }
+      });
     };
 
     if (window.google?.translate?.TranslateElement) {
@@ -28,5 +28,5 @@ export default function GoogleTranslate() {
     }
   }, []);
 
-  return <div id="google_translate_element" aria-hidden="true" className="gt-hidden" />;
+  return <div id={id} className={`gt-el ${className}`} />;
 }

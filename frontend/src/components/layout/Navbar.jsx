@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { site, navLinks } from "../../data/site.js";
 import Icon from "../ui/Icon.jsx";
-import LanguageSelect from "../LanguageSelect.jsx";
+import GoogleTranslate from "../GoogleTranslate.jsx";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -33,7 +33,10 @@ export default function Navbar() {
             <span className="flex items-center gap-1.5 text-slate-300">
               <Icon name="clock" className="h-3.5 w-3.5" /> {site.hours}
             </span>
-            <LanguageSelect dark />
+            <div className="flex items-center gap-1.5 text-white">
+              <Icon name="globe" className="h-4 w-4" />
+              <GoogleTranslate id="gt_desktop" />
+            </div>
             <div className="flex items-center gap-3">
               <a href={site.social.linkedin} aria-label="LinkedIn" className="hover:text-brand-red">
                 <Icon name="linkedin" className="h-4 w-4" />
@@ -118,8 +121,9 @@ export default function Navbar() {
                   </NavLink>
                 </li>
               ))}
-              <li className="mt-3 px-3">
-                <LanguageSelect />
+              <li className="mt-3 flex items-center gap-2 px-3">
+                <Icon name="globe" className="h-4 w-4 text-brand-navy" />
+                <GoogleTranslate id="gt_mobile" />
               </li>
               <li className="mt-2">
                 <Link to="/contact" className="btn-primary w-full">
