@@ -7,7 +7,6 @@ import Loader from "../components/ui/Loader.jsx";
 const CARDS = [
   { key: "products", label: "Products", icon: "layers", to: "/admin/products", color: "bg-brand-navy" },
   { key: "categories", label: "Categories", icon: "test", to: "/admin/testing-categories", color: "bg-brand-red" },
-  { key: "blogs", label: "Blog Posts", icon: "quote", to: "/admin/blogs", color: "bg-emerald-600" },
   { key: "services", label: "Services", icon: "wrench", to: "/admin/services", color: "bg-amber-500" },
   { key: "inquiries", label: "Inquiries", icon: "briefcase", to: "/admin/inquiries", color: "bg-indigo-600" },
   { key: "contacts", label: "Messages", icon: "mail", to: "/admin/contacts", color: "bg-sky-600" },

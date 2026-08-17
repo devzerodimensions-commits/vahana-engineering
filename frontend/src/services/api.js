@@ -49,9 +49,6 @@ export const getCategories = () =>
   withFallback(() => api.get("/testing-categories"), localCategories);
 
 export const getServices = () => withFallback(() => api.get("/services"), fb.services);
-export const getBlogs = () => withFallback(() => api.get("/blogs"), fb.blogs);
-export const getBlog = (slug) =>
-  withFallback(() => api.get(`/blogs/${slug}`), fb.blogs.find((b) => b.slug === slug) || null);
 export const getTestimonials = () => withFallback(() => api.get("/testimonials"), fb.testimonials);
 export const getClients = () => withFallback(() => api.get("/clients"), fb.clients);
 export const getCertifications = () =>
