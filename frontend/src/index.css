@@ -2,37 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ---- Google Translate widget cleanup & styling ---- */
+/* ---- Google Translate engine: keep hidden, hide its banner ---- */
+.gt-hidden {
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
 .goog-te-banner-frame.skiptranslate,
-.goog-te-gadget-icon,
 iframe.skiptranslate {
   display: none !important;
 }
 body {
   top: 0 !important;
-}
-/* hide the "Powered by Google Translate" text, keep only the dropdown */
-.goog-te-gadget {
-  font-size: 0 !important;
-  line-height: 1 !important;
-  color: transparent !important;
-}
-.goog-te-gadget span,
-.goog-te-gadget a {
-  display: none !important;
-}
-.goog-te-gadget .goog-te-combo {
-  margin: 0 !important;
-  padding: 4px 8px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #16256b;
-  background: #ffffff;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  max-width: 160px;
-  cursor: pointer;
-  outline: none;
 }
 
 @layer base {

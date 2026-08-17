@@ -1,32 +1,26 @@
 import { useEffect } from "react";
 
-// Adds a Google Website Translator "Select Language" dropdown that translates
-// the whole site into any language. Renders a container; the script populates it.
-let scriptRequested = false;
+// Loads the Google Translate engine into a HIDDEN container. The visible UI is
+// the custom LanguageSelect dropdown, which drives this engine. Render once.
+let requested = false;
 
-export default function GoogleTranslate({ id = "google_translate_element", className = "" }) {
+export default function GoogleTranslate() {
   useEffect(() => {
-    // Initialise every translate container that isn't populated yet.
     window.googleTranslateElementInit = () => {
       if (!window.google?.translate?.TranslateElement) return;
-      document.querySelectorAll(".gt-el").forEach((el) => {
-        if (el.childElementCount === 0) {
-          new window.google.translate.TranslateElement(
-            {
-              pageLanguage: "en",
-              autoDisplay: false,
-              layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
-            },
-            el.id
-          );
-        }
-      });
+      const el = document.getElementById("google_translate_element");
+      if (el && !el.childElementCount) {
+        new window.google.translate.TranslateElement(
+          { pageLanguage: "en", autoDisplay: false },
+          "google_translate_element"
+        );
+      }
     };
 
     if (window.google?.translate?.TranslateElement) {
       window.googleTranslateElementInit();
-    } else if (!scriptRequested && !document.getElementById("google-translate-script")) {
-      scriptRequested = true;
+    } else if (!requested && !document.getElementById("google-translate-script")) {
+      requested = true;
       const s = document.createElement("script");
       s.id = "google-translate-script";
       s.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
@@ -34,5 +28,5 @@ export default function GoogleTranslate({ id = "google_translate_element", class
     }
   }, []);
 
-  return <div id={id} className={`gt-el ${className}`} />;
+  return <div id="google_translate_element" aria-hidden="true" className="gt-hidden" />;
 }

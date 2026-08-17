@@ -3,12 +3,14 @@ import Navbar from "./Navbar.jsx";
 import Footer from "./Footer.jsx";
 import ScrollToTop from "../ScrollToTop.jsx";
 import WhatsAppButton from "../WhatsAppButton.jsx";
+import GoogleTranslate from "../GoogleTranslate.jsx";
 
 // Public site shell: navbar + routed page + footer.
 export default function Layout() {
   return (
     <div className="flex min-h-screen flex-col">
       <ScrollToTop />
+      <GoogleTranslate />
       <Navbar />
       <main className="flex-1">
         <Outlet />
