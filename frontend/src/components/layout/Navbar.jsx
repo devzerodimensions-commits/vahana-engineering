@@ -54,9 +54,9 @@ export default function Navbar() {
         <div className="container-x flex h-24 items-center justify-between lg:h-28">
           <Link to="/" className="flex items-center gap-3">
             <img
-              src={site.logoHeader}
+              src={site.logo}
               alt={site.name}
-              className="h-16 w-auto sm:h-20 lg:h-24"
+              className="h-16 w-auto sm:h-[76px] lg:h-[88px]"
             />
           </Link>
 
