@@ -103,6 +103,11 @@ export default function HeroSlider() {
                       className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
+                  {/* Machine name under each cutout. Fixed min-height keeps the
+                      captions on a common baseline despite differing name lengths. */}
+                  <h3 className="mt-3 flex min-h-[3.25rem] items-start justify-center text-center text-sm font-semibold leading-snug text-brand-navy transition-colors group-hover:text-brand-red sm:min-h-[3.5rem] sm:text-base">
+                    {it.name}
+                  </h3>
                 </Link>
               </div>
             ))}
