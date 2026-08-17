@@ -1,6 +1,6 @@
-// Normalises the machine cutouts to a UNIFORM canvas so they all display at the
-// same height & size (no crop) in the hero carousel. Each machine is scaled to a
-// fixed height and centred on an identical transparent canvas.
+// Normalises the machine cutouts to a UNIFORM canvas (same size for all, no crop)
+// AND cleans the alpha channel to remove any residual semi-transparent studio
+// background left by the AI cutout — so the machine background is properly transparent.
 import sharp from "sharp";
 import fs from "node:fs";
 import path from "node:path";
@@ -9,8 +9,12 @@ const CUT = path.resolve("_cutouts");
 const OUT = path.resolve("../frontend/public/machines");
 fs.mkdirSync(OUT, { recursive: true });
 
-// Uniform canvas: every output image is exactly CW x CH, machine height = MH.
-const CW = 660, CH = 600, MH = 500;
+const CW = 660, CH = 600, MH = 500; // uniform canvas + machine height
+
+// Alpha cleanup: only very-faint pixels below LOW -> fully transparent (removes
+// leftover background); anything above HIGH -> fully OPAQUE so the machine's own
+// light-coloured surfaces stay solid (not see-through). Smooth edge in between.
+const LOW = 45, HIGH = 115, SPAN = HIGH - LOW;
 
 const MACHINES = [
   "universal-testing-machine-10-ton",
@@ -33,23 +37,35 @@ for (const slug of MACHINES) {
     console.log("missing cutout:", slug);
     continue;
   }
-  // Scale machine to a uniform height (fit inside so very wide ones don't overflow).
-  const m = await sharp(src)
+
+  // Resize to uniform height, get raw RGBA.
+  const { data, info } = await sharp(src)
     .trim({ threshold: 1 })
     .resize({ height: MH, width: CW - 20, fit: "inside", withoutEnlargement: false })
+    .ensureAlpha()
+    .raw()
     .toBuffer({ resolveWithObject: true });
 
-  const w = m.info.width, h = m.info.height;
-  const left = Math.round((CW - w) / 2);
-  const top = Math.round((CH - h) / 2);
+  // Clean the alpha channel (every 4th byte).
+  for (let i = 3; i < data.length; i += 4) {
+    const a = data[i];
+    data[i] = a <= LOW ? 0 : a >= HIGH ? 255 : Math.round(((a - LOW) * 255) / SPAN);
+  }
+
+  const machine = await sharp(data, { raw: { width: info.width, height: info.height, channels: 4 } })
+    .png()
+    .toBuffer();
+
+  const left = Math.round((CW - info.width) / 2);
+  const top = Math.round((CH - info.height) / 2);
 
   const out = path.join(OUT, `${slug}.webp`);
   await sharp({
     create: { width: CW, height: CH, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
   })
-    .composite([{ input: m.data, left, top }])
-    .webp({ quality: 86 })
+    .composite([{ input: machine, left, top }])
+    .webp({ quality: 90, alphaQuality: 100 })
     .toFile(out);
-  console.log(`machines/${slug}.webp  ${CW}x${CH} (machine ${w}x${h})`);
+  console.log(`machines/${slug}.webp  cleaned (machine ${info.width}x${info.height})`);
 }
 console.log("Done.");
