@@ -98,7 +98,7 @@ export default function HeroSlider() {
                       src={it.image}
                       alt={it.name}
                       loading={i < 4 ? "eager" : "lazy"}
-                      className="h-full w-full object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.45)] transition-transform duration-500 group-hover:scale-105"
+                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                 </Link>
