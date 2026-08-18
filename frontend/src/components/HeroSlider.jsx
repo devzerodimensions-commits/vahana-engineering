@@ -73,12 +73,10 @@ export default function HeroSlider() {
   };
 
   return (
-    // Full-screen hero. The sticky header sits above this section and takes up
-    // layout space, so we subtract its height (nav h-24, lg:h-28, plus the h-10
-    // utility bar shown from md up) — that makes the hero fill exactly one
-    // screen with nothing cut off below the fold. dvh keeps it correct on mobile
-    // where the browser address bar shrinks the viewport.
-    <section className="relative flex min-h-[calc(100dvh-6rem)] items-center overflow-hidden border-b-4 border-brand-red bg-gradient-to-b from-slate-100 to-slate-200 md:min-h-[calc(100dvh-8.5rem)] lg:min-h-[calc(100dvh-9.5rem)]">
+    // Hero is 80% of the screen height on every device, so a little of the next
+    // section shows below the fold. dvh (not vh) keeps this correct on mobile,
+    // where the browser address bar shrinks the visible viewport.
+    <section className="relative flex min-h-[80dvh] items-center overflow-hidden border-b-4 border-brand-red bg-gradient-to-b from-slate-100 to-slate-200">
       <div
         className="container-x relative w-full py-10 sm:py-12"
         onMouseEnter={() => setPaused(true)}
