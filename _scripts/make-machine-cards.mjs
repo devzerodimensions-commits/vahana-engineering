@@ -11,6 +11,51 @@ fs.mkdirSync(OUT, { recursive: true });
 
 const CW = 660, CH = 600, MH = 500; // uniform canvas + machine height
 
+// ---------------------------------------------------------------------------
+// Alpha hole repair.
+// @imgly sometimes mistakes a machine's own cream/white panels for the light
+// studio background and erases them, leaving the machine looking hollow (the
+// Contour Cutter came out 34% see-through). The RGB underneath survives — only
+// the alpha is zeroed — so we can repair it by flood-filling the background in
+// from the image border: any transparent area NOT reachable from the border is
+// an interior hole and gets made opaque again.
+//
+// ONLY safe for solid-cabinet machines. Open-frame machines (Two Roll Mill,
+// Emission Flow, Geomembrane UTM, Carbon Black) have real enclosed gaps you are
+// meant to see through, and filling those would wrongly seal them shut.
+const FILL_HOLES = new Set([
+  "contour-cutter",
+  "vicat-softening-point-test-apparatus",
+  "melt-flow-index-mfi-test-apparatus",
+]);
+
+async function repairAlpha(src) {
+  const { data, info } = await sharp(src).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const { width: W, height: H } = info;
+  const THR = 32;
+  const seen = new Uint8Array(W * H);
+  const stack = [];
+  const push = (x, y) => {
+    const i = y * W + x;
+    if (!seen[i] && data[i * 4 + 3] < THR) { seen[i] = 1; stack.push(i); }
+  };
+  for (let x = 0; x < W; x++) { push(x, 0); push(x, H - 1); }
+  for (let y = 0; y < H; y++) { push(0, y); push(W - 1, y); }
+  while (stack.length) {
+    const i = stack.pop(), x = i % W, y = (i / W) | 0;
+    if (x > 0) push(x - 1, y);
+    if (x < W - 1) push(x + 1, y);
+    if (y > 0) push(x, y - 1);
+    if (y < H - 1) push(x, y + 1);
+  }
+  let filled = 0;
+  for (let i = 0; i < W * H; i++) {
+    if (data[i * 4 + 3] < THR && !seen[i]) { data[i * 4 + 3] = 255; filled++; }
+  }
+  const buf = await sharp(data, { raw: { width: W, height: H, channels: 4 } }).png().toBuffer();
+  return { buf, filled };
+}
+
 // Alpha cleanup: only very-faint pixels below LOW -> fully transparent (removes
 // leftover background); anything above HIGH -> fully OPAQUE so the machine's own
 // light-coloured surfaces stay solid (not see-through). Smooth edge in between.
@@ -39,8 +84,16 @@ for (const slug of MACHINES) {
     continue;
   }
 
+  // Repair erased panels first (solid-cabinet machines only).
+  let input = src;
+  if (FILL_HOLES.has(slug)) {
+    const { buf, filled } = await repairAlpha(src);
+    input = buf;
+    console.log(`  hole-repair: ${slug} — refilled ${filled} px`);
+  }
+
   // Resize to uniform height, get raw RGBA.
-  const { data, info } = await sharp(src)
+  const { data, info } = await sharp(input)
     .trim({ threshold: 1 })
     .resize({ height: MH, width: CW - 20, fit: "inside", withoutEnlargement: false })
     .ensureAlpha()
