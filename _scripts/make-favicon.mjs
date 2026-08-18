@@ -40,7 +40,10 @@ const w = maxX - minX + 1, h = maxY - minY + 1;
 console.log(`VE mark bbox: x=${minX} y=${minY} ${w}x${h}`);
 
 // Square it up with a little breathing room so the mark isn't jammed to the edge.
-const pad = Math.round(Math.max(w, h) * 0.10);
+// The VE mark is wide and short (~1.8:1), so squaring it already leaves big
+// empty bands top and bottom. Keep the padding minimal — at 16px every pixel of
+// mark counts, and generous padding is what made it look like a smudge.
+const pad = Math.round(Math.max(w, h) * 0.02);
 const side = Math.max(w, h) + pad * 2;
 
 // The logo is fully opaque on white, so the crop brings a white box with it.
@@ -114,4 +117,37 @@ await sharp({ create: { width: 80 * previewCells.length, height: 80, channels: 3
 
 fs.writeFileSync(path.join(OUT, "favicon.png"), await sharp(master).resize(512, 512).png().toBuffer());
 console.log("  favicon.png (512 master)");
+
+// favicon.ico — browsers request /favicon.ico by default regardless of the
+// <link> tags, and on this host an absent file falls through to the SPA 404
+// handler and returns HTML, so the tab ends up with no icon at all. sharp can't
+// write ICO, but an .ico is just a small header plus embedded images, and PNG
+// payloads are valid, so build the container by hand.
+const icoSizes = [16, 32, 48];
+const pngs = [];
+for (const s of icoSizes) {
+  pngs.push(await sharp(master).resize(s, s, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer());
+}
+const header = Buffer.alloc(6);
+header.writeUInt16LE(0, 0);              // reserved
+header.writeUInt16LE(1, 2);              // type 1 = icon
+header.writeUInt16LE(pngs.length, 4);    // image count
+
+const entries = [];
+let offset = 6 + 16 * pngs.length;
+pngs.forEach((png, i) => {
+  const e = Buffer.alloc(16);
+  e.writeUInt8(icoSizes[i] === 256 ? 0 : icoSizes[i], 0); // width  (0 => 256)
+  e.writeUInt8(icoSizes[i] === 256 ? 0 : icoSizes[i], 1); // height
+  e.writeUInt8(0, 2);                    // palette size (0 = no palette)
+  e.writeUInt8(0, 3);                    // reserved
+  e.writeUInt16LE(1, 4);                 // colour planes
+  e.writeUInt16LE(32, 6);                // bits per pixel
+  e.writeUInt32LE(png.length, 8);        // size of image data
+  e.writeUInt32LE(offset, 12);           // offset of image data
+  offset += png.length;
+  entries.push(e);
+});
+fs.writeFileSync(path.join(OUT, "favicon.ico"), Buffer.concat([header, ...entries, ...pngs]));
+console.log(`  favicon.ico (${icoSizes.join("/")} px)`);
 console.log("preview -> _scripts/_favicon-preview.png");
