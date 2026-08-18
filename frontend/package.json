@@ -6,7 +6,7 @@
   "description": "Corporate website frontend for Vihana Engineering (React + Vite + Tailwind).",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node copy-404.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
