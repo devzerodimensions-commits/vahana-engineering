@@ -12,7 +12,7 @@ connectDB();
 
 const server = app.listen(PORT, () => {
   console.log(
-    `\n Vihana Engineering API running in ${process.env.NODE_ENV || "development"} mode on http://localhost:${PORT}`
+    `\n Vihaana Engineering API running in ${process.env.NODE_ENV || "development"} mode on http://localhost:${PORT}`
   );
 });
 

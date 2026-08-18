@@ -1,4 +1,4 @@
-# Deploying the Vihana Engineering website
+# Deploying the Vihaana Engineering website
 
 You want a **public link you can send to people**. The whole public site (all pages,
 27 products, images, logo, contact details) works as a static site — no server or

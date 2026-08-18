@@ -23,7 +23,7 @@ app.use("/uploads", express.static("uploads"));
 
 // Health check
 app.get("/api/health", (req, res) =>
-  res.json({ success: true, service: "Vihana Engineering API", status: "ok", time: new Date().toISOString() })
+  res.json({ success: true, service: "Vihaana Engineering API", status: "ok", time: new Date().toISOString() })
 );
 
 // API

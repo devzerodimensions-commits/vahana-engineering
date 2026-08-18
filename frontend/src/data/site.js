@@ -1,8 +1,8 @@
 // Central place for company details shown across the site.
 // Contact details taken from the official Vihaana Engineering business card.
 export const site = {
-  name: "Vihana Engineering",
-  shortName: "Vihana",
+  name: "Vihaana Engineering",
+  shortName: "Vihaana",
   tagline: "Your Testing Partner",
   businessLine: "Manufacturer & Exporter of Plastic Testing Machinery",
   description:

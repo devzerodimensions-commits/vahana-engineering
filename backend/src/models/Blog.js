@@ -5,7 +5,7 @@ const blogSchema = new mongoose.Schema(
   {
     title: { type: String, required: [true, "Blog title is required"], trim: true },
     slug: { type: String, unique: true, index: true },
-    author: { type: String, default: "Vihana Engineering" },
+    author: { type: String, default: "Vihaana Engineering" },
     image: { type: String, default: "" },
     excerpt: { type: String, default: "" },
     content: { type: String, default: "" },

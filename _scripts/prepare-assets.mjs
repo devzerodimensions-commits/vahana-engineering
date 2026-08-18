@@ -437,7 +437,7 @@ for (const [base, meta] of Object.entries(PRODUCTS)) {
     summary: meta.summary,
     model: detail?.model || "",
     description:
-      `${meta.summary} Manufactured by Vihana Engineering, the ${meta.name} is built for ` +
+      `${meta.summary} Manufactured by Vihaana Engineering, the ${meta.name} is built for ` +
       `laboratories, QC departments and R&D centres that demand accurate, repeatable results. ` +
       `Robust construction, digital control and compliance with recognised test standards make it ` +
       `a dependable choice for polymer, pipe, film and geosynthetic testing.`,

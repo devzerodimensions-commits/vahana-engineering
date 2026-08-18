@@ -94,7 +94,7 @@ export default function Home() {
       <section className="bg-brand-navy py-16 sm:py-20">
         <div className="container-x grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <SectionHeading light eyebrow="Why Vihana" title="Engineered for Accuracy & Reliability" />
+            <SectionHeading light eyebrow="Why Vihaana" title="Engineered for Accuracy & Reliability" />
             <div className="grid gap-5 sm:grid-cols-2">
               {WHY.map((w) => (
                 <div key={w.title} className="flex gap-3">

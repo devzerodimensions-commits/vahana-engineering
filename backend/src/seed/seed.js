@@ -66,9 +66,9 @@ const CLIENTS = [
 ];
 
 const TESTIMONIALS = [
-  { name: "R. Sharma", role: "QA Manager", company: "Pipe Manufacturing Co.", rating: 5, message: "The UTM and hydrostatic rigs from Vihana have been rock-solid. Accurate results and dependable after-sales support." },
+  { name: "R. Sharma", role: "QA Manager", company: "Pipe Manufacturing Co.", rating: 5, message: "The UTM and hydrostatic rigs from Vihaana have been rock-solid. Accurate results and dependable after-sales support." },
   { name: "A. Verma", role: "Lab Head", company: "Geosynthetics Ltd.", rating: 5, message: "Their geomembrane tensile system made our NABL audit smooth. Great build quality and calibration support." },
-  { name: "S. Nair", role: "R&D Engineer", company: "Polymer Research Institute", rating: 5, message: "Melt flow index and OIT apparatus perform exactly to standard. Vihana truly is our testing partner." },
+  { name: "S. Nair", role: "R&D Engineer", company: "Polymer Research Institute", rating: 5, message: "Melt flow index and OIT apparatus perform exactly to standard. Vihaana truly is our testing partner." },
 ];
 
 const BLOGS = [

@@ -1,6 +1,6 @@
-# Vihana Engineering — Corporate Website (MERN)
+# Vihaana Engineering — Corporate Website (MERN)
 
-A professional, fully responsive corporate website for **Vihana Engineering** —
+A professional, fully responsive corporate website for **Vihaana Engineering** —
 *Your Testing Partner* — a manufacturer of material-testing instruments for
 plastics, polymers, pipes, films and geosynthetics.
 
@@ -30,7 +30,7 @@ inquiries and contact messages.
 job station/
 ├── frontend/                 # React + Vite + Tailwind
 │   ├── public/
-│   │   ├── logo.png          # Vihana Engineering logo
+│   │   ├── logo.png          # Vihaana Engineering logo
 │   │   └── products/         # 27 product photos (auto-slugged)
 │   ├── src/
 │   │   ├── components/       # Navbar, Footer, ProductCard, UI, ErrorBoundary…

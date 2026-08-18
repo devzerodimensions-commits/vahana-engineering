@@ -1,10 +1,10 @@
-# Vihana Engineering Website — Handoff / Continuation Notes
+# Vihaana Engineering Website — Handoff / Continuation Notes
 
 > Read this first when continuing the project in a new session. It captures the full
 > current state so work can resume without re-discovery.
 
 ## What this is
-Corporate website for **Vihana / Vihaana Engineering** — manufacturer & exporter of
+Corporate website for **Vihaana / Vihaana Engineering** — manufacturer & exporter of
 **plastic / polymer material-testing machinery** (UTM, MFI, impact, hydrostatic, ovens,
 Vicat, OIT, etc.). 27 products across 8 testing domains.
 
@@ -88,5 +88,5 @@ standalone via bundled `products.json` + `fallback.js`.
   If the client provides specs for the rest, add them to `SPECS` in `prepare-assets.mjs`,
   re-run it, rebuild, push.
 - Real **social-media links** to replace placeholders in `site.js`.
-- Everything else per the change log in `Vihana-Engineering-Website-Development-Log.docx`
+- Everything else per the change log in `Vihaana-Engineering-Website-Development-Log.docx`
   (on the Desktop).

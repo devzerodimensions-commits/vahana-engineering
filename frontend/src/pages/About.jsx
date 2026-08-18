@@ -16,7 +16,7 @@ export default function About() {
   return (
     <>
       <PageHeader
-        title="About Vihana Engineering"
+        title="About Vihaana Engineering"
         crumb="About"
         subtitle="Your trusted manufacturing partner for material-testing instruments."
       />

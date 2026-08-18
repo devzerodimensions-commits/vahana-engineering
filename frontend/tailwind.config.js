@@ -9,7 +9,7 @@ export default {
     },
     extend: {
       colors: {
-        // Brand palette sampled from the Vihana Engineering logo
+        // Brand palette sampled from the Vihaana Engineering logo
         brand: {
           navy: "#16256B",
           "navy-dark": "#0F1A4D",

@@ -47,7 +47,7 @@ export async function downloadProductPdf(product) {
   doc.setTextColor(255, 255, 255);
   doc.setFont("helvetica", "bold");
   doc.setFontSize(22);
-  doc.text("VIHANA ENGINEERING", M, 42);
+  doc.text("VIHAANA ENGINEERING", M, 42);
   doc.setFont("helvetica", "normal");
   doc.setFontSize(10);
   doc.setTextColor(...RED);

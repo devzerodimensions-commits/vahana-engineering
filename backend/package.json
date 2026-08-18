@@ -1,7 +1,7 @@
 {
   "name": "vihana-engineering-backend",
   "version": "1.0.0",
-  "description": "REST API for the Vihana Engineering corporate website (Express + Mongoose).",
+  "description": "REST API for the Vihaana Engineering corporate website (Express + Mongoose).",
   "type": "module",
   "main": "server.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "seed:destroy": "node src/seed/seed.js --destroy"
   },
   "keywords": ["vihana", "engineering", "testing", "mern", "express", "mongoose"],
-  "author": "Vihana Engineering",
+  "author": "Vihaana Engineering",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",

@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Corporate website frontend for Vihana Engineering (React + Vite + Tailwind).",
+  "description": "Corporate website frontend for Vihaana Engineering (React + Vite + Tailwind).",
   "scripts": {
     "dev": "vite",
     "build": "vite build && node copy-404.mjs",
