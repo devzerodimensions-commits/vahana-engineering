@@ -31,17 +31,26 @@ const FILL_HOLES = new Set([
 // Some photos defeat hole-filling: on the Contour Cutter the AI kept only the
 // blue frame wireframe and erased BOTH the front and the right-side panels, and
 // the side panel's outline leaks to the border, so it never counts as an
-// interior hole. For these we ignore the AI mask and derive the silhouette from
-// the source photo instead: flood the smooth studio backdrop inward from the
-// border, growing only while the step to the next pixel is tiny (TOL), so it
-// follows the gradient but stops dead at the machine's edges. Union with the
-// AI mask so confidently-detected dark parts are never dropped.
+// interior hole. For these we ignore the AI mask and rebuild the silhouette from
+// the source photo.
 //
-// Tuned per image: TOL=10 is right for the Contour Cutter. Do NOT apply this
-// blindly — on the Vicat and MFI the wand leaks through their cream control
-// bodies and dissolves them; those use FILL_HOLES above instead.
+// The discriminator is colour neutrality, not brightness or local contrast:
+// the studio backdrop is a perfectly NEUTRAL grey (R=G=B), while every painted
+// machine panel is slightly WARM (R exceeds B by ~6). e.g. at mid-height the
+// right-side face reads 205,204,199 against a 217,217,217 backdrop — nearly the
+// same lightness, but one is neutral and the other is not.
+//
+// So we flood inward from the border but only through neutral pixels. An
+// earlier version compared each pixel to its neighbour instead; that leaked,
+// because a soft panel edge is a long ramp of individually-tiny steps, and once
+// the fill crossed it the whole uniform panel was consumed. A global property
+// cannot be walked across that way.
+//
+// SPREAD_MAX is sensitive: 3-5 all work, 6 starts eating the side panels
+// (they become "neutral enough"), so 3 keeps a safety margin. Do NOT apply this
+// blindly — the Vicat and MFI need FILL_HOLES above instead.
 const WAND_REPAIR = new Set(["contour-cutter"]);
-const WAND_TOL = 10;
+const SPREAD_MAX = 3;
 
 async function wandRepair(slug, cutoutPath) {
   const srcJpg = path.resolve("../frontend/public/products", `${slug}.jpg`);
@@ -49,9 +58,16 @@ async function wandRepair(slug, cutoutPath) {
   const { width: W, height: H } = info;
   const { data: cut } = await sharp(cutoutPath).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
 
+  // Neutral-grey backdrop pixels are the only ones the flood may pass through.
+  const neutral = new Uint8Array(W * H);
+  for (let i = 0; i < W * H; i++) {
+    const r = rgb[i * 3], g = rgb[i * 3 + 1], b = rgb[i * 3 + 2];
+    neutral[i] = (Math.max(r, g, b) - Math.min(r, g, b)) <= SPREAD_MAX ? 1 : 0;
+  }
+
   const bg = new Uint8Array(W * H);
   const stack = [];
-  const seed = (x, y) => { const i = y * W + x; if (!bg[i]) { bg[i] = 1; stack.push(i); } };
+  const seed = (x, y) => { const i = y * W + x; if (!bg[i] && neutral[i]) { bg[i] = 1; stack.push(i); } };
   for (let x = 0; x < W; x++) { seed(x, 0); seed(x, H - 1); }
   for (let y = 0; y < H; y++) { seed(0, y); seed(W - 1, y); }
   while (stack.length) {
@@ -59,24 +75,39 @@ async function wandRepair(slug, cutoutPath) {
     const step = (xx, yy) => {
       if (xx < 0 || yy < 0 || xx >= W || yy >= H) return;
       const j = yy * W + xx;
-      if (bg[j]) return;
-      const d = Math.abs(rgb[i * 3] - rgb[j * 3])
-        + Math.abs(rgb[i * 3 + 1] - rgb[j * 3 + 1])
-        + Math.abs(rgb[i * 3 + 2] - rgb[j * 3 + 2]);
-      if (d <= WAND_TOL) { bg[j] = 1; stack.push(j); }
+      if (!bg[j] && neutral[j]) { bg[j] = 1; stack.push(j); }
     };
     step(x - 1, y); step(x + 1, y); step(x, y - 1); step(x, y + 1);
   }
 
+  // Machine = anything the backdrop flood didn't reach, plus whatever the AI was
+  // confident about (keeps dark parts the neutrality test would misjudge).
+  const alpha = new Uint8Array(W * H);
+  for (let i = 0; i < W * H; i++) alpha[i] = (!bg[i] || cut[i * 4 + 3] >= 128) ? 1 : 0;
+
+  // Close any leftover enclosed gaps.
+  const seen = new Uint8Array(W * H);
+  const st2 = [];
+  const push = (x, y) => { const i = y * W + x; if (!seen[i] && alpha[i] === 0) { seen[i] = 1; st2.push(i); } };
+  for (let x = 0; x < W; x++) { push(x, 0); push(x, H - 1); }
+  for (let y = 0; y < H; y++) { push(0, y); push(W - 1, y); }
+  while (st2.length) {
+    const i = st2.pop(), x = i % W, y = (i / W) | 0;
+    if (x > 0) push(x - 1, y);
+    if (x < W - 1) push(x + 1, y);
+    if (y > 0) push(x, y - 1);
+    if (y < H - 1) push(x, y + 1);
+  }
+  for (let i = 0; i < W * H; i++) if (alpha[i] === 0 && !seen[i]) alpha[i] = 1;
+
   const out = Buffer.alloc(W * H * 4);
   let kept = 0;
   for (let i = 0; i < W * H; i++) {
-    const keep = !bg[i] || cut[i * 4 + 3] >= 128;
     out[i * 4] = rgb[i * 3];
     out[i * 4 + 1] = rgb[i * 3 + 1];
     out[i * 4 + 2] = rgb[i * 3 + 2];
-    out[i * 4 + 3] = keep ? 255 : 0;
-    if (keep) kept++;
+    out[i * 4 + 3] = alpha[i] ? 255 : 0;
+    if (alpha[i]) kept++;
   }
   const buf = await sharp(out, { raw: { width: W, height: H, channels: 4 } }).png().toBuffer();
   return { buf, kept };
