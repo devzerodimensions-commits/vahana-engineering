@@ -73,9 +73,14 @@ export default function HeroSlider() {
   };
 
   return (
-    <section className="relative overflow-hidden border-b-4 border-brand-red bg-gradient-to-b from-slate-100 to-slate-200">
+    // Full-screen hero. The sticky header sits above this section and takes up
+    // layout space, so we subtract its height (nav h-24, lg:h-28, plus the h-10
+    // utility bar shown from md up) — that makes the hero fill exactly one
+    // screen with nothing cut off below the fold. dvh keeps it correct on mobile
+    // where the browser address bar shrinks the viewport.
+    <section className="relative flex min-h-[calc(100dvh-6rem)] items-center overflow-hidden border-b-4 border-brand-red bg-gradient-to-b from-slate-100 to-slate-200 md:min-h-[calc(100dvh-8.5rem)] lg:min-h-[calc(100dvh-9.5rem)]">
       <div
-        className="container-x relative py-16 sm:py-24"
+        className="container-x relative w-full py-10 sm:py-12"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
         onTouchStart={onTouchStart}
@@ -94,7 +99,10 @@ export default function HeroSlider() {
                   aria-label={it.name}
                   className="group block"
                 >
-                  {/* uniform box — all machines are normalised to the same size (no crop) */}
+                  {/* Uniform box — all machines are normalised to the same size (no
+                      crop). Keep the box on the machines' own ~11:10 aspect: at
+                      4-per-view the slide width caps how large a machine can render,
+                      so a taller box would only pad empty space inside each slide. */}
                   <div className="flex aspect-[11/10] items-center justify-center">
                     <img
                       src={it.image}
