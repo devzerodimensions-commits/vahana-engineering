@@ -42,8 +42,36 @@ console.log(`VE mark bbox: x=${minX} y=${minY} ${w}x${h}`);
 // Square it up with a little breathing room so the mark isn't jammed to the edge.
 const pad = Math.round(Math.max(w, h) * 0.10);
 const side = Math.max(w, h) + pad * 2;
-const mark = await sharp(SRC)
+
+// The logo is fully opaque on white, so the crop brings a white box with it.
+// Derive alpha from how far each pixel is from white, then UN-MATTE the colour:
+// an edge pixel is the mark blended over white, so recovering the true colour
+// with C = (P - 255(1-a)) / a stops a pale fringe forming round the strokes.
+// Scaling by 255/215 lets the brand navy (min channel 22) reach full opacity
+// instead of settling at ~91%, which would wash the mark out.
+const cropped = await sharp(SRC)
   .extract({ left: minX, top: minY, width: w, height: h })
+  .ensureAlpha()
+  .raw()
+  .toBuffer({ resolveWithObject: true });
+
+const px = cropped.data;
+for (let i = 0; i < px.length; i += 4) {
+  const r = px[i], g = px[i + 1], b = px[i + 2];
+  const whiteness = Math.min(r, g, b);
+  const a = Math.max(0, Math.min(255, Math.round(((255 - whiteness) * 255) / 215)));
+  if (a === 0) {
+    px[i] = px[i + 1] = px[i + 2] = 0;
+  } else if (a < 255) {
+    const af = a / 255;
+    px[i] = Math.max(0, Math.min(255, Math.round((r - 255 * (1 - af)) / af)));
+    px[i + 1] = Math.max(0, Math.min(255, Math.round((g - 255 * (1 - af)) / af)));
+    px[i + 2] = Math.max(0, Math.min(255, Math.round((b - 255 * (1 - af)) / af)));
+  }
+  px[i + 3] = a;
+}
+const mark = await sharp(px, { raw: { width: cropped.info.width, height: cropped.info.height, channels: 4 } })
+  .png()
   .toBuffer();
 
 // Master: transparent background, so it sits well on light or dark browser UI.
