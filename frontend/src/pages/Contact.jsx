@@ -11,6 +11,11 @@ const CONTACTS = [
   { icon: "clock", title: "Working Hours", lines: [site.hours] },
 ];
 
+// Google Maps embed needs no API key in this form. `output=embed` returns the
+// iframe-friendly map; the directions link opens the full app in a new tab.
+const MAP_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(site.mapQuery)}&z=15&output=embed`;
+const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.mapQuery)}`;
+
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
   const [status, setStatus] = useState({ state: "idle", msg: "" });
@@ -118,6 +123,38 @@ export default function Contact() {
                 </button>
               </form>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* Map — where the works is */}
+      <section className="border-t border-slate-200 bg-slate-50 py-16">
+        <div className="container-x">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2 className="text-2xl font-extrabold text-brand-navy">Find Us on the Map</h2>
+              <p className="mt-2 max-w-2xl text-slate-600">{site.addressLong}</p>
+            </div>
+            <a
+              href={MAP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary shrink-0 self-start sm:self-auto"
+            >
+              <Icon name="location" className="h-4 w-4" /> Get Directions
+            </a>
+          </div>
+
+          <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+            <iframe
+              title={`Map showing the location of ${site.name}, ${site.address}`}
+              src={MAP_EMBED}
+              className="block h-[320px] w-full sm:h-[420px] lg:h-[460px]"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>

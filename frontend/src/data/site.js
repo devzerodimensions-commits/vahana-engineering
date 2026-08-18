@@ -19,6 +19,11 @@ export const site = {
   address: "Vatva, Ahmedabad, Gujarat, India",
   addressLong:
     "28, Pushkar Mahadev Industrial Estate - 2, Nr. Ramol Vatva Railway Bridge, Phase - 1, G.I.D.C., Vatva, Ahmedabad - 382 445, Gujarat, India",
+  // Location the Google Map on the Contact page searches for. If the pin doesn't
+  // land exactly on the works, replace this with coordinates ("23.0012,72.6291")
+  // or the Google Maps Plus Code — both are accepted here and are exact.
+  mapQuery:
+    "Pushkar Mahadev Industrial Estate 2, Nr. Ramol Vatva Railway Bridge, Phase 1, GIDC Vatva, Ahmedabad, Gujarat 382445, India",
   hours: "Mon – Sat: 9:30 AM – 6:30 PM",
   social: {
     linkedin: "#",
