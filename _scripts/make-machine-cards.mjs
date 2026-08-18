@@ -24,10 +24,63 @@ const CW = 660, CH = 600, MH = 500; // uniform canvas + machine height
 // Emission Flow, Geomembrane UTM, Carbon Black) have real enclosed gaps you are
 // meant to see through, and filling those would wrongly seal them shut.
 const FILL_HOLES = new Set([
-  "contour-cutter",
   "vicat-softening-point-test-apparatus",
   "melt-flow-index-mfi-test-apparatus",
 ]);
+
+// Some photos defeat hole-filling: on the Contour Cutter the AI kept only the
+// blue frame wireframe and erased BOTH the front and the right-side panels, and
+// the side panel's outline leaks to the border, so it never counts as an
+// interior hole. For these we ignore the AI mask and derive the silhouette from
+// the source photo instead: flood the smooth studio backdrop inward from the
+// border, growing only while the step to the next pixel is tiny (TOL), so it
+// follows the gradient but stops dead at the machine's edges. Union with the
+// AI mask so confidently-detected dark parts are never dropped.
+//
+// Tuned per image: TOL=10 is right for the Contour Cutter. Do NOT apply this
+// blindly — on the Vicat and MFI the wand leaks through their cream control
+// bodies and dissolves them; those use FILL_HOLES above instead.
+const WAND_REPAIR = new Set(["contour-cutter"]);
+const WAND_TOL = 10;
+
+async function wandRepair(slug, cutoutPath) {
+  const srcJpg = path.resolve("../frontend/public/products", `${slug}.jpg`);
+  const { data: rgb, info } = await sharp(srcJpg).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+  const { width: W, height: H } = info;
+  const { data: cut } = await sharp(cutoutPath).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+
+  const bg = new Uint8Array(W * H);
+  const stack = [];
+  const seed = (x, y) => { const i = y * W + x; if (!bg[i]) { bg[i] = 1; stack.push(i); } };
+  for (let x = 0; x < W; x++) { seed(x, 0); seed(x, H - 1); }
+  for (let y = 0; y < H; y++) { seed(0, y); seed(W - 1, y); }
+  while (stack.length) {
+    const i = stack.pop(), x = i % W, y = (i / W) | 0;
+    const step = (xx, yy) => {
+      if (xx < 0 || yy < 0 || xx >= W || yy >= H) return;
+      const j = yy * W + xx;
+      if (bg[j]) return;
+      const d = Math.abs(rgb[i * 3] - rgb[j * 3])
+        + Math.abs(rgb[i * 3 + 1] - rgb[j * 3 + 1])
+        + Math.abs(rgb[i * 3 + 2] - rgb[j * 3 + 2]);
+      if (d <= WAND_TOL) { bg[j] = 1; stack.push(j); }
+    };
+    step(x - 1, y); step(x + 1, y); step(x, y - 1); step(x, y + 1);
+  }
+
+  const out = Buffer.alloc(W * H * 4);
+  let kept = 0;
+  for (let i = 0; i < W * H; i++) {
+    const keep = !bg[i] || cut[i * 4 + 3] >= 128;
+    out[i * 4] = rgb[i * 3];
+    out[i * 4 + 1] = rgb[i * 3 + 1];
+    out[i * 4 + 2] = rgb[i * 3 + 2];
+    out[i * 4 + 3] = keep ? 255 : 0;
+    if (keep) kept++;
+  }
+  const buf = await sharp(out, { raw: { width: W, height: H, channels: 4 } }).png().toBuffer();
+  return { buf, kept };
+}
 
 async function repairAlpha(src) {
   const { data, info } = await sharp(src).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
@@ -86,7 +139,11 @@ for (const slug of MACHINES) {
 
   // Repair erased panels first (solid-cabinet machines only).
   let input = src;
-  if (FILL_HOLES.has(slug)) {
+  if (WAND_REPAIR.has(slug)) {
+    const { buf, kept } = await wandRepair(slug, src);
+    input = buf;
+    console.log(`  wand-repair: ${slug} — silhouette rebuilt from source photo (${kept} px)`);
+  } else if (FILL_HOLES.has(slug)) {
     const { buf, filled } = await repairAlpha(src);
     input = buf;
     console.log(`  hole-repair: ${slug} — refilled ${filled} px`);
