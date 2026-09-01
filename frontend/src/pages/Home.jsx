@@ -88,20 +88,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- Stats ---------------- */}
-      <section className="border-b border-slate-100 bg-white">
-        <div className="container-x grid grid-cols-2 gap-6 py-10 lg:grid-cols-4">
-          {site.stats.map((s) => (
-            <div key={s.label} className="text-center">
-              <p className="text-3xl font-extrabold text-brand-navy sm:text-4xl">
-                <Counter value={s.value} />
-              </p>
-              <p className="mt-1 text-sm font-medium text-slate-500">{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ---------------- Testing Categories ---------------- */}
       <section className="bg-slate-50 py-16 sm:py-20">
         <div className="container-x">
@@ -131,6 +117,24 @@ export default function Home() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ---------------- Stats ----------------
+          Sits under Testing Domains rather than under the hero. The numbers land
+          better as proof after the visitor has seen the range than as the first
+          thing on the page. Top border added because the section above it is
+          slate-50, not white, so it now needs its own edge on both sides. */}
+      <section className="border-y border-slate-100 bg-white">
+        <div className="container-x grid grid-cols-2 gap-6 py-10 lg:grid-cols-4">
+          {site.stats.map((s) => (
+            <div key={s.label} className="text-center">
+              <p className="text-3xl font-extrabold text-brand-navy sm:text-4xl">
+                <Counter value={s.value} />
+              </p>
+              <p className="mt-1 text-sm font-medium text-slate-500">{s.label}</p>
+            </div>
+          ))}
         </div>
       </section>
 
