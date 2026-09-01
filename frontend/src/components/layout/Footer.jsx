@@ -14,7 +14,10 @@ export default function Footer() {
           <div className="mb-4 flex items-center gap-3">
             {/* Transparent logo — logo.png is opaque white and would show as a
                 pale rectangle against the grey. */}
-            <img src={site.logoTransparent} alt={site.name} className="h-14 w-auto" />
+            {/* Same responsive sizes as the header logo, so the mark reads at a
+                consistent scale top and bottom of the page. It was h-14, which
+                looked undersized against the header's h-[88px]. */}
+            <img src={site.logoTransparent} alt={site.name} className="h-16 w-auto sm:h-[76px] lg:h-[88px]" />
           </div>
           <p className="text-sm leading-relaxed text-slate-600">{site.description}</p>
           <div className="mt-5 flex gap-3">
