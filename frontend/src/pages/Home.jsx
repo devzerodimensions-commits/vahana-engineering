@@ -89,21 +89,24 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              "melt-flow-index-mfi-test-apparatus",
-              "izod-and-charpy-impact-test-apparatus",
-              "hydrostatic-pressure-testing-machine-3-station",
-              "vicat-softening-point-test-apparatus",
-            ].map((slug, i) => (
-              <img
-                key={slug}
-                src={`/products/${slug}.jpg`}
-                alt=""
-                className={`aspect-square w-full rounded-xl object-cover ring-1 ring-white/10 ${
-                  i % 2 ? "translate-y-6" : ""
-                }`}
-              />
+          {/* Was /products photos with object-cover: those carry the grey studio
+              backdrop, which sat badly on the navy, and object-cover on a square
+              box cropped the machines. The /machines cutouts are transparent and
+              all on one canvas, so they sit straight on the navy, stay uncropped
+              and tile evenly. Dropped the translate-y-6 stagger with them. */}
+          <div className="grid grid-cols-2 gap-4 sm:gap-5">
+            {WHY_MACHINES.map((m) => (
+              <div
+                key={m.slug}
+                className="group flex aspect-square items-center justify-center rounded-2xl bg-white/5 p-5 ring-1 ring-white/10 transition duration-300 hover:bg-white/10 hover:ring-white/20"
+              >
+                <img
+                  src={`/machines/${m.slug}.webp`}
+                  alt={m.name}
+                  loading="lazy"
+                  className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -196,6 +199,15 @@ const WHY = [
   { icon: "wrench", title: "Robust Build", text: "Industrial-grade construction for years of dependable service." },
   { icon: "gauge", title: "Digital Precision", text: "Accurate load, temperature and speed control with digital readouts." },
   { icon: "shield", title: "After-Sales Support", text: "Calibration, AMC and genuine spares across India." },
+];
+
+// Machines shown beside the "Why Vihaana" copy. Uses the transparent cutouts
+// from /machines so they sit cleanly on the navy background.
+const WHY_MACHINES = [
+  { slug: "melt-flow-index-mfi-test-apparatus", name: "Melt Flow Index (MFI) Test Apparatus" },
+  { slug: "izod-and-charpy-impact-test-apparatus", name: "Izod & Charpy Impact Test Apparatus" },
+  { slug: "hydrostatic-pressure-testing-machine-3-station", name: "Hydrostatic Pressure Testing Machine – 3 Station" },
+  { slug: "vicat-softening-point-test-apparatus", name: "Vicat Softening Point Test Apparatus" },
 ];
 
 export function CtaBanner() {
