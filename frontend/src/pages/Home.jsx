@@ -77,16 +77,23 @@ export default function Home() {
           never drift out of step with what the instruments actually certify to.
           Deliberately not another icon-card grid — Testing Domains, Services and
           Industries already use that shape, and a fourth would read as filler. */}
-      <section className="bg-brand-navy py-16 sm:py-20">
+      {/* Light #F0F4F8 panel — the same tone used for the page-title bands, so the
+          site reads consistently. Bordered top and bottom because the sections
+          either side are slate-50 and white, which are close enough to blend. */}
+      <section
+        className="border-y border-slate-200 py-16 sm:py-20"
+        style={{ backgroundColor: "#F0F4F8" }}
+      >
         <div className="container-x">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-block rounded-full bg-brand-red/15 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-red">
+            {/* red-dark, not red: brand red is only 4.29:1 on this panel. */}
+            <span className="inline-block rounded-full bg-brand-red/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-red-dark">
               Standards &amp; Compliance
             </span>
-            <h2 className="mt-5 text-3xl font-extrabold text-white sm:text-4xl">
+            <h2 className="mt-5 text-3xl font-extrabold text-brand-navy sm:text-4xl">
               Every instrument, built to Indian Standards
             </h2>
-            <p className="mt-4 text-slate-300">
+            <p className="mt-4 text-slate-600">
               Our machines are engineered and verified against IS / BIS test methods, so your results
               stand up to audit, certification and customer scrutiny — first time, every time.
             </p>
@@ -94,17 +101,18 @@ export default function Home() {
 
           {/* Each chip is a real filter link, not a label — clicking one lists the
               instruments certified to that standard. The count sets expectations
-              before the click. */}
+              before the click. Hover fills navy rather than red: white on navy is
+              13.9:1 against red's 4.74, and it avoids competing with the red CTA. */}
           <ul className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-3">
             {STANDARDS.map((s) => (
               <li key={s.code}>
                 <Link
                   to={`/products?standard=${encodeURIComponent(s.code)}`}
-                  className="group flex items-center gap-2 rounded-full border border-white/15 bg-white/5 py-2 pl-4 pr-2.5 text-sm font-semibold text-white transition hover:border-brand-red hover:bg-brand-red"
+                  className="group flex items-center gap-2 rounded-full border border-slate-200 bg-white py-2 pl-4 pr-2.5 text-sm font-semibold text-brand-navy shadow-sm transition hover:border-brand-navy hover:bg-brand-navy hover:text-white"
                   aria-label={`View the ${s.count} instruments certified to ${s.code}`}
                 >
                   {s.code}
-                  <span className="rounded-full bg-white/15 px-2 py-0.5 text-xs tabular-nums transition group-hover:bg-white/25">
+                  <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs tabular-nums text-slate-600 transition group-hover:bg-white/20 group-hover:text-white">
                     {s.count}
                   </span>
                 </Link>
@@ -112,14 +120,14 @@ export default function Home() {
             ))}
           </ul>
 
-          <div className="mx-auto mt-12 grid max-w-4xl gap-8 border-t border-white/10 pt-10 sm:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-4xl gap-8 border-t border-slate-200 pt-10 sm:grid-cols-3">
             {ASSURANCES.map((a) => (
               <div key={a.title} className="text-center">
                 <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-brand-red text-white">
                   <Icon name={a.icon} className="h-5 w-5" />
                 </div>
-                <h3 className="font-bold text-white">{a.title}</h3>
-                <p className="mt-1 text-sm text-slate-300">{a.text}</p>
+                <h3 className="font-bold text-brand-navy">{a.title}</h3>
+                <p className="mt-1 text-sm text-slate-600">{a.text}</p>
               </div>
             ))}
           </div>
