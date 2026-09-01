@@ -9,6 +9,10 @@ export const site = {
     "Manufacturer and exporter of plastic testing machinery — precision material-testing instruments for plastics, polymers, pipes, films and geosynthetics.",
   logo: "/logo.png",
   logoHeader: "/logo-header.png",
+  // Background removed — for use on any non-white surface (e.g. the light-grey
+  // footer), where logo.png's opaque white would show as a pale rectangle.
+  // Regenerate with _scripts/make-logo-transparent.mjs.
+  logoTransparent: "/logo-transparent.png",
   contactPerson: "Mr. Chirag Pawar",
   contactPersonRole: "Business Head",
   email: "info@vihaanaengineering.com",
