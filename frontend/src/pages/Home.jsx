@@ -7,6 +7,7 @@ import {
   getClients,
 } from "../services/api.js";
 import { site } from "../data/site.js";
+import manifest from "../data/products.json";
 import { categoryIcon, serviceIcon, industryIcon } from "../lib/ui.js";
 import Icon from "../components/ui/Icon.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
@@ -70,44 +71,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- Why choose us ---------------- */}
+      {/* ---------------- Standards & compliance ----------------
+          Replaces the old "Why Vihaana" block. The standards listed are read
+          from the real product data rather than written by hand, so this can
+          never drift out of step with what the instruments actually certify to.
+          Deliberately not another icon-card grid — Testing Domains, Services and
+          Industries already use that shape, and a fourth would read as filler. */}
       <section className="bg-brand-navy py-16 sm:py-20">
-        <div className="container-x grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
-            <SectionHeading light eyebrow="Why Vihaana" title="Engineered for Accuracy & Reliability" />
-            <div className="grid gap-5 sm:grid-cols-2">
-              {WHY.map((w) => (
-                <div key={w.title} className="flex gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-red text-white">
-                    <Icon name={w.icon} className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-white">{w.title}</h4>
-                    <p className="mt-1 text-sm text-slate-300">{w.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+        <div className="container-x">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-block rounded-full bg-brand-red/15 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-red">
+              Standards &amp; Compliance
+            </span>
+            <h2 className="mt-5 text-3xl font-extrabold text-white sm:text-4xl">
+              Every instrument, built to Indian Standards
+            </h2>
+            <p className="mt-4 text-slate-300">
+              Our machines are engineered and verified against IS / BIS test methods, so your results
+              stand up to audit, certification and customer scrutiny — first time, every time.
+            </p>
           </div>
-          {/* Was /products photos with object-cover: those carry the grey studio
-              backdrop, which sat badly on the navy, and object-cover on a square
-              box cropped the machines. The /machines cutouts are transparent and
-              all on one canvas, so they sit straight on the navy, stay uncropped
-              and tile evenly. Dropped the translate-y-6 stagger with them. */}
-          <div className="grid grid-cols-2 gap-4 sm:gap-5">
-            {WHY_MACHINES.map((m) => (
-              <div
-                key={m.slug}
-                className="group flex aspect-square items-center justify-center rounded-2xl bg-white/5 p-5 ring-1 ring-white/10 transition duration-300 hover:bg-white/10 hover:ring-white/20"
+
+          <ul className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-3">
+            {STANDARDS.map((s) => (
+              <li
+                key={s}
+                className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white"
               >
-                <img
-                  src={`/machines/${m.slug}.webp`}
-                  alt={m.name}
-                  loading="lazy"
-                  className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                />
+                {s}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mx-auto mt-12 grid max-w-4xl gap-8 border-t border-white/10 pt-10 sm:grid-cols-3">
+            {ASSURANCES.map((a) => (
+              <div key={a.title} className="text-center">
+                <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-brand-red text-white">
+                  <Icon name={a.icon} className="h-5 w-5" />
+                </div>
+                <h3 className="font-bold text-white">{a.title}</h3>
+                <p className="mt-1 text-sm text-slate-300">{a.text}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link to="/products" className="btn-primary">
+              Browse all instruments <Icon name="arrowRight" className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
@@ -194,20 +205,21 @@ export default function Home() {
   );
 }
 
-const WHY = [
-  { icon: "target", title: "Standard Compliant", text: "Built to Indian Standards (IS / BIS) test methods for audit-ready results." },
-  { icon: "wrench", title: "Robust Build", text: "Industrial-grade construction for years of dependable service." },
-  { icon: "gauge", title: "Digital Precision", text: "Accurate load, temperature and speed control with digital readouts." },
-  { icon: "shield", title: "After-Sales Support", text: "Calibration, AMC and genuine spares across India." },
-];
+// Read the IS/BIS codes straight off the catalogue instead of hard-coding them,
+// so the section always reflects what the instruments actually certify to.
+// Sorted numerically ("IS 2508" before "IS 13360") — a plain string sort would
+// put IS 12235 ahead of IS 2508, which looks like a mistake to anyone in the trade.
+const STANDARDS = [...new Set(manifest.products.flatMap((p) => p.standards || []))].sort(
+  (a, b) => {
+    const num = (s) => parseFloat(String(s).replace(/^IS\s*/i, "")) || 0;
+    return num(a) - num(b) || String(a).localeCompare(String(b));
+  }
+);
 
-// Machines shown beside the "Why Vihaana" copy. Uses the transparent cutouts
-// from /machines so they sit cleanly on the navy background.
-const WHY_MACHINES = [
-  { slug: "melt-flow-index-mfi-test-apparatus", name: "Melt Flow Index (MFI) Test Apparatus" },
-  { slug: "izod-and-charpy-impact-test-apparatus", name: "Izod & Charpy Impact Test Apparatus" },
-  { slug: "hydrostatic-pressure-testing-machine-3-station", name: "Hydrostatic Pressure Testing Machine – 3 Station" },
-  { slug: "vicat-softening-point-test-apparatus", name: "Vicat Softening Point Test Apparatus" },
+const ASSURANCES = [
+  { icon: "target", title: "Calibrated & Verified", text: "Every unit validated against the relevant IS test method before dispatch." },
+  { icon: "shield", title: "ISO 9001 Quality System", text: "Manufactured under a certified quality management system." },
+  { icon: "wrench", title: "Support Across India", text: "Installation, calibration, AMC and genuine spares." },
 ];
 
 export function CtaBanner() {
