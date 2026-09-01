@@ -138,75 +138,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- Standards & compliance ----------------
-          Replaces the old "Why Vihaana" block. The standards listed are read
-          from the real product data rather than written by hand, so this can
-          never drift out of step with what the instruments actually certify to.
-          Deliberately not another icon-card grid — Testing Domains, Services and
-          Industries already use that shape, and a fourth would read as filler. */}
-      {/* Light #F0F4F8 panel — the same tone used for the page-title bands, so the
-          site reads consistently. Bordered top and bottom because the sections
-          either side are slate-50 and white, which are close enough to blend. */}
-      <section
-        className="border-y border-slate-200 py-16 sm:py-20"
-        style={{ backgroundColor: "#F0F4F8" }}
-      >
-        <div className="container-x">
-          <div className="mx-auto max-w-3xl text-center">
-            {/* red-dark, not red: brand red is only 4.29:1 on this panel. */}
-            <span className="inline-block rounded-full bg-brand-red/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-red-dark">
-              Standards &amp; Compliance
-            </span>
-            <h2 className="mt-5 text-3xl font-extrabold text-brand-navy sm:text-4xl">
-              Every instrument, built to Indian Standards
-            </h2>
-            <p className="mt-4 text-slate-600">
-              Our machines are engineered and verified against IS / BIS test methods, so your results
-              stand up to audit, certification and customer scrutiny — first time, every time.
-            </p>
-          </div>
-
-          {/* Each chip is a real filter link, not a label — clicking one lists the
-              instruments certified to that standard. The count sets expectations
-              before the click. Hover fills navy rather than red: white on navy is
-              13.9:1 against red's 4.74, and it avoids competing with the red CTA. */}
-          <ul className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-3">
-            {STANDARDS.map((s) => (
-              <li key={s.code}>
-                <Link
-                  to={`/products?standard=${encodeURIComponent(s.code)}`}
-                  className="group flex items-center gap-2 rounded-full border border-slate-200 bg-white py-2 pl-4 pr-2.5 text-sm font-semibold text-brand-navy shadow-sm transition hover:border-brand-navy hover:bg-brand-navy hover:text-white"
-                  aria-label={`View the ${s.count} instruments certified to ${s.code}`}
-                >
-                  {s.code}
-                  <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs tabular-nums text-slate-600 transition group-hover:bg-white/20 group-hover:text-white">
-                    {s.count}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          <div className="mx-auto mt-12 grid max-w-4xl gap-8 border-t border-slate-200 pt-10 sm:grid-cols-3">
-            {ASSURANCES.map((a) => (
-              <div key={a.title} className="text-center">
-                <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-brand-red text-white">
-                  <Icon name={a.icon} className="h-5 w-5" />
-                </div>
-                <h3 className="font-bold text-brand-navy">{a.title}</h3>
-                <p className="mt-1 text-sm text-slate-600">{a.text}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <Link to="/products" className="btn-primary">
-              Browse all instruments <Icon name="arrowRight" className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* ---------------- Services ---------------- */}
       <section className="py-16 sm:py-20">
         <div className="container-x">
@@ -289,24 +220,6 @@ export default function Home() {
   );
 }
 
-// Read the IS/BIS codes straight off the catalogue instead of hard-coding them,
-// so the section always reflects what the instruments actually certify to.
-// Sorted numerically ("IS 2508" before "IS 13360") — a plain string sort would
-// put IS 12235 ahead of IS 2508, which looks like a mistake to anyone in the trade.
-// Each standard carries how many instruments certify to it, so the chip tells
-// the visitor what they'll get before they click rather than after.
-const STANDARDS = Object.entries(
-  manifest.products.reduce((acc, p) => {
-    for (const s of p.standards || []) acc[s] = (acc[s] || 0) + 1;
-    return acc;
-  }, {})
-)
-  .map(([code, count]) => ({ code, count }))
-  .sort((a, b) => {
-    const num = (s) => parseFloat(String(s).replace(/^IS\s*/i, "")) || 0;
-    return num(a.code) - num(b.code) || a.code.localeCompare(b.code);
-  });
-
 // Counts come from the catalogue so the claims can't go stale as products change.
 const DOMAIN_COUNT = new Set(manifest.products.map((p) => p.category)).size;
 
@@ -314,12 +227,6 @@ const ABOUT_POINTS = [
   `${manifest.products.length} testing instruments across ${DOMAIN_COUNT} testing domains`,
   "Engineered and verified to IS / BIS test methods",
   "Installation, calibration, AMC and genuine spares across India",
-];
-
-const ASSURANCES = [
-  { icon: "target", title: "Calibrated & Verified", text: "Every unit validated against the relevant IS test method before dispatch." },
-  { icon: "shield", title: "ISO 9001 Quality System", text: "Manufactured under a certified quality management system." },
-  { icon: "wrench", title: "Support Across India", text: "Installation, calibration, AMC and genuine spares." },
 ];
 
 export function CtaBanner() {
