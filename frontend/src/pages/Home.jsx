@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch.js";
 import {
   getCategories,
-  getProducts,
   getServices,
   getTestimonials,
   getClients,
@@ -11,13 +10,11 @@ import { site } from "../data/site.js";
 import { categoryIcon, serviceIcon, industryIcon } from "../lib/ui.js";
 import Icon from "../components/ui/Icon.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
-import ProductCard from "../components/ProductCard.jsx";
 import HeroSlider from "../components/HeroSlider.jsx";
 import Counter from "../components/ui/Counter.jsx";
 
 export default function Home() {
   const { data: categories } = useFetch(getCategories, []);
-  const { data: featured } = useFetch(() => getProducts({ featured: true }), []);
   const { data: services } = useFetch(getServices, []);
   const { data: testimonials } = useFetch(getTestimonials, []);
   const { data: clients } = useFetch(getClients, []);
@@ -68,23 +65,6 @@ export default function Home() {
                   ))}
                 </div>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ---------------- Featured Products ---------------- */}
-      <section className="py-16 sm:py-20">
-        <div className="container-x">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <SectionHeading eyebrow="Our range" title="Featured Instruments" />
-            <Link to="/products" className="btn-outline mb-10">
-              View all products <Icon name="arrowRight" className="h-4 w-4" />
-            </Link>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {(featured || []).slice(0, 6).map((p) => (
-              <ProductCard key={p.slug} product={p} />
             ))}
           </div>
         </div>
