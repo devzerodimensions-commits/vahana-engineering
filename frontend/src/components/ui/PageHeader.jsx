@@ -2,38 +2,31 @@ import { Link } from "react-router-dom";
 
 // Reusable inner-page title banner.
 //
-// The photo carries a brand-navy scrim rather than sitting bare. Without one the
-// white heading lands on whatever the photo happens to be — on this image that
-// is a bright lab coat, and the title washed out. The scrim is heaviest on the
-// left where the text sits and eases off to the right so the machine still
-// reads. It also means the photo can be swapped later without re-checking
-// contrast every time, which the old text-shadow approach could not promise.
+// Flat #F0F4F8 background — no photo, no scrim. Because the surface is now very
+// light, every colour in here had to invert: white type measured 1.11:1 against
+// it and would have been invisible. Title uses brand navy (12.57:1) and the
+// supporting text slate-600 (6.86:1).
+//
+// The active breadcrumb uses red-DARK, not brand red: the standard red only
+// reaches 4.29:1 here, under the 4.5 minimum for small text. It reads as the
+// same colour but measures 5.99:1.
 export default function PageHeader({ title, subtitle, crumb }) {
   return (
     <section
-      className="relative overflow-hidden bg-brand-navy bg-cover bg-center py-16 sm:py-20"
-      style={{ backgroundImage: "url(/page-banner-testing.jpg)" }}
+      className="relative overflow-hidden border-b border-slate-200 py-16 sm:py-20"
+      style={{ backgroundColor: "#F0F4F8" }}
     >
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(90deg, rgba(22,37,107,0.92) 0%, rgba(22,37,107,0.72) 55%, rgba(15,26,77,0.55) 100%)",
-        }}
-        aria-hidden="true"
-      />
-
       <div className="container-x relative">
-        <nav className="mb-3 flex items-center gap-2 text-sm font-medium text-white">
-          <Link to="/" className="transition hover:text-brand-red">Home</Link>
-          <span className="text-white/60">/</span>
-          <span className="text-brand-red">{crumb || title}</span>
+        <nav className="mb-3 flex items-center gap-2 text-sm font-medium text-slate-600">
+          <Link to="/" className="transition hover:text-brand-red-dark">Home</Link>
+          <span className="text-slate-400">/</span>
+          <span className="text-brand-red-dark">{crumb || title}</span>
         </nav>
-        <h1 className="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+        <h1 className="text-3xl font-extrabold text-brand-navy sm:text-4xl lg:text-5xl">
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-4 max-w-2xl text-slate-200">{subtitle}</p>
+          <p className="mt-4 max-w-2xl text-slate-600">{subtitle}</p>
         )}
       </div>
     </section>
