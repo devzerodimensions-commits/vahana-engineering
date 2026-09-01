@@ -25,6 +25,69 @@ export default function Home() {
       {/* ---------------- Hero (image slider — no text, per client) ---------------- */}
       <HeroSlider />
 
+      {/* ---------------- About Vihaana Engineering ----------------
+          Sits directly under the hero: the slider carries no text, so without
+          this the first words on the page were "Testing Domains We Cover" and a
+          first-time visitor had nothing telling them who the company is.
+          Copy is deliberately a summary, not a repeat of the About page — the
+          same paragraphs on two pages would compete in search results. */}
+      <section className="bg-white py-16 sm:py-20">
+        <div className="container-x grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <span className="inline-block rounded-full bg-brand-red/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-red-dark">
+              About {site.shortName}
+            </span>
+            <h2 className="mt-5 text-3xl font-extrabold text-brand-navy sm:text-4xl">
+              {site.businessLine}
+            </h2>
+            <div className="mt-5 space-y-4 text-slate-600">
+              <p>
+                {site.name} designs and manufactures precision material-testing instruments for the
+                plastics, polymer, pipe, film and geosynthetics industries — relied on by
+                quality-control departments, R&amp;D centres and accredited laboratories across India.
+              </p>
+              <p>
+                From a single instrument to a complete turnkey laboratory, every machine is built
+                in-house to Indian Standards and backed by nationwide installation, calibration and
+                service.
+              </p>
+            </div>
+
+            <ul className="mt-6 space-y-3">
+              {ABOUT_POINTS.map((point) => (
+                <li key={point} className="flex items-start gap-3 text-sm text-slate-700">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-red/10 text-brand-red-dark">
+                    <Icon name="check" className="h-3.5 w-3.5" />
+                  </span>
+                  {point}
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link to="/about" className="btn-primary">
+                More about us <Icon name="arrowRight" className="h-4 w-4" />
+              </Link>
+              <Link to="/contact" className="btn-outline">Talk to our team</Link>
+            </div>
+          </div>
+
+          {/* One large machine rather than a grid — the About page already uses a
+              2x2 tile collage, and repeating it would make the pages look alike. */}
+          <div className="relative">
+            <div className="absolute -inset-4 rounded-[2rem] bg-slate-50" aria-hidden="true" />
+            <div className="relative flex aspect-[4/3] items-center justify-center rounded-3xl border border-slate-200 bg-white p-8 shadow-card">
+              <img
+                src="/machines/universal-testing-machine-10-ton.webp"
+                alt="Vihaana Engineering Universal Testing Machine – 10 Ton"
+                loading="lazy"
+                className="h-full w-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ---------------- Stats ---------------- */}
       <section className="border-b border-slate-100 bg-white">
         <div className="container-x grid grid-cols-2 gap-6 py-10 lg:grid-cols-4">
@@ -239,6 +302,15 @@ const STANDARDS = Object.entries(
     const num = (s) => parseFloat(String(s).replace(/^IS\s*/i, "")) || 0;
     return num(a.code) - num(b.code) || a.code.localeCompare(b.code);
   });
+
+// Counts come from the catalogue so the claims can't go stale as products change.
+const DOMAIN_COUNT = new Set(manifest.products.map((p) => p.category)).size;
+
+const ABOUT_POINTS = [
+  `${manifest.products.length} testing instruments across ${DOMAIN_COUNT} testing domains`,
+  "Engineered and verified to IS / BIS test methods",
+  "Installation, calibration, AMC and genuine spares across India",
+];
 
 const ASSURANCES = [
   { icon: "target", title: "Calibrated & Verified", text: "Every unit validated against the relevant IS test method before dispatch." },
