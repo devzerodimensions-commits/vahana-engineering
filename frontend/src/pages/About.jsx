@@ -5,6 +5,17 @@ import Icon from "../components/ui/Icon.jsx";
 import { site } from "../data/site.js";
 import { CtaBanner } from "./Home.jsx";
 
+// Shown in the "Who we are" collage. Uses the transparent cutouts from
+// /machines rather than /products photos: those still carry the grey studio
+// backdrop, which clashed with the white section and made four different-shaped
+// grey rectangles. The cutouts are all normalised to one canvas, so they tile.
+const SHOWCASE = [
+  { slug: "universal-testing-machine-2-ton", name: "Universal Testing Machine – 2 Ton" },
+  { slug: "hot-air-oven", name: "Hot Air Oven" },
+  { slug: "melt-flow-index-mfi-test-apparatus", name: "Melt Flow Index (MFI) Test Apparatus" },
+  { slug: "dart-impact-testing-machine", name: "Dart Impact Testing Machine" },
+];
+
 const VALUES = [
   { icon: "target", title: "Accuracy First", text: "Every instrument is calibrated and validated against recognised test standards." },
   { icon: "shield", title: "Reliability", text: "Rugged, industrial-grade builds that perform consistently for years." },
@@ -49,11 +60,25 @@ export default function About() {
               <Link to="/contact" className="btn-outline">Contact Us</Link>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img src="/products/universal-testing-machine-2-ton.jpg" alt="" className="rounded-xl object-cover shadow-card" />
-            <img src="/products/hot-air-oven.jpg" alt="" className="mt-8 rounded-xl object-cover shadow-card" />
-            <img src="/products/melt-flow-index-mfi-test-apparatus.jpg" alt="" className="rounded-xl object-cover shadow-card" />
-            <img src="/products/dart-impact-testing-machine.jpg" alt="" className="mt-8 rounded-xl object-cover shadow-card" />
+          {/* Uniform square tiles. The previous version set object-cover with no
+              height, which does nothing — each photo kept its own aspect ratio,
+              so the four came out different heights, and the alternating mt-8
+              stagger turned that into a mess. A fixed aspect-square box with
+              object-contain gives one consistent grid and never crops a machine. */}
+          <div className="grid grid-cols-2 gap-4 sm:gap-5">
+            {SHOWCASE.map((m) => (
+              <div
+                key={m.slug}
+                className="group flex aspect-square items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 p-5 transition duration-300 hover:border-brand-navy/25 hover:shadow-card"
+              >
+                <img
+                  src={`/machines/${m.slug}.webp`}
+                  alt={m.name}
+                  loading="lazy"
+                  className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
