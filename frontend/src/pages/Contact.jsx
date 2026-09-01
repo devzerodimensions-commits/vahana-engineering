@@ -36,8 +36,10 @@ export default function Contact() {
 
   return (
     <>
+      {/* Title is the company tagline; the breadcrumb still reads "Contact" so
+          visitors can see where they are. */}
       <PageHeader
-        title="Contact Us"
+        title={site.tagline}
         crumb="Contact"
         subtitle="Tell us about your testing requirement and our team will recommend the right instrument."
       />
