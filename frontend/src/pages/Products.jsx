@@ -10,6 +10,8 @@ import Icon from "../components/ui/Icon.jsx";
 export default function Products() {
   const [searchParams, setSearchParams] = useSearchParams();
   const activeCategory = searchParams.get("category") || "all";
+  // Set by the standards links on the home page, e.g. /products?standard=IS 4984.
+  const activeStandard = searchParams.get("standard") || "";
   const [query, setQuery] = useState("");
 
   const { data: categories } = useFetch(getCategories, []);
@@ -18,6 +20,7 @@ export default function Products() {
   const filtered = useMemo(() => {
     let list = products || [];
     if (activeCategory !== "all") list = list.filter((p) => p.category === activeCategory);
+    if (activeStandard) list = list.filter((p) => (p.standards || []).includes(activeStandard));
     if (query.trim()) {
       const q = query.toLowerCase();
       list = list.filter(
@@ -25,11 +28,22 @@ export default function Products() {
       );
     }
     return list;
-  }, [products, activeCategory, query]);
+  }, [products, activeCategory, activeStandard, query]);
 
+  // Category and standard are independent filters, so each setter has to carry
+  // the other through — otherwise picking a category silently drops the
+  // standard the visitor arrived with.
   const setCategory = (slug) => {
-    if (slug === "all") setSearchParams({});
-    else setSearchParams({ category: slug });
+    const next = {};
+    if (slug !== "all") next.category = slug;
+    if (activeStandard) next.standard = activeStandard;
+    setSearchParams(next);
+  };
+
+  const clearStandard = () => {
+    const next = {};
+    if (activeCategory !== "all") next.category = activeCategory;
+    setSearchParams(next);
   };
 
   return (
@@ -44,9 +58,25 @@ export default function Products() {
         <div className="container-x">
           {/* Search */}
           <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-sm text-slate-500">
-              Showing <span className="font-bold text-brand-navy">{filtered.length}</span> instruments
-            </p>
+            <div className="flex flex-wrap items-center gap-3">
+              <p className="text-sm text-slate-500">
+                Showing <span className="font-bold text-brand-navy">{filtered.length}</span> instruments
+              </p>
+              {/* Arriving from a standards link, the visitor needs to see WHY the
+                  list is short, and be able to get out of it in one click. */}
+              {activeStandard && (
+                <span className="inline-flex items-center gap-2 rounded-full bg-brand-navy px-3 py-1.5 text-xs font-semibold text-white">
+                  Certified to {activeStandard}
+                  <button
+                    onClick={clearStandard}
+                    aria-label={`Remove the ${activeStandard} filter`}
+                    className="flex h-4 w-4 items-center justify-center rounded-full bg-white/25 leading-none transition hover:bg-brand-red"
+                  >
+                    ×
+                  </button>
+                </span>
+              )}
+            </div>
             <div className="relative w-full sm:max-w-xs">
               <input
                 value={query}

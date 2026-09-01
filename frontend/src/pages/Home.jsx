@@ -92,13 +92,22 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Each chip is a real filter link, not a label — clicking one lists the
+              instruments certified to that standard. The count sets expectations
+              before the click. */}
           <ul className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-3">
             {STANDARDS.map((s) => (
-              <li
-                key={s}
-                className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white"
-              >
-                {s}
+              <li key={s.code}>
+                <Link
+                  to={`/products?standard=${encodeURIComponent(s.code)}`}
+                  className="group flex items-center gap-2 rounded-full border border-white/15 bg-white/5 py-2 pl-4 pr-2.5 text-sm font-semibold text-white transition hover:border-brand-red hover:bg-brand-red"
+                  aria-label={`View the ${s.count} instruments certified to ${s.code}`}
+                >
+                  {s.code}
+                  <span className="rounded-full bg-white/15 px-2 py-0.5 text-xs tabular-nums transition group-hover:bg-white/25">
+                    {s.count}
+                  </span>
+                </Link>
               </li>
             ))}
           </ul>
@@ -209,12 +218,19 @@ export default function Home() {
 // so the section always reflects what the instruments actually certify to.
 // Sorted numerically ("IS 2508" before "IS 13360") — a plain string sort would
 // put IS 12235 ahead of IS 2508, which looks like a mistake to anyone in the trade.
-const STANDARDS = [...new Set(manifest.products.flatMap((p) => p.standards || []))].sort(
-  (a, b) => {
+// Each standard carries how many instruments certify to it, so the chip tells
+// the visitor what they'll get before they click rather than after.
+const STANDARDS = Object.entries(
+  manifest.products.reduce((acc, p) => {
+    for (const s of p.standards || []) acc[s] = (acc[s] || 0) + 1;
+    return acc;
+  }, {})
+)
+  .map(([code, count]) => ({ code, count }))
+  .sort((a, b) => {
     const num = (s) => parseFloat(String(s).replace(/^IS\s*/i, "")) || 0;
-    return num(a) - num(b) || String(a).localeCompare(String(b));
-  }
-);
+    return num(a.code) - num(b.code) || a.code.localeCompare(b.code);
+  });
 
 const ASSURANCES = [
   { icon: "target", title: "Calibrated & Verified", text: "Every unit validated against the relevant IS test method before dispatch." },
