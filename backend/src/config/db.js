@@ -41,4 +41,8 @@ export const connectDB = async () => {
   }
 };
 
-export default connectDB;
+// The DEFAULT export is the client, because five modules do
+// `import prisma from "../config/db.js"`. connectDB is a named export used only
+// by server.js — defaulting to it made every one of those imports silently
+// resolve to a function, which fails at query time, not at import time.
+export default prisma;
