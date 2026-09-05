@@ -27,7 +27,7 @@ export default function Login() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-brand-navy px-4 py-12">
+    <div className="admin-scope flex min-h-screen items-center justify-center bg-brand-ink px-4 py-12">
       <div className="w-full max-w-md">
         <Link to="/" className="mb-6 flex items-center justify-center gap-2 text-white">
           <span className="rounded-lg bg-white px-2 py-1">
@@ -35,7 +35,7 @@ export default function Login() {
           </span>
         </Link>
         <div className="rounded-2xl bg-white p-8 shadow-2xl">
-          <h1 className="text-2xl font-extrabold text-brand-navy">Admin Login</h1>
+          <h1 className="text-2xl font-extrabold text-brand-ink">Admin Login</h1>
           <p className="mt-1 text-sm text-slate-500">Sign in to manage the website content.</p>
 
           <form onSubmit={submit} className="mt-6 space-y-4">
@@ -72,8 +72,8 @@ export default function Login() {
 
           <p className="mt-6 rounded-lg bg-slate-50 px-3 py-2 text-xs text-slate-500">
             Default seed credentials: <br />
-            <span className="font-semibold text-brand-navy">admin@vihaanaengineering.com</span> /{" "}
-            <span className="font-semibold text-brand-navy">Admin@12345</span>
+            <span className="font-semibold text-brand-ink">admin@vihaanaengineering.com</span> /{" "}
+            <span className="font-semibold text-brand-ink">Admin@12345</span>
             <br />Requires the backend + MongoDB running &amp; seeded.
           </p>
         </div>

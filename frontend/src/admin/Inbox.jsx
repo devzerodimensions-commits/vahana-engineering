@@ -47,7 +47,7 @@ export default function Inbox({ type }) {
 
   return (
     <div>
-      <h1 className="text-2xl font-extrabold text-brand-navy">
+      <h1 className="text-2xl font-extrabold text-brand-ink">
         {isInquiry ? "Product Inquiries" : "Contact Messages"}
       </h1>
       <p className="mb-6 text-sm text-slate-500">{items.length} record(s)</p>
@@ -70,7 +70,7 @@ export default function Inbox({ type }) {
                 }`}
               >
                 <div className="min-w-0">
-                  <p className="flex items-center gap-2 font-semibold text-brand-navy">
+                  <p className="flex items-center gap-2 font-semibold text-brand-ink">
                     {(unread || isNew) && <span className="h-2 w-2 rounded-full bg-brand-red" />}
                     {it.name}
                   </p>
@@ -80,7 +80,7 @@ export default function Inbox({ type }) {
                   <p className="mt-0.5 text-[11px] text-slate-400">{fmt(it.createdAt)}</p>
                 </div>
                 {isInquiry && (
-                  <span className="shrink-0 rounded-full bg-brand-navy/5 px-2 py-0.5 text-[11px] font-semibold capitalize text-brand-navy">
+                  <span className="shrink-0 rounded-full bg-brand-ink/5 px-2 py-0.5 text-[11px] font-semibold capitalize text-brand-ink">
                     {it.status}
                   </span>
                 )}
@@ -95,7 +95,7 @@ export default function Inbox({ type }) {
             <div>
               <div className="flex items-start justify-between">
                 <div>
-                  <h2 className="text-lg font-bold text-brand-navy">{selected.name}</h2>
+                  <h2 className="text-lg font-bold text-brand-ink">{selected.name}</h2>
                   <p className="text-sm text-slate-500">{fmt(selected.createdAt)}</p>
                 </div>
                 <button onClick={() => remove(selected._id)} className="rounded-md border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-red hover:text-brand-red">

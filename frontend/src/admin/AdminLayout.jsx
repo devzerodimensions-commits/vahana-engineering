@@ -21,10 +21,10 @@ export default function AdminLayout() {
     }`;
 
   return (
-    <div className="min-h-screen bg-slate-100 lg:flex">
+    <div className="admin-scope min-h-screen bg-slate-100 lg:flex">
       {/* Sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-40 w-64 transform bg-brand-navy-dark transition-transform lg:static lg:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-40 w-64 transform bg-brand-ink-dark transition-transform lg:static lg:translate-x-0 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -59,7 +59,7 @@ export default function AdminLayout() {
       {/* Main */}
       <div className="flex min-w-0 flex-1 flex-col">
         <header className="sticky top-0 z-20 flex h-16 items-center justify-between border-b border-slate-200 bg-white px-4 lg:px-6">
-          <button onClick={() => setOpen(true)} className="rounded-lg p-2 text-brand-navy lg:hidden" aria-label="Menu">
+          <button onClick={() => setOpen(true)} className="rounded-lg p-2 text-brand-ink lg:hidden" aria-label="Menu">
             <Icon name="menu" className="h-6 w-6" />
           </button>
           <Link to="/" target="_blank" className="hidden text-sm font-medium text-slate-500 hover:text-brand-red sm:block">
@@ -67,7 +67,7 @@ export default function AdminLayout() {
           </Link>
           <div className="ml-auto flex items-center gap-4">
             <div className="text-right">
-              <p className="text-sm font-semibold text-brand-navy">{user?.name}</p>
+              <p className="text-sm font-semibold text-brand-ink">{user?.name}</p>
               <p className="text-xs capitalize text-slate-400">{user?.role}</p>
             </div>
             <button onClick={doLogout} className="rounded-lg border border-slate-200 px-3 py-1.5 text-sm font-medium text-slate-600 hover:border-brand-red hover:text-brand-red">

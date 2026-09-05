@@ -80,4 +80,24 @@ body {
   .prose-content p {
     @apply mb-4 leading-relaxed;
   }
+
+  /* Admin panel: black instead of the brand navy, per the client.
+     The admin reuses .field, .btn-outline and .badge from the public site, and
+     those carry navy focus rings and borders. Rather than fork the components,
+     scope the override to .admin-scope (set on the admin layout and login page)
+     so the public site is untouched. */
+  .admin-scope .field {
+    @apply focus:border-brand-ink focus:ring-brand-ink/20;
+  }
+  .admin-scope .btn-outline {
+    @apply border-brand-ink text-brand-ink hover:bg-brand-ink hover:text-white focus:ring-brand-ink;
+  }
+  .admin-scope .badge {
+    @apply bg-brand-ink/5 text-brand-ink;
+  }
+  /* The login submit button. On the near-black login page a navy button was the
+     one remaining blue element on screen. */
+  .admin-scope .btn-navy {
+    @apply bg-brand-ink-light hover:bg-brand-ink focus:ring-brand-ink-light;
+  }
 }

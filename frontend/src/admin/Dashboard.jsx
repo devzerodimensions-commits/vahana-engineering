@@ -5,7 +5,7 @@ import Icon from "../components/ui/Icon.jsx";
 import Loader from "../components/ui/Loader.jsx";
 
 const CARDS = [
-  { key: "products", label: "Products", icon: "layers", to: "/admin/products", color: "bg-brand-navy" },
+  { key: "products", label: "Products", icon: "layers", to: "/admin/products", color: "bg-brand-ink" },
   { key: "categories", label: "Categories", icon: "test", to: "/admin/testing-categories", color: "bg-brand-red" },
   { key: "services", label: "Services", icon: "wrench", to: "/admin/services", color: "bg-amber-500" },
   { key: "inquiries", label: "Inquiries", icon: "briefcase", to: "/admin/inquiries", color: "bg-indigo-600" },
@@ -28,7 +28,7 @@ export default function Dashboard() {
 
   return (
     <div>
-      <h1 className="text-2xl font-extrabold text-brand-navy">Dashboard</h1>
+      <h1 className="text-2xl font-extrabold text-brand-ink">Dashboard</h1>
       <p className="mt-1 text-sm text-slate-500">Overview of your website content and enquiries.</p>
 
       {error && (
@@ -44,7 +44,7 @@ export default function Dashboard() {
             </Link>
           )}
           {stats.alerts.unreadContacts > 0 && (
-            <Link to="/admin/contacts" className="rounded-lg bg-brand-navy/10 px-4 py-2 text-sm font-semibold text-brand-navy">
+            <Link to="/admin/contacts" className="rounded-lg bg-brand-ink/10 px-4 py-2 text-sm font-semibold text-brand-ink">
               {stats.alerts.unreadContacts} unread message(s)
             </Link>
           )}
@@ -59,7 +59,7 @@ export default function Dashboard() {
               <Icon name={c.icon} className="h-6 w-6" />
             </div>
             <div>
-              <p className="text-2xl font-extrabold text-brand-navy">{stats?.totals?.[c.key] ?? 0}</p>
+              <p className="text-2xl font-extrabold text-brand-ink">{stats?.totals?.[c.key] ?? 0}</p>
               <p className="text-xs font-medium text-slate-500">{c.label}</p>
             </div>
           </Link>
@@ -74,7 +74,7 @@ export default function Dashboard() {
           items={stats?.recentInquiries}
           render={(i) => (
             <>
-              <p className="font-semibold text-brand-navy">{i.name}</p>
+              <p className="font-semibold text-brand-ink">{i.name}</p>
               <p className="text-xs text-slate-500">{i.product || i.email}</p>
             </>
           )}
@@ -85,7 +85,7 @@ export default function Dashboard() {
           items={stats?.recentContacts}
           render={(c) => (
             <>
-              <p className="font-semibold text-brand-navy">{c.name}</p>
+              <p className="font-semibold text-brand-ink">{c.name}</p>
               <p className="text-xs text-slate-500 line-clamp-1">{c.subject || c.message}</p>
             </>
           )}
@@ -99,7 +99,7 @@ function RecentList({ title, items, render, to }) {
   return (
     <div className="card p-5">
       <div className="mb-3 flex items-center justify-between">
-        <h2 className="font-bold text-brand-navy">{title}</h2>
+        <h2 className="font-bold text-brand-ink">{title}</h2>
         <Link to={to} className="text-xs font-semibold text-brand-red">View all</Link>
       </div>
       {items?.length ? (

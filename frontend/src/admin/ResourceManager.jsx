@@ -62,7 +62,7 @@ export default function ResourceManager() {
     <div>
       <div className="mb-6 flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-extrabold text-brand-navy">{config.label}</h1>
+          <h1 className="text-2xl font-extrabold text-brand-ink">{config.label}</h1>
           <p className="text-sm text-slate-500">{items.length} item(s)</p>
         </div>
         <button onClick={() => setEditing({})} className="btn-primary">
@@ -96,7 +96,7 @@ export default function ResourceManager() {
                     ))}
                     <td className="px-4 py-3">
                       <div className="flex justify-end gap-2">
-                        <button onClick={() => setEditing(item)} className="rounded-md border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-navy hover:text-brand-navy">
+                        <button onClick={() => setEditing(item)} className="rounded-md border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-ink hover:text-brand-ink">
                           Edit
                         </button>
                         <button onClick={() => remove(item._id)} className="rounded-md border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-600 hover:border-brand-red hover:text-brand-red">
@@ -183,7 +183,7 @@ function ResourceForm({ config, initial, onClose, onSave }) {
     <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/50 p-4">
       <div className="my-8 w-full max-w-2xl rounded-2xl bg-white shadow-2xl">
         <div className="flex items-center justify-between border-b border-slate-100 px-6 py-4">
-          <h2 className="text-lg font-bold text-brand-navy">
+          <h2 className="text-lg font-bold text-brand-ink">
             {initial._id ? "Edit" : "Add"} {config.label.replace(/s$/, "")}
           </h2>
           <button onClick={onClose} className="rounded-lg p-1.5 text-slate-400 hover:bg-slate-100" aria-label="Close">
@@ -218,7 +218,7 @@ function Field({ field, value, onChange }) {
   if (field.type === "checkbox")
     return (
       <label className="flex items-center gap-2 pt-1.5">
-        <input type="checkbox" checked={!!value} onChange={(e) => onChange(e.target.checked)} className="h-4 w-4 rounded border-slate-300 text-brand-navy" />
+        <input type="checkbox" checked={!!value} onChange={(e) => onChange(e.target.checked)} className="h-4 w-4 rounded border-slate-300 text-brand-ink" />
         <span className="text-sm text-slate-600">Enabled</span>
       </label>
     );

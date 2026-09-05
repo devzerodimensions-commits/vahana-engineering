@@ -16,6 +16,14 @@ export default {
           "navy-light": "#26398F",
           red: "#E11F27",
           "red-dark": "#B8161D",
+          // Admin panel only. The client asked for black rather than the brand
+          // navy in the dashboard, so it gets its own token instead of black
+          // being hard-coded across ~25 class names. Not pure #000 — a slight
+          // warmth stops large dark panels looking like a dead pixel field, and
+          // gives the borders something to sit against.
+          ink: "#141416",
+          "ink-dark": "#0A0A0C",
+          "ink-light": "#26262B",
         },
       },
       fontFamily: {
