@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { crudControllers } from "../controllers/factory.js";
-import { protect, authorize } from "../middleware/auth.js";
+import { protect, authorize, attachUser } from "../middleware/auth.js";
 
 /**
  * Builds a standard REST router for a content model.
@@ -23,8 +23,10 @@ export const resourceRouter = (Model, options = {}, config = {}) => {
 
   // Reads
   if (publicRead) {
-    router.get("/", c.getAll);
-    router.get("/:idOrSlug", c.getOne);
+    // attachUser, not protect: anyone may read, but a signed-in admin must be
+    // recognised so they can also see unpublished drafts.
+    router.get("/", attachUser, c.getAll);
+    router.get("/:idOrSlug", attachUser, c.getOne);
   } else {
     router.get("/", protect, c.getAll);
     router.get("/:idOrSlug", protect, c.getOne);

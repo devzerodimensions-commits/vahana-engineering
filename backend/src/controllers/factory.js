@@ -67,16 +67,28 @@ export const crudControllers = (modelName, options = {}) => {
     const where = {};
 
     if (!UNPUBLISHED_MODELS.includes(modelName)) {
-      if (req.query.published !== undefined) {
-        where.published = req.query.published === "true";
-      } else if (!req.user) {
-        where.published = true; // anonymous callers never see drafts
+      const pub = req.query.published;
+      // An EMPTY string means "don't filter" — the admin panel sends
+      // `?published=` precisely so it can see drafts alongside live records.
+      // Testing only for `undefined` treated "" as "false", so the admin asked
+      // for unpublished-only and every list came back empty. That bug was in the
+      // original Mongo controller too; it just never ran, because the backend
+      // was never deployed.
+      if (pub === undefined || pub === "") {
+        if (!req.user) where.published = true; // anonymous callers never see drafts
+      } else {
+        where.published = pub === "true";
       }
     }
 
     for (const field of filterFields) {
       const val = req.query[field];
-      if (val === undefined) continue;
+      // Skip empty values as well as absent ones. `?published=` and `?category=`
+      // are sent by the admin and by cleared dropdowns to mean "no filter";
+      // passing "" straight through made Prisma reject a boolean column with a
+      // string and return a 500. Mongo silently matched nothing instead, which
+      // is why this never surfaced before.
+      if (val === undefined || val === "") continue;
       where[field] = val === "true" ? true : val === "false" ? false : val;
     }
 
