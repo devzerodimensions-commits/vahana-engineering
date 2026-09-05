@@ -6,8 +6,9 @@ import connectDB from "./src/config/db.js";
 
 const PORT = process.env.PORT || 5000;
 
-// Connect to MongoDB (non-fatal: the server still boots so the health check and
-// clear error messages are available even if the database is unreachable).
+// Connect to PostgreSQL. Unlike the old Mongo setup this IS fatal: without a
+// database every content route errors anyway, so exiting with a clear message
+// beats a server that looks healthy and 500s on every request.
 connectDB();
 
 const server = app.listen(PORT, () => {

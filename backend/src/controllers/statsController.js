@@ -1,63 +1,57 @@
 import asyncHandler from "../utils/asyncHandler.js";
-import Product from "../models/Product.js";
-import Service from "../models/Service.js";
-import TestingCategory from "../models/TestingCategory.js";
-import Blog from "../models/Blog.js";
-import Client from "../models/Client.js";
-import Testimonial from "../models/Testimonial.js";
-import Gallery from "../models/Gallery.js";
-import Certification from "../models/Certification.js";
-import Inquiry from "../models/Inquiry.js";
-import Contact from "../models/Contact.js";
-import Job from "../models/Job.js";
+import prisma from "../config/db.js";
+import { toApi } from "./factory.js";
 
-// GET /api/stats  (admin dashboard analytics)
+// GET /api/stats — admin dashboard analytics.
+//
+// The blogs / gallery / jobs counts are gone with those models; the dashboard
+// reads totals defensively, so absent keys simply don't render a tile.
 export const getStats = asyncHandler(async (req, res) => {
   const [
     products,
     services,
     categories,
-    blogs,
     clients,
     testimonials,
-    gallery,
     certifications,
     inquiries,
     newInquiries,
     contacts,
     unreadContacts,
-    jobs,
+    recentInquiries,
+    recentContacts,
   ] = await Promise.all([
-    Product.countDocuments(),
-    Service.countDocuments(),
-    TestingCategory.countDocuments(),
-    Blog.countDocuments(),
-    Client.countDocuments(),
-    Testimonial.countDocuments(),
-    Gallery.countDocuments(),
-    Certification.countDocuments(),
-    Inquiry.countDocuments(),
-    Inquiry.countDocuments({ status: "new" }),
-    Contact.countDocuments(),
-    Contact.countDocuments({ read: false }),
-    Job.countDocuments(),
+    prisma.product.count(),
+    prisma.service.count(),
+    prisma.testingCategory.count(),
+    prisma.client.count(),
+    prisma.testimonial.count(),
+    prisma.certification.count(),
+    prisma.inquiry.count(),
+    prisma.inquiry.count({ where: { status: "new" } }),
+    prisma.contact.count(),
+    prisma.contact.count({ where: { read: false } }),
+    prisma.inquiry.findMany({ orderBy: { createdAt: "desc" }, take: 5 }),
+    prisma.contact.findMany({ orderBy: { createdAt: "desc" }, take: 5 }),
   ]);
 
-  // Inquiries grouped by product category (join through products).
-  const recentInquiries = await Inquiry.find().sort("-createdAt").limit(5);
-  const recentContacts = await Contact.find().sort("-createdAt").limit(5);
+  // Enquiries per month for the trend chart. Mongo did this with an aggregation
+  // pipeline; in SQL it's a date_trunc group-by, which is both simpler and
+  // correctly ordered by actual date rather than by year/month tuple.
+  const trendRows = await prisma.$queryRaw`
+    SELECT date_trunc('month', "createdAt") AS month, COUNT(*)::int AS count
+    FROM inquiries
+    GROUP BY month
+    ORDER BY month DESC
+    LIMIT 12
+  `;
 
-  // Inquiry counts for the last 6 months for a simple trend chart.
-  const trend = await Inquiry.aggregate([
-    {
-      $group: {
-        _id: { y: { $year: "$createdAt" }, m: { $month: "$createdAt" } },
-        count: { $sum: 1 },
-      },
-    },
-    { $sort: { "_id.y": 1, "_id.m": 1 } },
-    { $limit: 12 },
-  ]);
+  const trend = trendRows
+    .map((r) => ({
+      _id: { y: new Date(r.month).getUTCFullYear(), m: new Date(r.month).getUTCMonth() + 1 },
+      count: r.count,
+    }))
+    .reverse(); // oldest first, as the chart expects
 
   res.json({
     success: true,
@@ -66,18 +60,15 @@ export const getStats = asyncHandler(async (req, res) => {
         products,
         services,
         categories,
-        blogs,
         clients,
         testimonials,
-        gallery,
         certifications,
         inquiries,
         contacts,
-        jobs,
       },
       alerts: { newInquiries, unreadContacts },
-      recentInquiries,
-      recentContacts,
+      recentInquiries: recentInquiries.map(toApi),
+      recentContacts: recentContacts.map(toApi),
       trend,
     },
   });

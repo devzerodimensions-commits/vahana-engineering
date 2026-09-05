@@ -5,17 +5,9 @@ import resourceRouter from "./resourceRouter.js";
 import { protect, authorize } from "../middleware/auth.js";
 import { getStats } from "../controllers/statsController.js";
 
-import Product from "../models/Product.js";
-import TestingCategory from "../models/TestingCategory.js";
-import Service from "../models/Service.js";
-import Blog from "../models/Blog.js";
-import Client from "../models/Client.js";
-import Testimonial from "../models/Testimonial.js";
-import Gallery from "../models/Gallery.js";
-import Certification from "../models/Certification.js";
-import Inquiry from "../models/Inquiry.js";
-import Contact from "../models/Contact.js";
-import Job from "../models/Job.js";
+// Resources are identified by Prisma model NAME rather than a Mongoose model
+// object. The blogs / gallery / jobs routes are gone with their models: those
+// pages were removed from the site and nothing in the frontend calls them.
 
 const router = Router();
 
@@ -27,50 +19,46 @@ router.get("/stats", protect, authorize("admin", "editor", "viewer"), getStats);
 // Content resources (public read, protected write)
 router.use(
   "/products",
-  resourceRouter(Product, {
+  resourceRouter("product", {
     searchFields: ["name", "summary", "description"],
     filterFields: ["category", "featured", "published"],
     defaultSort: "order -createdAt",
+    slugFrom: "name",
   })
 );
 
 router.use(
   "/testing-categories",
-  resourceRouter(TestingCategory, {
+  resourceRouter("testingCategory", {
     searchFields: ["name", "blurb"],
     defaultSort: "order name",
+    slugFrom: "name",
   })
 );
 
 router.use(
   "/services",
-  resourceRouter(Service, {
+  resourceRouter("service", {
     searchFields: ["title", "summary", "description"],
     defaultSort: "order -createdAt",
+    slugFrom: "title",
   })
 );
 
-router.use(
-  "/blogs",
-  resourceRouter(Blog, {
-    searchFields: ["title", "excerpt", "content", "tags"],
-    filterFields: ["published"],
-    defaultSort: "-publishedAt",
-  })
-);
+router.use("/clients", resourceRouter("client", { defaultSort: "order name" }));
+router.use("/testimonials", resourceRouter("testimonial", { defaultSort: "order -createdAt" }));
+router.use("/certifications", resourceRouter("certification", { defaultSort: "order -createdAt" }));
 
-router.use("/clients", resourceRouter(Client, { defaultSort: "order name" }));
-router.use("/testimonials", resourceRouter(Testimonial, { defaultSort: "order -createdAt" }));
-router.use("/gallery", resourceRouter(Gallery, { filterFields: ["category"], defaultSort: "order -createdAt" }));
-router.use("/certifications", resourceRouter(Certification, { defaultSort: "order -createdAt" }));
-router.use("/jobs", resourceRouter(Job, { searchFields: ["title", "department", "location"], defaultSort: "-createdAt" }));
-
-// Form submissions: anyone can create, only staff can read/manage.
+// Form submissions: anyone can create, only staff can read or manage.
 router.use(
   "/inquiries",
   resourceRouter(
-    Inquiry,
-    { searchFields: ["name", "email", "product", "company"], filterFields: ["status"], defaultSort: "-createdAt" },
+    "inquiry",
+    {
+      searchFields: ["name", "email", "product", "company"],
+      filterFields: ["status"],
+      defaultSort: "-createdAt",
+    },
     { publicRead: false, publicCreate: true }
   )
 );
@@ -78,8 +66,12 @@ router.use(
 router.use(
   "/contacts",
   resourceRouter(
-    Contact,
-    { searchFields: ["name", "email", "subject"], filterFields: ["read"], defaultSort: "-createdAt" },
+    "contact",
+    {
+      searchFields: ["name", "email", "subject"],
+      filterFields: ["read"],
+      defaultSort: "-createdAt",
+    },
     { publicRead: false, publicCreate: true }
   )
 );

@@ -1,0 +1,176 @@
+// PostgreSQL schema for the Vihaana Engineering site (Neon).
+//
+// Ported from the previous Mongoose models. Three of those — Blog, Gallery and
+// Job — are deliberately NOT carried over: their pages were removed from the
+// site and nothing in the frontend calls those endpoints, so porting them would
+// only recreate dead code.
+//
+// Ids are cuids rather than integers so they stay opaque in URLs, and the API
+// exposes them as `_id` to match the shape the admin screens already expect.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String // bcrypt hash; never selected into API responses
+  role      String   @default("editor") // admin | editor | viewer
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Product {
+  id           String   @id @default(cuid())
+  name         String
+  slug         String   @unique
+  category     String // testing-category slug
+  categoryName String?
+  image        String   @default("")
+  gallery      String[] @default([])
+  summary      String   @default("")
+  description  String   @default("")
+  // Model number, e.g. "VE-CBC-01". 9 of the 27 products have one, and both the
+  // product page and the generated PDF datasheet print it. The old Mongoose
+  // schema omitted this field entirely, so seeding would have silently dropped
+  // every model number — included here deliberately.
+  model        String   @default("")
+  standards    String[] @default([])
+  // Array of { label, value }. Json rather than a child table: it is display-only,
+  // always read as a whole, and never queried by individual row.
+  specifications Json   @default("[]")
+  price        String   @default("On Request")
+  featured     Boolean  @default(false)
+  published    Boolean  @default(true)
+  order        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([category])
+  @@index([published])
+  @@map("products")
+}
+
+model TestingCategory {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  blurb       String   @default("")
+  description String   @default("")
+  icon        String   @default("")
+  image       String   @default("")
+  standards   String[] @default([])
+  order       Int      @default(0)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("testing_categories")
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  icon        String   @default("")
+  image       String   @default("")
+  summary     String   @default("")
+  description String   @default("")
+  features    String[] @default([])
+  order       Int      @default(0)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("services")
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String
+  company   String   @default("")
+  role      String   @default("")
+  avatar    String   @default("")
+  message   String
+  rating    Int      @default(5)
+  order     Int      @default(0)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("testimonials")
+}
+
+model Client {
+  id        String   @id @default(cuid())
+  name      String
+  logo      String   @default("")
+  website   String   @default("")
+  industry  String   @default("")
+  order     Int      @default(0)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("clients")
+}
+
+model Certification {
+  id          String   @id @default(cuid())
+  title       String
+  issuer      String   @default("")
+  image       String   @default("")
+  file        String   @default("") // downloadable certificate / brochure
+  description String   @default("")
+  year        String   @default("")
+  order       Int      @default(0)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("certifications")
+}
+
+// General contact-form submissions.
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String   @default("")
+  subject   String   @default("")
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([read])
+  @@map("contacts")
+}
+
+// Product / quote enquiries raised from product pages.
+model Inquiry {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String   @default("")
+  company   String   @default("")
+  product   String   @default("") // product name or slug
+  quantity  String   @default("")
+  message   String   @default("")
+  status    String   @default("new") // new | in-progress | quoted | closed
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+  @@map("inquiries")
+}

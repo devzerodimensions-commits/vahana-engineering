@@ -1,28 +1,43 @@
-import mongoose from "mongoose";
+// Prisma client (PostgreSQL / Neon).
+//
+// A single shared instance: Prisma opens a connection pool, and creating a
+// client per import would exhaust Neon's connection limit. In dev, nodemon
+// re-imports modules on reload, so the instance is cached on globalThis to stop
+// every reload leaking another pool.
+import { PrismaClient } from "@prisma/client";
+
+const globalForPrisma = globalThis;
+
+export const prisma =
+  globalForPrisma.__vePrisma ||
+  new PrismaClient({
+    log: process.env.NODE_ENV === "production" ? ["error"] : ["error", "warn"],
+  });
+
+if (process.env.NODE_ENV !== "production") globalForPrisma.__vePrisma = prisma;
 
 /**
- * Connects to MongoDB. Uses a short server-selection timeout and disables
- * command buffering so that, when the database is not running, queries fail
- * fast with a helpful message instead of hanging.
+ * Connects at boot. Unlike the old Mongo setup this does NOT keep serving on a
+ * failed connection: without a database every content route returns an error
+ * anyway, so failing loudly here is clearer than a server that looks healthy
+ * and 500s on each request.
  */
-const connectDB = async () => {
-  const uri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/vihana_engineering";
-  mongoose.set("bufferCommands", false);
-  mongoose.set("strictQuery", true);
+export const connectDB = async () => {
+  if (!process.env.DATABASE_URL) {
+    console.error("\nDATABASE_URL is not set.");
+    console.error("   Fix: copy backend/.env.example to backend/.env and paste your Neon");
+    console.error("   connection string into DATABASE_URL.\n");
+    process.exit(1);
+  }
 
   try {
-    const conn = await mongoose.connect(uri, {
-      serverSelectionTimeoutMS: 8000,
-    });
-    console.log(` MongoDB connected: ${conn.connection.host}/${conn.connection.name}`);
+    await prisma.$connect();
+    const host = process.env.DATABASE_URL.replace(/^.*@/, "").replace(/[/?].*$/, "");
+    console.log(`PostgreSQL connected (${host})`);
   } catch (err) {
-    console.error(`\n MongoDB connection failed: ${err.message}`);
-    console.error(
-      "   The API will keep running, but database routes will return errors until MongoDB is reachable."
-    );
-    console.error(
-      "   Fix: start a local MongoDB (mongodb://127.0.0.1:27017) or set MONGO_URI to a MongoDB Atlas cluster in backend/.env\n"
-    );
+    console.error(`\nPostgreSQL connection failed: ${err.message}`);
+    console.error("   Check DATABASE_URL in backend/.env — Neon requires ?sslmode=require\n");
+    process.exit(1);
   }
 };
 
