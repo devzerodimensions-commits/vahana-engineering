@@ -1,6 +1,7 @@
-# Render Blueprint — deploys the Vihaana Engineering website as a free Static Site.
+# Render Blueprint — the whole site: static frontend + API backend.
 # In Render: New + → Blueprint → connect this repo → Apply.
 services:
+  # ---------------------------------------------------------------- frontend
   - type: web
     name: vihana-engineering
     runtime: static
@@ -8,7 +9,45 @@ services:
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     # SPA rewrite so deep links (e.g. /products/…) work on refresh.
+    # NOTE: the live service was created by hand, not from this Blueprint, so
+    # this rule is NOT active on it — frontend/copy-404.mjs is the workaround.
     routes:
       - type: rewrite
         source: /*
         destination: /index.html
+    envVars:
+      # Points the site at the API below. Without this the frontend falls back
+      # to its bundled copy of the data and the admin panel cannot log in.
+      - key: VITE_API_URL
+        fromService:
+          name: vihaana-engineering-api
+          type: web
+          property: hostport
+  # ----------------------------------------------------------------- backend
+  - type: web
+    name: vihaana-engineering-api
+    runtime: node
+    plan: free
+    # Singapore, to sit beside the Neon database (ap-southeast-1). On the US
+    # default every query would cross the Pacific twice.
+    region: singapore
+    rootDir: backend
+    # postinstall runs `prisma generate`, which is required before the client
+    # can be imported — the build fails without it.
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Set manually in the dashboard — a database URL must never be committed.
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRE
+        value: 7d
+      # Origin allowed by CORS. Must be the deployed site, or the browser will
+      # block every admin request.
+      - key: CLIENT_URL
+        value: https://vahana-engineering.onrender.com
