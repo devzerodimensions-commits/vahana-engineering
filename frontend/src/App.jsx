@@ -19,6 +19,7 @@ import Login from "./admin/Login.jsx";
 import Dashboard from "./admin/Dashboard.jsx";
 import ResourceManager from "./admin/ResourceManager.jsx";
 import Inbox from "./admin/Inbox.jsx";
+import Media from "./admin/Media.jsx";
 
 export default function App() {
   return (
@@ -49,6 +50,9 @@ export default function App() {
           <Route index element={<Dashboard />} />
           <Route path="inquiries" element={<Inbox type="inquiries" />} />
           <Route path="contacts" element={<Inbox type="contacts" />} />
+          {/* Must stay ABOVE the ":resource" catch-all, or /admin/media is
+              treated as a CRUD resource and tries to fetch /api/media. */}
+          <Route path="media" element={<Media />} />
           <Route path=":resource" element={<ResourceManager />} />
         </Route>
       </Routes>

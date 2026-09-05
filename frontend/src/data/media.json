@@ -1,0 +1,546 @@
+{
+  "generatedFrom": "frontend/public",
+  "count": 54,
+  "items": [
+    {
+      "url": "/logo-header.png",
+      "file": "logo-header.png",
+      "name": "Logo Header",
+      "group": "Brand",
+      "bytes": 38703,
+      "width": 1050,
+      "height": 576,
+      "usedBy": null
+    },
+    {
+      "url": "/logo-original.png",
+      "file": "logo-original.png",
+      "name": "Logo Original",
+      "group": "Brand",
+      "bytes": 51281,
+      "width": 1153,
+      "height": 769,
+      "usedBy": null
+    },
+    {
+      "url": "/logo-transparent.png",
+      "file": "logo-transparent.png",
+      "name": "Logo Transparent",
+      "group": "Brand",
+      "bytes": 45193,
+      "width": 1153,
+      "height": 769,
+      "usedBy": null
+    },
+    {
+      "url": "/logo.png",
+      "file": "logo.png",
+      "name": "Logo",
+      "group": "Brand",
+      "bytes": 51281,
+      "width": 1153,
+      "height": 769,
+      "usedBy": null
+    },
+    {
+      "url": "/machines/carbon-black-content-test-apparatus.webp",
+      "file": "carbon-black-content-test-apparatus.webp",
+      "name": "Carbon Black Content Test Apparatus",
+      "group": "Machine Cutouts",
+      "bytes": 26416,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Carbon Black Content Test Apparatus"
+    },
+    {
+      "url": "/machines/compression-moulding-press.webp",
+      "file": "compression-moulding-press.webp",
+      "name": "Compression Moulding Press",
+      "group": "Machine Cutouts",
+      "bytes": 25316,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Compression Moulding Press"
+    },
+    {
+      "url": "/machines/contour-cutter.webp",
+      "file": "contour-cutter.webp",
+      "name": "Contour Cutter",
+      "group": "Machine Cutouts",
+      "bytes": 17770,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Contour Cutter"
+    },
+    {
+      "url": "/machines/dart-impact-testing-machine.webp",
+      "file": "dart-impact-testing-machine.webp",
+      "name": "Dart Impact Testing Machine",
+      "group": "Machine Cutouts",
+      "bytes": 10236,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Dart Impact Testing Machine"
+    },
+    {
+      "url": "/machines/emission-flow-variation-test-apparatus.webp",
+      "file": "emission-flow-variation-test-apparatus.webp",
+      "name": "Emission Flow Variation Test Apparatus",
+      "group": "Machine Cutouts",
+      "bytes": 72838,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Emission Flow Variation Test Apparatus"
+    },
+    {
+      "url": "/machines/hot-air-oven.webp",
+      "file": "hot-air-oven.webp",
+      "name": "Hot Air Oven",
+      "group": "Machine Cutouts",
+      "bytes": 21628,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Hot Air Oven"
+    },
+    {
+      "url": "/machines/hydrostatic-pressure-testing-machine-3-station.webp",
+      "file": "hydrostatic-pressure-testing-machine-3-station.webp",
+      "name": "Hydrostatic Pressure Testing Machine 3 Station",
+      "group": "Machine Cutouts",
+      "bytes": 27558,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Hydrostatic Pressure Testing Machine – 3 Station"
+    },
+    {
+      "url": "/machines/izod-and-charpy-impact-test-apparatus.webp",
+      "file": "izod-and-charpy-impact-test-apparatus.webp",
+      "name": "Izod And Charpy Impact Test Apparatus",
+      "group": "Machine Cutouts",
+      "bytes": 16466,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Izod & Charpy Impact Test Apparatus"
+    },
+    {
+      "url": "/machines/melt-flow-index-mfi-test-apparatus.webp",
+      "file": "melt-flow-index-mfi-test-apparatus.webp",
+      "name": "Melt Flow Index Mfi Test Apparatus",
+      "group": "Machine Cutouts",
+      "bytes": 19098,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Melt Flow Index (MFI) Test Apparatus"
+    },
+    {
+      "url": "/machines/oxidation-induction-time-oit-test-apparatus.webp",
+      "file": "oxidation-induction-time-oit-test-apparatus.webp",
+      "name": "Oxidation Induction Time Oit Test Apparatus",
+      "group": "Machine Cutouts",
+      "bytes": 29928,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Oxidation Induction Time (OIT) Test Apparatus"
+    },
+    {
+      "url": "/machines/tensile-testing-machine-wst.webp",
+      "file": "tensile-testing-machine-wst.webp",
+      "name": "Tensile Testing Machine Wst",
+      "group": "Machine Cutouts",
+      "bytes": 22180,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Tensile Testing Machine – WST"
+    },
+    {
+      "url": "/machines/tensile-testing-machine.webp",
+      "file": "tensile-testing-machine.webp",
+      "name": "Tensile Testing Machine",
+      "group": "Machine Cutouts",
+      "bytes": 14790,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Tensile Testing Machine"
+    },
+    {
+      "url": "/machines/two-roll-mill.webp",
+      "file": "two-roll-mill.webp",
+      "name": "Two Roll Mill",
+      "group": "Machine Cutouts",
+      "bytes": 22244,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Two Roll Mill"
+    },
+    {
+      "url": "/machines/universal-testing-machine-10-ton.webp",
+      "file": "universal-testing-machine-10-ton.webp",
+      "name": "Universal Testing Machine 10 Ton",
+      "group": "Machine Cutouts",
+      "bytes": 16904,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Universal Testing Machine – 10 Ton"
+    },
+    {
+      "url": "/machines/universal-testing-machine-2-ton.webp",
+      "file": "universal-testing-machine-2-ton.webp",
+      "name": "Universal Testing Machine 2 Ton",
+      "group": "Machine Cutouts",
+      "bytes": 13784,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Universal Testing Machine – 2 Ton"
+    },
+    {
+      "url": "/machines/universal-testing-machine-geomembrane-and-fabric.webp",
+      "file": "universal-testing-machine-geomembrane-and-fabric.webp",
+      "name": "Universal Testing Machine Geomembrane And Fabric",
+      "group": "Machine Cutouts",
+      "bytes": 24856,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Universal Testing Machine – Geomembrane & Fabric"
+    },
+    {
+      "url": "/machines/vicat-softening-point-test-apparatus.webp",
+      "file": "vicat-softening-point-test-apparatus.webp",
+      "name": "Vicat Softening Point Test Apparatus",
+      "group": "Machine Cutouts",
+      "bytes": 22300,
+      "width": 660,
+      "height": 600,
+      "usedBy": "Vicat Softening Point Test Apparatus"
+    },
+    {
+      "url": "/products/ash-content-tester-muffle-furnace.jpg",
+      "file": "ash-content-tester-muffle-furnace.jpg",
+      "name": "Ash Content Tester Muffle Furnace",
+      "group": "Product Photos",
+      "bytes": 41278,
+      "width": 1100,
+      "height": 1038,
+      "usedBy": "Ash Content Tester (Muffle Furnace)"
+    },
+    {
+      "url": "/products/blown-film-extrusion-plant-laboratory-model.jpg",
+      "file": "blown-film-extrusion-plant-laboratory-model.jpg",
+      "name": "Blown Film Extrusion Plant Laboratory Model",
+      "group": "Product Photos",
+      "bytes": 64761,
+      "width": 1100,
+      "height": 1065,
+      "usedBy": "Blown Film Extrusion Plant – Laboratory Model"
+    },
+    {
+      "url": "/products/carbon-black-content-test-apparatus.jpg",
+      "file": "carbon-black-content-test-apparatus.jpg",
+      "name": "Carbon Black Content Test Apparatus",
+      "group": "Product Photos",
+      "bytes": 38424,
+      "width": 1100,
+      "height": 666,
+      "usedBy": "Carbon Black Content Test Apparatus"
+    },
+    {
+      "url": "/products/compression-moulding-press.jpg",
+      "file": "compression-moulding-press.jpg",
+      "name": "Compression Moulding Press",
+      "group": "Product Photos",
+      "bytes": 48160,
+      "width": 935,
+      "height": 1100,
+      "usedBy": "Compression Moulding Press"
+    },
+    {
+      "url": "/products/contour-cutter.jpg",
+      "file": "contour-cutter.jpg",
+      "name": "Contour Cutter",
+      "group": "Product Photos",
+      "bytes": 34297,
+      "width": 990,
+      "height": 1100,
+      "usedBy": "Contour Cutter"
+    },
+    {
+      "url": "/products/cooling-chamber.jpg",
+      "file": "cooling-chamber.jpg",
+      "name": "Cooling Chamber",
+      "group": "Product Photos",
+      "bytes": 34244,
+      "width": 852,
+      "height": 1100,
+      "usedBy": "Cooling Chamber"
+    },
+    {
+      "url": "/products/dart-impact-testing-machine.jpg",
+      "file": "dart-impact-testing-machine.jpg",
+      "name": "Dart Impact Testing Machine",
+      "group": "Product Photos",
+      "bytes": 22345,
+      "width": 511,
+      "height": 1100,
+      "usedBy": "Dart Impact Testing Machine"
+    },
+    {
+      "url": "/products/emission-flow-variation-test-apparatus.jpg",
+      "file": "emission-flow-variation-test-apparatus.jpg",
+      "name": "Emission Flow Variation Test Apparatus",
+      "group": "Product Photos",
+      "bytes": 59470,
+      "width": 1100,
+      "height": 787,
+      "usedBy": "Emission Flow Variation Test Apparatus"
+    },
+    {
+      "url": "/products/hot-air-oven.jpg",
+      "file": "hot-air-oven.jpg",
+      "name": "Hot Air Oven",
+      "group": "Product Photos",
+      "bytes": 44811,
+      "width": 926,
+      "height": 1100,
+      "usedBy": "Hot Air Oven"
+    },
+    {
+      "url": "/products/hot-oil-bath.jpg",
+      "file": "hot-oil-bath.jpg",
+      "name": "Hot Oil Bath",
+      "group": "Product Photos",
+      "bytes": 27309,
+      "width": 1100,
+      "height": 642,
+      "usedBy": "Hot Oil Bath"
+    },
+    {
+      "url": "/products/hot-water-bath.jpg",
+      "file": "hot-water-bath.jpg",
+      "name": "Hot Water Bath",
+      "group": "Product Photos",
+      "bytes": 27110,
+      "width": 1100,
+      "height": 668,
+      "usedBy": "Hot Water Bath"
+    },
+    {
+      "url": "/products/humidity-chamber.jpg",
+      "file": "humidity-chamber.jpg",
+      "name": "Humidity Chamber",
+      "group": "Product Photos",
+      "bytes": 33520,
+      "width": 761,
+      "height": 1100,
+      "usedBy": "Humidity Chamber"
+    },
+    {
+      "url": "/products/hydrostatic-pressure-testing-machine-3-station.jpg",
+      "file": "hydrostatic-pressure-testing-machine-3-station.jpg",
+      "name": "Hydrostatic Pressure Testing Machine 3 Station",
+      "group": "Product Photos",
+      "bytes": 50533,
+      "width": 1100,
+      "height": 985,
+      "usedBy": "Hydrostatic Pressure Testing Machine – 3 Station"
+    },
+    {
+      "url": "/products/izod-and-charpy-impact-test-apparatus.jpg",
+      "file": "izod-and-charpy-impact-test-apparatus.jpg",
+      "name": "Izod And Charpy Impact Test Apparatus",
+      "group": "Product Photos",
+      "bytes": 34650,
+      "width": 860,
+      "height": 1100,
+      "usedBy": "Izod & Charpy Impact Test Apparatus"
+    },
+    {
+      "url": "/products/melt-flow-index-mfi-test-apparatus.jpg",
+      "file": "melt-flow-index-mfi-test-apparatus.jpg",
+      "name": "Melt Flow Index Mfi Test Apparatus",
+      "group": "Product Photos",
+      "bytes": 40369,
+      "width": 1059,
+      "height": 1100,
+      "usedBy": "Melt Flow Index (MFI) Test Apparatus"
+    },
+    {
+      "url": "/products/opacity-test-apparatus.jpg",
+      "file": "opacity-test-apparatus.jpg",
+      "name": "Opacity Test Apparatus",
+      "group": "Product Photos",
+      "bytes": 32662,
+      "width": 1100,
+      "height": 912,
+      "usedBy": "Opacity Test Apparatus"
+    },
+    {
+      "url": "/products/oxidation-induction-time-oit-test-apparatus.jpg",
+      "file": "oxidation-induction-time-oit-test-apparatus.jpg",
+      "name": "Oxidation Induction Time Oit Test Apparatus",
+      "group": "Product Photos",
+      "bytes": 42573,
+      "width": 1100,
+      "height": 853,
+      "usedBy": "Oxidation Induction Time (OIT) Test Apparatus"
+    },
+    {
+      "url": "/products/sheet-moulding-press.jpg",
+      "file": "sheet-moulding-press.jpg",
+      "name": "Sheet Moulding Press",
+      "group": "Product Photos",
+      "bytes": 73692,
+      "width": 1100,
+      "height": 1015,
+      "usedBy": "Sheet Moulding Press"
+    },
+    {
+      "url": "/products/tensile-testing-machine-tape-and-fabric.jpg",
+      "file": "tensile-testing-machine-tape-and-fabric.jpg",
+      "name": "Tensile Testing Machine Tape And Fabric",
+      "group": "Product Photos",
+      "bytes": 36442,
+      "width": 633,
+      "height": 1100,
+      "usedBy": "Tensile Testing Machine – Tape & Fabric"
+    },
+    {
+      "url": "/products/tensile-testing-machine-wst.jpg",
+      "file": "tensile-testing-machine-wst.jpg",
+      "name": "Tensile Testing Machine Wst",
+      "group": "Product Photos",
+      "bytes": 39799,
+      "width": 620,
+      "height": 1100,
+      "usedBy": "Tensile Testing Machine – WST"
+    },
+    {
+      "url": "/products/tensile-testing-machine.jpg",
+      "file": "tensile-testing-machine.jpg",
+      "name": "Tensile Testing Machine",
+      "group": "Product Photos",
+      "bytes": 34221,
+      "width": 516,
+      "height": 1100,
+      "usedBy": "Tensile Testing Machine"
+    },
+    {
+      "url": "/products/two-roll-mill.jpg",
+      "file": "two-roll-mill.jpg",
+      "name": "Two Roll Mill",
+      "group": "Product Photos",
+      "bytes": 52387,
+      "width": 1023,
+      "height": 1100,
+      "usedBy": "Two Roll Mill"
+    },
+    {
+      "url": "/products/universal-testing-machine-10-ton.jpg",
+      "file": "universal-testing-machine-10-ton.jpg",
+      "name": "Universal Testing Machine 10 Ton",
+      "group": "Product Photos",
+      "bytes": 28067,
+      "width": 1100,
+      "height": 1012,
+      "usedBy": "Universal Testing Machine – 10 Ton"
+    },
+    {
+      "url": "/products/universal-testing-machine-2-ton.jpg",
+      "file": "universal-testing-machine-2-ton.jpg",
+      "name": "Universal Testing Machine 2 Ton",
+      "group": "Product Photos",
+      "bytes": 32300,
+      "width": 1100,
+      "height": 1012,
+      "usedBy": "Universal Testing Machine – 2 Ton"
+    },
+    {
+      "url": "/products/universal-testing-machine-geomembrane-and-fabric.jpg",
+      "file": "universal-testing-machine-geomembrane-and-fabric.jpg",
+      "name": "Universal Testing Machine Geomembrane And Fabric",
+      "group": "Product Photos",
+      "bytes": 43808,
+      "width": 888,
+      "height": 1100,
+      "usedBy": "Universal Testing Machine – Geomembrane & Fabric"
+    },
+    {
+      "url": "/products/v-notch-cutter-for-hdpe-pipe.jpg",
+      "file": "v-notch-cutter-for-hdpe-pipe.jpg",
+      "name": "V Notch Cutter For Hdpe Pipe",
+      "group": "Product Photos",
+      "bytes": 29488,
+      "width": 1100,
+      "height": 734,
+      "usedBy": "V-Notch Cutter for HDPE Pipe"
+    },
+    {
+      "url": "/products/vicat-softening-point-test-apparatus.jpg",
+      "file": "vicat-softening-point-test-apparatus.jpg",
+      "name": "Vicat Softening Point Test Apparatus",
+      "group": "Product Photos",
+      "bytes": 46118,
+      "width": 1100,
+      "height": 1093,
+      "usedBy": "Vicat Softening Point Test Apparatus"
+    },
+    {
+      "url": "/slides/dart-impact-testing-machine.jpg",
+      "file": "dart-impact-testing-machine.jpg",
+      "name": "Dart Impact Testing Machine",
+      "group": "Slides",
+      "bytes": 17008,
+      "width": 418,
+      "height": 900,
+      "usedBy": null
+    },
+    {
+      "url": "/slides/hydrostatic-pressure-testing-machine-3-station.jpg",
+      "file": "hydrostatic-pressure-testing-machine-3-station.jpg",
+      "name": "Hydrostatic Pressure Testing Machine 3 Station",
+      "group": "Slides",
+      "bytes": 43145,
+      "width": 1005,
+      "height": 900,
+      "usedBy": null
+    },
+    {
+      "url": "/slides/izod-and-charpy-impact-test-apparatus.jpg",
+      "file": "izod-and-charpy-impact-test-apparatus.jpg",
+      "name": "Izod And Charpy Impact Test Apparatus",
+      "group": "Slides",
+      "bytes": 25541,
+      "width": 703,
+      "height": 900,
+      "usedBy": null
+    },
+    {
+      "url": "/slides/melt-flow-index-mfi-test-apparatus.jpg",
+      "file": "melt-flow-index-mfi-test-apparatus.jpg",
+      "name": "Melt Flow Index Mfi Test Apparatus",
+      "group": "Slides",
+      "bytes": 29822,
+      "width": 866,
+      "height": 900,
+      "usedBy": null
+    },
+    {
+      "url": "/slides/tensile-testing-machine.jpg",
+      "file": "tensile-testing-machine.jpg",
+      "name": "Tensile Testing Machine",
+      "group": "Slides",
+      "bytes": 25085,
+      "width": 422,
+      "height": 900,
+      "usedBy": null
+    },
+    {
+      "url": "/slides/universal-testing-machine-10-ton.jpg",
+      "file": "universal-testing-machine-10-ton.jpg",
+      "name": "Universal Testing Machine 10 Ton",
+      "group": "Slides",
+      "bytes": 23505,
+      "width": 978,
+      "height": 900,
+      "usedBy": null
+    }
+  ]
+}

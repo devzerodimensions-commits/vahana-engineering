@@ -44,6 +44,9 @@ export default function AdminLayout() {
               <Icon name={resources[key].icon} className="h-4 w-4" /> {resources[key].label}
             </NavLink>
           ))}
+          <NavLink to="/admin/media" className={linkClass} onClick={() => setOpen(false)}>
+            <Icon name="image" className="h-4 w-4" /> Media
+          </NavLink>
           <p className="px-3 pb-1 pt-4 text-xs font-bold uppercase tracking-wider text-slate-500">Inbox</p>
           <NavLink to="/admin/inquiries" className={linkClass} onClick={() => setOpen(false)}>
             <Icon name="briefcase" className="h-4 w-4" /> Inquiries
