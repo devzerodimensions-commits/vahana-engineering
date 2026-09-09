@@ -20,7 +20,7 @@
         "IS 13360-5-4",
         "IS 2508"
       ],
-      "count": 2
+      "count": 3
     },
     {
       "slug": "melt-flow",
@@ -51,7 +51,7 @@
         "IS 2530",
         "IS 4984"
       ],
-      "count": 2
+      "count": 3
     },
     {
       "slug": "pressure-pipe",
@@ -1516,6 +1516,125 @@
         }
       ],
       "featured": true,
+      "price": "On Request"
+    },
+    {
+      "name": "Pipe Impact Testing Machine",
+      "slug": "pipe-impact-testing-machine",
+      "category": "impact",
+      "categoryName": "Impact Testing",
+      "image": "/products/pipe-impact-testing-machine.jpg",
+      "summary": "Falling-weight impact tester for PVC and HDPE pipe, with adjustable drop height up to 2000 mm and a 120° V-block sample support.",
+      "model": "VE-PIT-01",
+      "description": "Falling-weight impact tester for PVC and HDPE pipe, with adjustable drop height up to 2000 mm and a 120° V-block sample support. Manufactured by Vihaana Engineering, the Pipe Impact Testing Machine is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "IS 4985",
+        "IS 13592",
+        "IS 12818"
+      ],
+      "specifications": [
+        {
+          "label": "Model No.",
+          "value": "VE-PIT-01"
+        },
+        {
+          "label": "Falling height",
+          "value": "2000 mm"
+        },
+        {
+          "label": "Height adjustment",
+          "value": "Manually"
+        },
+        {
+          "label": "Height adjustment resolution",
+          "value": "± 2 mm"
+        },
+        {
+          "label": "Striker (Dart / Dead weight)",
+          "value": "Made from mild steel"
+        },
+        {
+          "label": "Striker (Dart / Dead weight) weight",
+          "value": "0.250 kgf, 0.500 kgf &amp; 1.000 kgf – one set of each weight"
+        },
+        {
+          "label": "Striker (Dart) release device",
+          "value": "Through D. C. magnet / Pull release free falling mechanism"
+        },
+        {
+          "label": "Max. dia. of test sample",
+          "value": "Test up to pipe Ø315mm"
+        },
+        {
+          "label": "Sample clamping",
+          "value": "on 120° V block"
+        },
+        {
+          "label": "Paint",
+          "value": "Powder coated"
+        }
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Digital Weight Balance",
+      "slug": "digital-weight-balance",
+      "category": "composition-optical",
+      "categoryName": "Composition & Optical",
+      "image": "/products/digital-weight-balance.jpg",
+      "summary": "Analytical balance reading to 0.1 mg with an automatic density-calculation program, supplied with a complete specific-gravity tool kit.",
+      "model": "VE-DWB-01Xi",
+      "description": "Analytical balance reading to 0.1 mg with an automatic density-calculation program, supplied with a complete specific-gravity tool kit. Manufactured by Vihaana Engineering, the Digital Weight Balance is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "IS 4985",
+        "IS 13592",
+        "IS 12818",
+        "IS 12701"
+      ],
+      "specifications": [
+        {
+          "label": "Model No.",
+          "value": "VE-DWB-01Xi"
+        },
+        {
+          "label": "Display",
+          "value": "LCD with multi parameter display"
+        },
+        {
+          "label": "Weighing capacity",
+          "value": "220 gms"
+        },
+        {
+          "label": "Readability",
+          "value": "0.0001 gm / 0.1 mg"
+        },
+        {
+          "label": "Repeatability",
+          "value": "0.2 mg"
+        },
+        {
+          "label": "Linearity",
+          "value": "0.4 mg"
+        },
+        {
+          "label": "Pan size",
+          "value": "Ø100mm"
+        },
+        {
+          "label": "Result",
+          "value": "Automatic density calculation with auto tare facility"
+        },
+        {
+          "label": "Accessories",
+          "value": "Machine supply with complete specific gravity tool kit"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
+        }
+      ],
+      "featured": false,
       "price": "On Request"
     }
   ]

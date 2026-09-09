@@ -86,7 +86,7 @@
       "note": "Rigid PVC pressure pipe",
       "order": 2,
       "instrumentCount": 8,
-      "linkedCount": 5,
+      "linkedCount": 8,
       "instruments": [
         {
           "name": "Ash Content Tester (Muffle furnace)",
@@ -98,9 +98,9 @@
         {
           "name": "Digital Weight Balance",
           "model": "VE-DWB-01Xi",
-          "slug": null,
-          "productName": null,
-          "image": null
+          "slug": "digital-weight-balance",
+          "productName": "Digital Weight Balance",
+          "image": "/products/digital-weight-balance.jpg"
         },
         {
           "name": "Hot Oil Bath",
@@ -133,16 +133,16 @@
         {
           "name": "Pipe Impact Testing Machine",
           "model": "VE-PIT-01",
-          "slug": null,
-          "productName": null,
-          "image": null
+          "slug": "pipe-impact-testing-machine",
+          "productName": "Pipe Impact Testing Machine",
+          "image": "/products/pipe-impact-testing-machine.jpg"
         },
         {
           "name": "VSP (Vicat Softening Point) Test Apparatus",
           "model": "VE-VSP-01",
-          "slug": null,
-          "productName": null,
-          "image": null
+          "slug": "vicat-softening-point-test-apparatus",
+          "productName": "Vicat Softening Point Test Apparatus",
+          "image": "/products/vicat-softening-point-test-apparatus.jpg"
         }
       ]
     },
@@ -155,7 +155,7 @@
       "note": "Soil, waste & rainwater",
       "order": 3,
       "instrumentCount": 10,
-      "linkedCount": 7,
+      "linkedCount": 10,
       "instruments": [
         {
           "name": "Ash Content Tester (Muffle furnace)",
@@ -167,9 +167,9 @@
         {
           "name": "Digital Weight Balance",
           "model": "VE-DWB-01Xi",
-          "slug": null,
-          "productName": null,
-          "image": null
+          "slug": "digital-weight-balance",
+          "productName": "Digital Weight Balance",
+          "image": "/products/digital-weight-balance.jpg"
         },
         {
           "name": "Hot Oil Bath",
@@ -209,16 +209,16 @@
         {
           "name": "Pipe Impact Testing Machine",
           "model": "VE-PIT-01",
-          "slug": null,
-          "productName": null,
-          "image": null
+          "slug": "pipe-impact-testing-machine",
+          "productName": "Pipe Impact Testing Machine",
+          "image": "/products/pipe-impact-testing-machine.jpg"
         },
         {
           "name": "VSP (Vicat Softening Point) Test Apparatus",
           "model": "VE-VSP-01",
-          "slug": null,
-          "productName": null,
-          "image": null
+          "slug": "vicat-softening-point-test-apparatus",
+          "productName": "Vicat Softening Point Test Apparatus",
+          "image": "/products/vicat-softening-point-test-apparatus.jpg"
         },
         {
           "name": "Tensile Testing Machine",
@@ -238,21 +238,21 @@
       "note": "Borewell casing",
       "order": 4,
       "instrumentCount": 7,
-      "linkedCount": 4,
+      "linkedCount": 7,
       "instruments": [
         {
           "name": "Pipe Impact Testing Machine",
           "model": "VE-PIT-01",
-          "slug": null,
-          "productName": null,
-          "image": null
+          "slug": "pipe-impact-testing-machine",
+          "productName": "Pipe Impact Testing Machine",
+          "image": "/products/pipe-impact-testing-machine.jpg"
         },
         {
           "name": "VSP (Vicat Softening Point) Test Apparatus",
           "model": "VE-VSP-01",
-          "slug": null,
-          "productName": null,
-          "image": null
+          "slug": "vicat-softening-point-test-apparatus",
+          "productName": "Vicat Softening Point Test Apparatus",
+          "image": "/products/vicat-softening-point-test-apparatus.jpg"
         },
         {
           "name": "Tensile Testing Machine",
@@ -278,9 +278,9 @@
         {
           "name": "Digital Weight Balance",
           "model": "VE-DWB-01Xi",
-          "slug": null,
-          "productName": null,
-          "image": null
+          "slug": "digital-weight-balance",
+          "productName": "Digital Weight Balance",
+          "image": "/products/digital-weight-balance.jpg"
         },
         {
           "name": "Hot Air Oven",
@@ -300,7 +300,7 @@
       "note": "Rotational moulded",
       "order": 5,
       "instrumentCount": 6,
-      "linkedCount": 5,
+      "linkedCount": 6,
       "instruments": [
         {
           "name": "Melt Flow Index Test Apparatus",
@@ -340,9 +340,9 @@
         {
           "name": "Digital Weight Balance",
           "model": "VE-DWB-01Xi",
-          "slug": null,
-          "productName": null,
-          "image": null
+          "slug": "digital-weight-balance",
+          "productName": "Digital Weight Balance",
+          "image": "/products/digital-weight-balance.jpg"
         }
       ]
     },
