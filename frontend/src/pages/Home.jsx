@@ -116,16 +116,22 @@ export default function Home() {
                 <p className="mt-4 text-xs font-bold uppercase tracking-wider text-slate-400">
                   {s.instrumentCount} instruments required
                 </p>
-                <ul className="mt-2 space-y-1.5 text-sm">
+                {/* Links are padded to a 24px+ tap target. At the natural 20px
+                    line height, ten links 6px apart is an easy row to mis-tap on
+                    a phone — WCAG 2.5.8 sets 24x24 CSS px as the minimum. */}
+                <ul className="mt-2 space-y-1 text-sm">
                   {s.instruments.map((i) => (
                     <li key={i.model} className="flex gap-2">
-                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-red" />
+                      <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-brand-red" />
                       {i.slug ? (
-                        <Link to={`/products/${i.slug}`} className="text-slate-600 transition hover:text-brand-red">
+                        <Link
+                          to={`/products/${i.slug}`}
+                          className="block py-1 text-slate-600 transition hover:text-brand-red"
+                        >
                           {i.name}
                         </Link>
                       ) : (
-                        <span className="text-slate-600">{i.name}</span>
+                        <span className="block py-1 text-slate-600">{i.name}</span>
                       )}
                     </li>
                   ))}
