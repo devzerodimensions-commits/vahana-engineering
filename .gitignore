@@ -28,3 +28,6 @@ Thumbs.db
 # resized into frontend/public/products by add-catalogue-products.mjs.
 _scripts/_carved/
 _scripts/_docx-media/
+
+# Render deploy hook URL. Acts as a credential - never commit.
+.render-deploy-hook
