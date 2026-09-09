@@ -40,6 +40,13 @@ SMART = {
 
 
 def clean(s):
+    # Word stores a picture as a field whose code sits in the text stream:
+    #   230V AC, Single phase, 50 Hz INCLUDEPICTURE "D:\Vihaana Photo\..." \* MERGEFORMAT
+    # The row itself is real, so it can't just be dropped — cut the field code off
+    # the end. Six products were showing a Windows file path inside their
+    # "Power supply" specification on the live site.
+    s = re.split(r"INCLUDEPICTURE|MERGEFORMAT|HYPERLINK\s", s)[0]
+
     # Convert smart punctuation before filtering. The catalogues write sizes as
     # 18” (45cm); stripping U+201D silently turned that into "18 (45cm)" and lost
     # the unit.
@@ -179,6 +186,16 @@ def parse_blocks(lines):
             text = value if kind == "cont" else label
             if not text or is_noise(text):
                 continue
+
+            # Don't glue a following heading onto a finished value. "Power supply
+            # 230V AC, Single phase, 50 Hz" is plainly complete, so a capitalised
+            # line after it is the next item's title, not more of the value —
+            # that is how "Traveling Microscope" ended up inside a power rating.
+            if kind == "text":
+                prev = specs[-1]["value"]
+                complete = re.search(r"(Hz|°C|mm|cm|kgf|kg|kN|BAR|%|RPM|\brs\b)\.?$", prev, re.I)
+                if complete and text[:1].isupper():
+                    continue
             # The next machine's heading ends this block.
             if kind == "text" and block_starts_here(lines, k, end):
                 break

@@ -39,6 +39,32 @@ const remote = await fetch(`${API}/products?published=&limit=200`, { headers: au
 const have = new Set((remote.data || []).map((p) => p.slug));
 console.log(`database has ${remote.total} products, local file has ${local.length}`);
 
+const byslug = new Map((remote.data || []).map((p) => [p.slug, p]));
+
+// Update existing rows whose specifications drifted from the file. Needed after
+// a fix to the extractor: the database already held values with Word picture
+// field codes ("… 50 Hz INCLUDEPICTURE \"D:\\Vihaana Photo\\…\"") appended, and
+// creating-only would have left those live for ever.
+let updated = 0;
+for (const p of local) {
+  const remoteP = byslug.get(p.slug);
+  if (!remoteP) continue;
+  const a = JSON.stringify(p.specifications || []);
+  const b = JSON.stringify(remoteP.specifications || []);
+  if (a === b) continue;
+  const res = await fetch(`${API}/products/${remoteP._id}`, {
+    method: "PUT",
+    headers: auth,
+    body: JSON.stringify({ specifications: p.specifications || [], model: p.model || "" }),
+  });
+  if (res.ok) {
+    console.log(`  updated ${p.slug.padEnd(34)} ${(p.specifications || []).length} spec rows`);
+    updated++;
+  } else {
+    console.log(`  FAILED update ${p.slug}: ${res.status}`);
+  }
+}
+
 let added = 0;
 for (const p of local) {
   if (have.has(p.slug)) continue;
