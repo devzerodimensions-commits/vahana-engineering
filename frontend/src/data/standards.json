@@ -10,7 +10,7 @@
       "note": "Up to 110 mm",
       "order": 1,
       "instrumentCount": 10,
-      "linkedCount": 9,
+      "linkedCount": 10,
       "instruments": [
         {
           "name": "Carbon Black Content Test Apparatus",
@@ -22,9 +22,9 @@
         {
           "name": "Cold Water Bath",
           "model": "VE-CWB-01-H",
-          "slug": null,
-          "productName": null,
-          "image": null
+          "slug": "cold-water-bath",
+          "productName": "Cold Water Bath",
+          "image": "/products/hot-water-bath.jpg"
         },
         {
           "name": "Hot Air Oven",

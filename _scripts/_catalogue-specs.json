@@ -1,0 +1,1485 @@
+{
+  "count": 23,
+  "machines": [
+    {
+      "model": "VE-CBC-01",
+      "name": "CARBON BLACK CONTENT TEST APPARATUS",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-CBC-01"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Heating element",
+          "value": "1000 watt heating element wounded on ceramic tube"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
+        },
+        {
+          "label": "Temperature range",
+          "value": "Ambient to 800\u00b0C"
+        },
+        {
+          "label": "Temperature least count",
+          "value": "1\u00b0C"
+        },
+        {
+          "label": "Accuracy",
+          "value": "\u00b1 5\u00b0C or better"
+        },
+        {
+          "label": "Furnace",
+          "value": "With dual insulations"
+        },
+        {
+          "label": "Effective furnace size",
+          "value": "\u00d830 mm x 300 mm"
+        },
+        {
+          "label": "Pyrolyting chamber",
+          "value": "Heat resistant quartz glass tube"
+        },
+        {
+          "label": "End closures",
+          "value": "Silicon rubber corks with glass tubes to accept gas tubing"
+        },
+        {
+          "label": "Pre treatment attachment",
+          "value": "De-oxygenating unit and de-humidifying unit"
+        },
+        {
+          "label": "Sample holder",
+          "value": "Quartz boat of \u00d812 mm x 75 mm Length"
+        },
+        {
+          "label": "Post treatment attachment",
+          "value": "Single dissolution unit"
+        },
+        {
+          "label": "Timer",
+          "value": "Micro processor based double display digital timer @ Optional"
+        },
+        {
+          "label": "Timer range",
+          "value": "999.59 Seconds, Minutes or Hours @ optional"
+        },
+        {
+          "label": "Insulation",
+          "value": "100 mm thick triple layer cera-wool"
+        },
+        {
+          "label": "Accessories",
+          "value": "Quartz tube, Quartz / Ceramic boat, Gas washing bottle with trap head & M.S. fabricated stand set, Rubber tube, Desiccator with porcelain plate, Boat pulling rod and related test Chemicals"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V, AC, Single phase, 50 Hz"
+        }
+      ],
+      "sources": [
+        "12786-13488-Product Catalogue - LLDPE Drip Pipe.doc",
+        "Catalogue-IS 4984-Product Catalogue - Up to 110mm HDPE Pipe.doc",
+        "Product Catalogue-IS 12701 - Water storage tank.doc"
+      ]
+    },
+    {
+      "model": "VE-HAO-01",
+      "name": "HOT AIR OVEN",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-HAO-01"
+        },
+        {
+          "label": "Internal chamber size",
+          "value": "Width 14\" (35cm) x Depth 14\" (35cm) x Height 14\" (35cm)"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
+        },
+        {
+          "label": "Heating",
+          "value": "Through high grade nichrome wire placed in the ribs of both side and bottom for uniform temperature equilibrium"
+        },
+        {
+          "label": "Air circulation",
+          "value": "Through Aluminum blower fitted at the top / at the back"
+        },
+        {
+          "label": "Temperature range",
+          "value": "Ambient to 250 \u00b0C"
+        },
+        {
+          "label": "Accuracy",
+          "value": "\u00b1 0.5 \u00b0C or better"
+        },
+        {
+          "label": "Timer",
+          "value": "Micro processor based double display digital timer @ optional"
+        },
+        {
+          "label": "Timer range",
+          "value": "Range from 0.1 minute to 999.59 minute"
+        },
+        {
+          "label": "Smoke ventilation",
+          "value": "Installed on top of both sides"
+        },
+        {
+          "label": "Insulation",
+          "value": "75 mm thick glass-wool"
+        },
+        {
+          "label": "Mat. of construction",
+          "value": "Inner chamber: Polished stainless steel 304 Outer chamber: CRC sheet with dual side powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50Hz"
+        }
+      ],
+      "sources": [
+        "12786-13488-Product Catalogue - LLDPE Drip Pipe.doc",
+        "Catalogue-IS 4984-Product Catalogue - Up to 110mm HDPE Pipe.doc",
+        "IS 12818-Product Catalogue - PVC Casing Pipe.docx",
+        "Product Catalogue-IS 12701 - Water storage tank.doc"
+      ]
+    },
+    {
+      "model": "VE-HYD-02",
+      "name": "HYDROSTATIC PRESSURE TESTING MACHINE",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-HYD-02"
+        },
+        {
+          "label": "No. of stations",
+          "value": "2 (Two)"
+        },
+        {
+          "label": "No. of outlets",
+          "value": "6 (Six) each station having three outlets"
+        },
+        {
+          "label": "Unit of pressure",
+          "value": "kg/cm2"
+        },
+        {
+          "label": "Pressure range",
+          "value": "0.00 to 60.00 kg/cm\u00b2"
+        },
+        {
+          "label": "Pressure resolution",
+          "value": "0.01 kg/cm\u00b2"
+        },
+        {
+          "label": "Time range",
+          "value": "999.59 Hours"
+        },
+        {
+          "label": "Time resolution",
+          "value": "0.1 Hour / 6 Minute"
+        },
+        {
+          "label": "Hydraulic circuit",
+          "value": "Made from corrosion less stainless steel 304 tubing & fittings"
+        },
+        {
+          "label": "Compressed air requirement",
+          "value": "Min. 3.0 kg/cm\u00b2 from compressor unit"
+        },
+        {
+          "label": "Pressure developing system",
+          "value": "Through hydro\u2013pneumatic type reciprocating pump"
+        },
+        {
+          "label": "No. of pumps",
+          "value": "Single"
+        },
+        {
+          "label": "Pressure control system",
+          "value": "Hydro-pneumatic pressure regulating device"
+        },
+        {
+          "label": "Paint",
+          "value": "Powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50Hz"
+        }
+      ],
+      "sources": [
+        "12786-13488-Product Catalogue - LLDPE Drip Pipe.doc"
+      ]
+    },
+    {
+      "model": "VE-WB-02-H",
+      "name": "HOT WATER BATH",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-WB-02-H"
+        },
+        {
+          "label": "Inner chamber dimension",
+          "value": "Length 24'' x Width 18'' x Height 12''"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
+        },
+        {
+          "label": "Heating",
+          "value": "Through high efficient S.S. tubular heating system"
+        },
+        {
+          "label": "Water circulation",
+          "value": "Through mono-block type pump"
+        },
+        {
+          "label": "Temperature range",
+          "value": "Ambient to 90\u00b0C"
+        },
+        {
+          "label": "Temp. least count",
+          "value": "0.1\u00b0C"
+        },
+        {
+          "label": "Temp. accuracy",
+          "value": "\u00b1 0.5\u00b0C or better"
+        },
+        {
+          "label": "Insulation",
+          "value": "50 mm thick glass-wool"
+        },
+        {
+          "label": "Water drainage",
+          "value": "Water drainage through Ball valve at bottom of the tank"
+        },
+        {
+          "label": "Mat. of construction",
+          "value": "Inner chamber: Polished stainless steel 304 Outer chamber: CRC sheet with dual side powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "440V AC, Three phase, 50 Hz"
+        }
+      ],
+      "sources": [
+        "12786-13488-Product Catalogue - LLDPE Drip Pipe.doc",
+        "Catalogue-IS 4984-Product Catalogue - Up to 110mm HDPE Pipe.doc",
+        "IS 13592-Product Catalogue - PVC SWR Pipe.docx",
+        "IS 4985-Product Catalogue - PVC Pipe.docx"
+      ]
+    },
+    {
+      "model": "VE-TTM-01LC",
+      "name": "TENSILE TESTING MACHINE",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-TTM-01LC"
+        },
+        {
+          "label": "Test capacity",
+          "value": "500 kgf"
+        },
+        {
+          "label": "System status",
+          "value": "Blue color four line LCD display indicate the value of load, extension, testing speed & type of test, machine operate through manual function only"
+        },
+        {
+          "label": "Test jaws",
+          "value": "Vice type single test jaws for Tensile test are fitted on machine"
+        },
+        {
+          "label": "No. of screws",
+          "value": "Screw-nut (Ball screw at optional) mechanism driven through reputed make motor and gear box"
+        },
+        {
+          "label": "Load cell",
+          "value": "'S' type loadcell of reputed make"
+        },
+        {
+          "label": "Load cell unit",
+          "value": "kgf"
+        },
+        {
+          "label": "Cross head travel",
+          "value": "600 mm"
+        },
+        {
+          "label": "Displn. accuracy",
+          "value": "0.1 mm"
+        },
+        {
+          "label": "Speed",
+          "value": "Available fix speed of 100 mm/minute or 300 mm/minute Variable speed through frequency controlled A.C. drive available as optional"
+        },
+        {
+          "label": "Power supply",
+          "value": "440V AC, Three phase, 50 Hz"
+        }
+      ],
+      "sources": [
+        "12786-13488-Product Catalogue - LLDPE Drip Pipe.doc"
+      ]
+    },
+    {
+      "model": "VE-ESCR-01",
+      "name": "ENVIRONMENTAL STRESS CRACKING RESISTANCE TEST APPARATUS",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-ESCR-01"
+        },
+        {
+          "label": "Inner chamber dimension",
+          "value": "Length 16\" x Width 14\" x Height 12\""
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
+        },
+        {
+          "label": "Heating",
+          "value": "Through high efficient S.S. tubular heating system"
+        },
+        {
+          "label": "Water circulation",
+          "value": "Continues stirring through Stirrer motor"
+        },
+        {
+          "label": "Temperature range",
+          "value": "Ambient to 90\u00b0C"
+        },
+        {
+          "label": "Temp. least count",
+          "value": "0.1\u00b0C"
+        },
+        {
+          "label": "Temp. accuracy",
+          "value": "\u00b1 0.5\u00b0C or better"
+        },
+        {
+          "label": "Accessories",
+          "value": "Specimen cutting die with hydraulic jack type press, Specimen holder, Nicking jig, Transfer tool, Bending clamp with vice, Glass test tubes with rubber cork, Test tube stand"
+        },
+        {
+          "label": "Insulation",
+          "value": "50 mm thick glass-wool"
+        },
+        {
+          "label": "Mat. of construction",
+          "value": "Inner chamber: Polished stainless steel 304 Outer chamber: CRC sheet with dual side powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
+        }
+      ],
+      "sources": [
+        "12786-13488-Product Catalogue - LLDPE Drip Pipe.doc"
+      ]
+    },
+    {
+      "model": "K-EmFVT-01",
+      "name": "EMISSION FLOW VARIATION TEST APPARATUS",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "K-EmFVT-01"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Model",
+          "value": "Rigid floor standing model"
+        },
+        {
+          "label": "Sample size",
+          "value": "Test up to 25 test sample at a time"
+        },
+        {
+          "label": "Tank",
+          "value": "Stainless Steel 304 tank fitted at bottom of capacity 250 Liter"
+        },
+        {
+          "label": "Filter",
+          "value": "10 micron filter inserted at the inlet of pump"
+        },
+        {
+          "label": "Pressure source",
+          "value": "Pressure created through high pressure pump of reputed make"
+        },
+        {
+          "label": "Working pressure",
+          "value": "Up to 4.50 kg/cm\u00b2 / Bar"
+        },
+        {
+          "label": "Accuracy",
+          "value": "+ 0.01 kg/cm\u00b2 / Bar"
+        },
+        {
+          "label": "Pressure control",
+          "value": "Precision pressure control through throttle valve"
+        },
+        {
+          "label": "Pressure indicator",
+          "value": "Double display digital pressure indicator with built in digital timer having range from 0.1 Sec. to 999.9 Sec."
+        },
+        {
+          "label": "Paint",
+          "value": "Powder coating"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz 9"
+        }
+      ],
+      "sources": [
+        "12786-13488-Product Catalogue - LLDPE Drip Pipe.doc"
+      ]
+    },
+    {
+      "model": "VE-MFI-01",
+      "name": "MELT FLOW INDEX TEST APPARATUS",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-MFI-01"
+        },
+        {
+          "label": "Reference standards",
+          "value": "ASTM - 1238, IS - 2530"
+        },
+        {
+          "label": "Test method",
+          "value": "A"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
+        },
+        {
+          "label": "Temperature range",
+          "value": "Ambient to 300 \u00b0C"
+        },
+        {
+          "label": "Temperature resolution",
+          "value": "0.1 \u00b0C"
+        },
+        {
+          "label": "Accuracy",
+          "value": "\u00b1 0.1 \u00b0C"
+        },
+        {
+          "label": "Timer",
+          "value": "Micro processor based double display digital timer"
+        },
+        {
+          "label": "Timer range",
+          "value": "Range from 0.1 minute to 999.59 minute"
+        },
+        {
+          "label": "Time resolution",
+          "value": "0.1 minute"
+        },
+        {
+          "label": "Weight lifting system",
+          "value": "Manual"
+        },
+        {
+          "label": "Sample cutting system",
+          "value": "Manual"
+        },
+        {
+          "label": "Accessories",
+          "value": "Orifice (Die), Piston, Orifice cleaner, Orifice ejector, Cylinder cleaner, Extrudate (sample) cutter, Forcep, Dead weights of 2.16 kgf & 5.00 kgf other weights are available at optional"
+        },
+        {
+          "label": "Paint",
+          "value": "Powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50Hz"
+        }
+      ],
+      "sources": [
+        "Catalogue-IS 4984-Product Catalogue - Up to 110mm HDPE Pipe.doc",
+        "Product Catalogue-IS 12701 - Water storage tank.doc"
+      ]
+    },
+    {
+      "model": "VE-HYD-03",
+      "name": "HYDRO-STATIC PRESSURE TESTING MACHINE",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-HYD-03"
+        },
+        {
+          "label": "No. of stations",
+          "value": "3 (Three)"
+        },
+        {
+          "label": "No. of outlets",
+          "value": "9 (Nine) each station having three outlets"
+        },
+        {
+          "label": "Unit of pressure",
+          "value": "kg/cm\u00b2"
+        },
+        {
+          "label": "Pressure range",
+          "value": "0.00 to 60.0 kg/cm\u00b2"
+        },
+        {
+          "label": "Pressure resolution",
+          "value": "0.01 kg/cm\u00b2"
+        },
+        {
+          "label": "Time range",
+          "value": "999.59 Hours"
+        },
+        {
+          "label": "Time resolution",
+          "value": "1 Minute"
+        },
+        {
+          "label": "Hydraulic circuit",
+          "value": "Made from stainless steel 304 tubing"
+        },
+        {
+          "label": "Pressure developing system",
+          "value": "through hydro-pneumatic piston pump operated through compressed air"
+        },
+        {
+          "label": "Pressure control system",
+          "value": "Hydro pressure regulating device"
+        },
+        {
+          "label": "Paint",
+          "value": "Powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "415V AC, Single phase, 50Hz"
+        }
+      ],
+      "sources": [
+        "Catalogue-IS 4984-Product Catalogue - Up to 110mm HDPE Pipe.doc",
+        "IS 13592-Product Catalogue - PVC SWR Pipe.docx",
+        "IS 4985-Product Catalogue - PVC Pipe.docx"
+      ]
+    },
+    {
+      "model": "VE-CWB-01-H",
+      "name": "COLD WATER BATH",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-CWB-01-H"
+        },
+        {
+          "label": "Inner chamber dimension",
+          "value": "Length 48' x Width 36' x Height 18''"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
+        },
+        {
+          "label": "Cooling",
+          "value": "Through reputed make compressor unit"
+        },
+        {
+          "label": "Water circulation",
+          "value": "Through submersible pump"
+        },
+        {
+          "label": "Temperature range",
+          "value": "Ambient to 20\u00b0C"
+        },
+        {
+          "label": "Temp. least count",
+          "value": "0.1\u00b0C"
+        },
+        {
+          "label": "Temp. accuracy",
+          "value": "\u00b1 1\u00b0C or better"
+        },
+        {
+          "label": "Insulation",
+          "value": "50 mm thick insulation"
+        },
+        {
+          "label": "Mat. of construction",
+          "value": "Inner chamber: Polished stainless steel 304 Outer chamber: CRC sheet with dual side powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
+        }
+      ],
+      "sources": [
+        "Catalogue-IS 4984-Product Catalogue - Up to 110mm HDPE Pipe.doc"
+      ]
+    },
+    {
+      "model": "VE-OIT-01",
+      "name": "OXIDATION INDUCTION TIME TESTER",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-OIT-01"
+        },
+        {
+          "label": "Reference standards",
+          "value": "I.S. 4984 & ASTM D 3895"
+        },
+        {
+          "label": "System status",
+          "value": "The windows based software to interface the computer, Data entry through software, PC connectivity of RS \u2013 232 and Graphical data type reports can be printed through software"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Microprocessor based PID temperature controller indicates the process temperature & Delta T"
+        },
+        {
+          "label": "Range",
+          "value": "Ambient to 300 \u00b0C"
+        },
+        {
+          "label": "Resolution",
+          "value": "0.1 \u00b0C"
+        },
+        {
+          "label": "Accuracy",
+          "value": "+ 0.5 \u00b0C"
+        },
+        {
+          "label": "Rate of temperature rise",
+          "value": "20 \u00b0C/minute & 2 \u00b0C/minute"
+        },
+        {
+          "label": "Gas flow control",
+          "value": "Through gas regulator fitted on cylinder & Rotameters equipped with machine"
+        },
+        {
+          "label": "Max. test time range",
+          "value": "0 to 300 minutes"
+        },
+        {
+          "label": "Accessories",
+          "value": "Aluminium pan 50 nos. and Specimen holder"
+        },
+        {
+          "label": "Temperature calibration",
+          "value": "Indium & Tin material supplied for calibration of temperature"
+        },
+        {
+          "label": "Cooling system",
+          "value": "Barrel cooling through circulated water is provided in machine"
+        },
+        {
+          "label": "Paint",
+          "value": "Dual side Powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 H"
+        }
+      ],
+      "sources": [
+        "Catalogue-IS 4984-Product Catalogue - Up to 110mm HDPE Pipe.doc"
+      ]
+    },
+    {
+      "model": "VE-TTM-01xi",
+      "name": "TENSILE TESTING MACHINE",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-TTM-01xi"
+        },
+        {
+          "label": "Test capacity",
+          "value": "500 kgf"
+        },
+        {
+          "label": "System status",
+          "value": "Digital with computer Interface, Blue color four-line LDC display indicated the value of load & extension, testing speed & type of test"
+        },
+        {
+          "label": "No. of screws",
+          "value": "Single screw-nut assembly mechanism driven through reputed make gear-motor"
+        },
+        {
+          "label": "Test jaws",
+          "value": "Vice type jaws for Tensile & Flat round jaws for Compression test"
+        },
+        {
+          "label": "Load cell",
+          "value": "'S Type' load-cell of reputed make"
+        },
+        {
+          "label": "Load cell unit",
+          "value": "kg/cm\u00b2 / N / Mpa"
+        },
+        {
+          "label": "Cross head travel",
+          "value": "700 mm"
+        },
+        {
+          "label": "Displn. accuracy",
+          "value": "0.1 mm"
+        },
+        {
+          "label": "Extensometer",
+          "value": "Electro-mechanical device fitted on machine"
+        },
+        {
+          "label": "Speed",
+          "value": "Speed variation thru duplex pulley attachment and speed adjustment through frequency controlled A.C. drive"
+        },
+        {
+          "label": "Software",
+          "value": "The Windows based software to interface the computer"
+        },
+        {
+          "label": "Data entry",
+          "value": "Through software"
+        },
+        {
+          "label": "PC connectivity",
+          "value": "RS-232"
+        },
+        {
+          "label": "Reports & printouts",
+          "value": "Graphical data type reports can be printed through software"
+        },
+        {
+          "label": "Safety features",
+          "value": "Mechanical safety by Limit switch, Equipments safety through software by feeding Max. Load & Max. Extensions, Emergency stop facility & also having Auto reverse facility to get machine at start position after completion of test"
+        },
+        {
+          "label": "Power supply",
+          "value": "415V AC, Three phase, 50 Hz"
+        }
+      ],
+      "sources": [
+        "Catalogue-IS 4984-Product Catalogue - Up to 110mm HDPE Pipe.doc",
+        "IS 13592-Product Catalogue - PVC SWR Pipe.docx"
+      ]
+    },
+    {
+      "model": "VE-UTM-01xi",
+      "name": "TENSILE TESTING MACHINE",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-UTM-01xi"
+        },
+        {
+          "label": "Test capacity",
+          "value": "2000 kgf / 20kN"
+        },
+        {
+          "label": "System status",
+          "value": "Digital with computer Interface, Blue color four line LDC display indicated the value of load & extension, testing speed & type of test"
+        },
+        {
+          "label": "No. of screws",
+          "value": "Double ball screw-nut assembly mechanism driven through reputed make gear-motor"
+        },
+        {
+          "label": "Test jaws",
+          "value": "Vice type testing jaws for Tensile test are fitted on machine"
+        },
+        {
+          "label": "Load cell",
+          "value": "'S Type' load-cell of reputed make"
+        },
+        {
+          "label": "Load cell unit",
+          "value": "kg/cm\u00b2 / N / Mpa"
+        },
+        {
+          "label": "Cross head travel",
+          "value": "800 mm"
+        },
+        {
+          "label": "Displn. accuracy",
+          "value": "0.1 mm"
+        },
+        {
+          "label": "Speed",
+          "value": "Variable speed through frequency controlled A.C. drive"
+        },
+        {
+          "label": "Software",
+          "value": "The Windows based software to interface the computer"
+        },
+        {
+          "label": "Data entry",
+          "value": "Through software"
+        },
+        {
+          "label": "PC connectivity",
+          "value": "RS-232"
+        },
+        {
+          "label": "Reports & printouts",
+          "value": "Graphical data type reports can be printed through software"
+        },
+        {
+          "label": "Safety features",
+          "value": "Mechanical safety by Limit switch, Equipments safety through software by feeding Max. Load & Max. Extensions, Emergency stop facility & also having Auto reverse facility to get machine at start position after completion of test"
+        },
+        {
+          "label": "Power supply",
+          "value": "440V AC, Three phase, 50 Hz"
+        }
+      ],
+      "sources": [
+        "Catalogue-IS 4984-Product Catalogue - Up to 110mm HDPE Pipe.doc",
+        "IS 12818-Product Catalogue - PVC Casing Pipe.docx"
+      ]
+    },
+    {
+      "model": "VE-SMP-01",
+      "name": "SHEET MOULDING PRESS",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-SMP-01"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Model",
+          "value": "Rigid floor standing model"
+        },
+        {
+          "label": "Sample mould",
+          "value": "Rectangular spacer frame type mould to produce 100mm x 120mm x 4mm thick PE sheet other size available @ optional"
+        },
+        {
+          "label": "Platen type",
+          "value": "Twin plate type mould with heating & cooling systems"
+        },
+        {
+          "label": "Heating system",
+          "value": "High efficient industrial flat heater in both heater plates"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
+        },
+        {
+          "label": "Temperature range",
+          "value": "Ambient to 200\u00b0C"
+        },
+        {
+          "label": "Working pressure",
+          "value": "Pressure up to 150 kg/cm\u00b2 / BAR build-up through heavy duty 16 Ton hydraulic jack"
+        },
+        {
+          "label": "Insulation",
+          "value": "Heat insulator inserted between heating & cooling plates"
+        },
+        {
+          "label": "Paint",
+          "value": "Powder coating"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
+        }
+      ],
+      "sources": [
+        "Catalogue-IS 4984-Product Catalogue - Up to 110mm HDPE Pipe.doc",
+        "Product Catalogue-IS 12701 - Water storage tank.doc"
+      ]
+    },
+    {
+      "model": "VE-PIT-01",
+      "name": "PIPE IMPACT TESTING MACHINE",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-PIT-01"
+        },
+        {
+          "label": "Falling height",
+          "value": "2000 mm"
+        },
+        {
+          "label": "Height adjustment",
+          "value": "Manually"
+        },
+        {
+          "label": "Height adjustment resolution",
+          "value": "\u00b1 2 mm"
+        },
+        {
+          "label": "Striker (Dart / Dead weight)",
+          "value": "Made from mild steel"
+        },
+        {
+          "label": "Striker (Dart / Dead weight) weight",
+          "value": "0.250 kgf, 0.500 kgf &amp; 1.000 kgf \u2013 one set of each weight"
+        },
+        {
+          "label": "Striker (Dart) release device",
+          "value": "Through D. C. magnet / Pull release free falling mechanism"
+        },
+        {
+          "label": "Max. dia. of test sample",
+          "value": "Test up to pipe \u00d8315mm"
+        },
+        {
+          "label": "Sample clamping",
+          "value": "on 120\u00b0 V block"
+        },
+        {
+          "label": "Paint",
+          "value": "Powder coated"
+        }
+      ],
+      "sources": [
+        "IS 12818-Product Catalogue - PVC Casing Pipe.docx",
+        "IS 13592-Product Catalogue - PVC SWR Pipe.docx",
+        "IS 4985-Product Catalogue - PVC Pipe.docx"
+      ]
+    },
+    {
+      "model": "VE-VSP-01",
+      "name": "VSP (Vicat Softening Point) TEST APPARATUS",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-VSP-01"
+        },
+        {
+          "label": "Test station",
+          "value": "Single test station for VSP test"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
+        },
+        {
+          "label": "Heating",
+          "value": "Through high efficient stainless steel tubular heating system"
+        },
+        {
+          "label": "Temperature range",
+          "value": "Ambient to 200\u00b0C"
+        },
+        {
+          "label": "Temperature least count",
+          "value": "0.1\u00b0C"
+        },
+        {
+          "label": "Temperature accuracy",
+          "value": "\u00b1 0.5\u00b0C or better"
+        },
+        {
+          "label": "Temperature ramp",
+          "value": "Selectable (50\u00b0C/Hr or 120\u00b0C/Hr.)"
+        },
+        {
+          "label": "Oil circulation",
+          "value": "Continuous stirring through stirrer motor"
+        },
+        {
+          "label": "Insulation",
+          "value": "50 mm thick cera-wool insulation"
+        },
+        {
+          "label": "Specimen thickness",
+          "value": "3 mm \u2013 13 mm"
+        },
+        {
+          "label": "Displacement sensing",
+          "value": "through dial gauge of reputed make"
+        },
+        {
+          "label": "Displacement range",
+          "value": "0.00 mm \u2013 10.00 mm"
+        },
+        {
+          "label": "Displacement accuracy",
+          "value": "0.01 mm"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
+        }
+      ],
+      "sources": [
+        "IS 12818-Product Catalogue - PVC Casing Pipe.docx",
+        "IS 13592-Product Catalogue - PVC SWR Pipe.docx",
+        "IS 4985-Product Catalogue - PVC Pipe.docx"
+      ]
+    },
+    {
+      "model": "VE-CnCt-01",
+      "name": "CONTOUR CUTTER",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-CnCt-01"
+        },
+        {
+          "label": "Template size",
+          "value": "150mm dumbbell shape as per I.S. standard other Templates are available @ optional"
+        },
+        {
+          "label": "Cutter",
+          "value": "End mill type cutter"
+        },
+        {
+          "label": "Cutting speed",
+          "value": "Fixed speed of 1400 RPM, Variable speed available @ optional through frequency control A.C. drive"
+        },
+        {
+          "label": "Max. thickness of specimen",
+          "value": "Machining enable up to 35mm thick Test specimen"
+        },
+        {
+          "label": "Paint",
+          "value": "Powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "415V AC, Three phase, 50Hz"
+        }
+      ],
+      "sources": [
+        "IS 12818-Product Catalogue - PVC Casing Pipe.docx"
+      ]
+    },
+    {
+      "model": "VE-HC-01",
+      "name": "HUMIDITY CHAMBER (CONDITIONING CHAMBER)",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-HC-01"
+        },
+        {
+          "label": "Inner chamber dimension",
+          "value": "Length 18\" (45cm) x Width 18\" (45cm) x Height 18\" (45cm)"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller with Auto tune facility"
+        },
+        {
+          "label": "Temperature range",
+          "value": "-10 \u00b0C to 25 \u00b0C"
+        },
+        {
+          "label": "Temperature resolution",
+          "value": "0.1 \u00b0C"
+        },
+        {
+          "label": "Accuracy",
+          "value": "\u00b10.5 \u00b0C or better"
+        },
+        {
+          "label": "Timer",
+          "value": "Micro processor based double display digital timer"
+        },
+        {
+          "label": "Timer range",
+          "value": "Range from 0.1 minute to 999.9 minute"
+        },
+        {
+          "label": "Time resolution",
+          "value": "0.1 minute"
+        },
+        {
+          "label": "Cooling",
+          "value": "Through specially designed high efficient cooling mechanism"
+        },
+        {
+          "label": "Air circulation",
+          "value": "Through blower fitted at the back side"
+        },
+        {
+          "label": "Humidity range",
+          "value": "45% Rh to 80% Rh"
+        },
+        {
+          "label": "Humidity least count",
+          "value": "1%"
+        },
+        {
+          "label": "Humidity accuracy",
+          "value": "+/- 5% or better"
+        },
+        {
+          "label": "Insulation",
+          "value": "75 mm thick PUF insulation to minimize the heating-cooling loses during test"
+        },
+        {
+          "label": "Mat. of construction",
+          "value": "Inner chamber: Polished stainless steel 304 Outer chamber: CRC sheet with dual side powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50Hz"
+        }
+      ],
+      "sources": [
+        "IS 12818-Product Catalogue - PVC Casing Pipe.docx",
+        "IS 13592-Product Catalogue - PVC SWR Pipe.docx"
+      ]
+    },
+    {
+      "model": "VE-DWB-01Xi",
+      "name": "DIGITAL WEIGHT BALANCE",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-DWB-01Xi"
+        },
+        {
+          "label": "Display",
+          "value": "LCD with multi parameter display"
+        },
+        {
+          "label": "Weighing capacity",
+          "value": "220 gms"
+        },
+        {
+          "label": "Readability",
+          "value": "0.0001 gm / 0.1 mg"
+        },
+        {
+          "label": "Repeatability",
+          "value": "0.2 mg"
+        },
+        {
+          "label": "Linearity",
+          "value": "0.4 mg"
+        },
+        {
+          "label": "Pan size",
+          "value": "\u00d8100mm"
+        },
+        {
+          "label": "Result",
+          "value": "Automatic density calculation with auto tare facility"
+        },
+        {
+          "label": "Accessories",
+          "value": "Machine supply with complete specific gravity tool kit"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
+        }
+      ],
+      "sources": [
+        "IS 12818-Product Catalogue - PVC Casing Pipe.docx",
+        "IS 13592-Product Catalogue - PVC SWR Pipe.docx",
+        "IS 4985-Product Catalogue - PVC Pipe.docx",
+        "Product Catalogue-IS 12701 - Water storage tank.doc"
+      ]
+    },
+    {
+      "model": "VE-MF-01",
+      "name": "ASH CONTENT TESTER (Muffle furnace)",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-MF-01"
+        },
+        {
+          "label": "Internal chamber size",
+          "value": "Width 10cm x Height 10cm x Depth 22.5cm"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Microprocessor based double display digital PID controller"
+        },
+        {
+          "label": "Heating",
+          "value": "Through custom high grade nichrome wire"
+        },
+        {
+          "label": "Temperature range",
+          "value": "Ambient to 1100 \u00b0C"
+        },
+        {
+          "label": "Temperature accuracy",
+          "value": "\u00b110 \u00b0C or better"
+        },
+        {
+          "label": "Timer",
+          "value": "Microprocessor based double display digital timer at optional"
+        },
+        {
+          "label": "Timer range",
+          "value": "up to 999.9 Seconds / Minutes"
+        },
+        {
+          "label": "Safety MCB / Fuse",
+          "value": "Available on electric panel"
+        },
+        {
+          "label": "Insulation",
+          "value": "100 mm double wall thick cera-wool insulation"
+        },
+        {
+          "label": "Mat. of construction",
+          "value": "Inner chamber: Tough treated ceramic Outer chamber: Heavy CRC dual side powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50Hz"
+        }
+      ],
+      "sources": [
+        "IS 13592-Product Catalogue - PVC SWR Pipe.docx",
+        "IS 4985-Product Catalogue - PVC Pipe.docx"
+      ]
+    },
+    {
+      "model": "VE-HOB-01",
+      "name": "HOT OIL BATH",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-HOB-01"
+        },
+        {
+          "label": "Inner chamber dimension",
+          "value": "Length 36\" (90cm) x Width 12\" (30cm) x Height 14\" (35cm)"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
+        },
+        {
+          "label": "Heating",
+          "value": "Through high efficient stainless steel tubular heating system"
+        },
+        {
+          "label": "Oil circulation",
+          "value": "Continuous stirring through stirrer motor of 'REMI' make"
+        },
+        {
+          "label": "Temperature range",
+          "value": "Up to 180\u00b0C"
+        },
+        {
+          "label": "Resolution",
+          "value": "0.1\u00b0C"
+        },
+        {
+          "label": "Accuracy",
+          "value": "\u00b1 0.5\u00b0C or better"
+        },
+        {
+          "label": "Insulation",
+          "value": "50 mm thick cera-wool insulation"
+        },
+        {
+          "label": "Power supply",
+          "value": "440V AC, Three phase, 50 Hz"
+        }
+      ],
+      "sources": [
+        "IS 13592-Product Catalogue - PVC SWR Pipe.docx",
+        "IS 4985-Product Catalogue - PVC Pipe.docx"
+      ]
+    },
+    {
+      "model": "VE-OTA-01",
+      "name": "OPACITY TEST APPARATUS",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-OTA-01"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Range",
+          "value": "0 \u2013 100%"
+        },
+        {
+          "label": "Resolution",
+          "value": "0.01%"
+        },
+        {
+          "label": "Light filter",
+          "value": "Light filter of 540 nm to 550 nm wavelength fitting in M/c."
+        },
+        {
+          "label": "Light sensor",
+          "value": "High quality precision Photoelectric cell"
+        },
+        {
+          "label": "Result",
+          "value": "Light transmission displayed on indicator in terms of '%'"
+        },
+        {
+          "label": "Results in terms of",
+          "value": "Opacity / Light transmission"
+        },
+        {
+          "label": "Sample thickness",
+          "value": "Up to 15 mm"
+        },
+        {
+          "label": "Sample holding system",
+          "value": "With operational ease mechanism"
+        },
+        {
+          "label": "Paint",
+          "value": "Powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
+        }
+      ],
+      "sources": [
+        "IS 13592-Product Catalogue - PVC SWR Pipe.docx",
+        "IS 4985-Product Catalogue - PVC Pipe.docx"
+      ]
+    },
+    {
+      "model": "VE-TTM-02-Wst",
+      "name": "TENSILE TESTING MACHINE",
+      "specs": [
+        {
+          "label": "Model No.",
+          "value": "VE-TTM-02-Wst"
+        },
+        {
+          "label": "Test capacity",
+          "value": "Load cell \u2013 1: 500 kgf / 5000 N, Loadcell \u2013 2: 50kgf / 500 N"
+        },
+        {
+          "label": "System status",
+          "value": "Digitally controlled, Blue color four line LDC display indicated the value of Load & Extension, Testing speed & Type of test etc."
+        },
+        {
+          "label": "No. of screws",
+          "value": "Ball screw-nut assembly driven through reputed make gear-motor"
+        },
+        {
+          "label": "Test jaws",
+          "value": "Individual test jaws for Tensile test & Flexural modulus test"
+        },
+        {
+          "label": "Load cell",
+          "value": "'S Type' load-cell"
+        },
+        {
+          "label": "Load cell unit",
+          "value": "kg/cm\u00b2"
+        },
+        {
+          "label": "Cross head travel",
+          "value": "600mm"
+        },
+        {
+          "label": "Displn. Accuracy",
+          "value": "0.1mm"
+        },
+        {
+          "label": "Speed control",
+          "value": "through frequency controlled A.C. drive"
+        },
+        {
+          "label": "Speed",
+          "value": "Variable testing speed for Flexural modulus test as 5mm/minute & Tensile strength test as 50mm/minute"
+        },
+        {
+          "label": "Software",
+          "value": "The Windows based software to interface the computer"
+        },
+        {
+          "label": "Data entry",
+          "value": "Through software"
+        },
+        {
+          "label": "PC connectivity",
+          "value": "RS-232"
+        },
+        {
+          "label": "Reports & printouts",
+          "value": "Graphical data type reports can be printed through software Safety features Mechanical safety by Limit switch, Equipments safety through software by feeding Max. Load & Max. Extensions, Emergency stop facility & also having Auto reverse facility to get machine at start position after completion of test"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
+        }
+      ],
+      "sources": [
+        "Product Catalogue-IS 12701 - Water storage tank.doc"
+      ]
+    }
+  ]
+}

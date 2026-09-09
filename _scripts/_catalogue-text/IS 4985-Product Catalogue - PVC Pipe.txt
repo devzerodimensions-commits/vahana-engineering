@@ -1,0 +1,115 @@
+ASH CONTENT TESTER (Muffle furnace)
+Technical Specification:
+Model no.VE-MF-01
+Internal chamber sizeWidth 10cm x Height 10cm x Depth 22.5cm
+System statusDigital
+Temperature controllerMicro processor based double display digital PID controller
+HeatingThrough custom high grade nichrome wire
+Temperature rangeAmbient to 1100oC
+Temperature accuracy 10 oC or better
+Insulation100 mm double wall thick cera-wool insulation
+Mat. of constructionInner chamber: Tough treated ceramic
+Outer chamber: Heavy CRC dual side powder coated
+Power supply230V AC, Single phase, 50Hz
+DIGITAL WEIGHT BALANCE
+(With Auto density test calculation program)
+Technical Specification
+Model no.VE-DWB-01Xi
+DisplayLCD with multi parameter display
+Weighing capacity220 gms
+Readability0.0001 gm / 0.1 mg
+Repeatability0.2 mg
+Linearity0.4 mg
+Pan size 100mm
+ResultAutomatic density calculation with auto tare facility
+AccessoriesMachine supply with complete specific gravity tool kit
+Power supply230V AC, Single phase, 50 Hz
+HOT OIL BATH
+Technical Specification
+Model no.VE-HOB-01
+Inner chamber dimensionLength 36 (90cm) x Width 12 (30cm) x Height 14 (35cm)
+System statusDigital
+Temperature controllerMicro processor based double display digital PID controller
+Heating Through high efficient stainless steel tubular heating system
+Oil circulationContinuous stirring through stirrer motor
+Temperature rangeUp to 180 C
+Resolution0.1 C
+Accuracy 0.5 C or better
+Insulation50 mm thick cera-wool insulation
+Power supply440V AC, Three phase, 50 Hz
+HOT WATER BATH
+Technical Specification:
+Model no.VE-WB-02-H
+Inner chamber dimensionLength 48 x Width 36 x Height 18
+System statusDigital
+Temperature controllerMicro processor based double display digital PID controller
+HeatingThrough high efficient S.S. tubular heating system
+Water circulationThrough mono-block type pump
+Temperature rangeAmbient to 90 C
+Temp. least count0.1 C
+Temp. accuracy 0.5 C or better
+Insulation50 mm thick glass-wool
+Mat. of constructionInner chamber: Polished stainless steel 304
+Outer chamber: CRC sheet with dual side powder coated
+Power supply440V AC, Three phase, 50 Hz
+HYDRO-STATIC PRESSURE TESTING MACHINE
+(3 test station with total 9 outlets)
+Technical Specification
+Model no.VE-HYD-03
+No. of stations3 (Three)
+No. of outlets9 (Nine) each station having three outlets
+Unit of pressurekg/cm
+Pressure range0.00 to 60.0 kg/cm
+Pressure resolution0.01 kg/cm
+Time range999.59 Hours
+Time resolution 1 Minute
+Hydraulic circuit Made from stainless steel 304 tubing
+Pressure developing systemthrough hydro-pneumatic piston pump
+operated through compressed air
+Pressure control systemHydro pressure regulating device
+PaintPowder coated
+Power supply230V AC, Single phase, 50Hz
+OPACITY TEST APPARATUS
+Technical Specification
+Model no.VE-OTA-01
+System statusDigital
+Range0 100%
+Resolution0.01%
+Light filterLight filter of 540 nm to 550 nm wavelength fitting in M/c.
+Light sensorHigh quality precision Photoelectric cell
+ResultLight transmission displayed on indicator in terms of %
+Results in terms ofOpacity / Light transmission
+Sample thicknessUp to 15 mm
+Sample holding systemWith operational ease mechanism
+PaintPowder coated
+Power supply230V AC, Single phase, 50 Hz
+PIPE IMPACT TESTING MACHINE
+Technical Specification
+Model no.VE-PIT-01
+Falling height 2000 mm
+Height adjustment Manually
+Height adjustment resolution 2 mm
+Striker (Dart / Dead weight)Made from mild steel
+Striker (Dart / Dead weight) weight 0.250 kgf, 0.500 kgf &amp; 1.000 kgf one set of each weight
+Striker (Dart) release device Through D. C. magnet / Pull release free falling mechanism
+Max. dia. of test sampleTest up to pipe 315mm
+Sample clampingon 120 V block
+PaintPowder coated
+VSP (Vicat Softening Point) TEST APPARATUS
+Technical Specification
+Model no.VE-VSP-01
+Test station Single test station for VSP test
+System status Digital
+Temperature controller Micro processor based double display digital PID controller
+Heating Through high efficient stainless steel tubular heating system
+Temperature range Ambient to 200 C
+Temperature least count 0.1 C
+Temperature accuracy 0.5 C or better
+Temperature rampSelectable (50 C/Hr or 120 C/Hr.)
+Oil circulation Continuous stirring through stirrer motor
+Insulation50 mm thick cera-wool insulation
+Specimen thickness 3 mm 13 mm
+Displacement sensingthrough dial gauge of reputed make
+Displacement range0.00 mm 10.00 mm
+Displacement accuracy 0.01 mm
+Power supply230V AC, Single phase, 50 Hz

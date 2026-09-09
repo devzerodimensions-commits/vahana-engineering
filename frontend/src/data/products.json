@@ -41,7 +41,7 @@
         "IS 4984",
         "IS 13360"
       ],
-      "count": 8
+      "count": 9
     },
     {
       "slug": "composition-optical",
@@ -1780,6 +1780,71 @@
         {
           "label": "Power supply",
           "value": "440V AC, Three phase, 50 Hz"
+        }
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Cold Water Bath",
+      "slug": "cold-water-bath",
+      "category": "thermal-ageing",
+      "categoryName": "Thermal & Ageing",
+      "image": "/products/hot-water-bath.jpg",
+      "summary": "Refrigerated conditioning bath with a 48\" x 36\" x 18\" stainless steel chamber, compressor cooling and a submersible circulation pump, holding ambient to 20°C within ±1°C.",
+      "model": "VE-CWB-01-H",
+      "description": "Refrigerated conditioning bath with a 48\" x 36\" x 18\" stainless steel chamber, compressor cooling and a submersible circulation pump, holding ambient to 20°C within ±1°C. Manufactured by Vihaana Engineering, the Cold Water Bath is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "IS 4984"
+      ],
+      "specifications": [
+        {
+          "label": "Model No.",
+          "value": "VE-CWB-01-H"
+        },
+        {
+          "label": "Inner chamber dimension",
+          "value": "Length 48' x Width 36' x Height 18''"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
+        },
+        {
+          "label": "Cooling",
+          "value": "Through reputed make compressor unit"
+        },
+        {
+          "label": "Water circulation",
+          "value": "Through submersible pump"
+        },
+        {
+          "label": "Temperature range",
+          "value": "Ambient to 20°C"
+        },
+        {
+          "label": "Temp. least count",
+          "value": "0.1°C"
+        },
+        {
+          "label": "Temp. accuracy",
+          "value": "± 1°C or better"
+        },
+        {
+          "label": "Insulation",
+          "value": "50 mm thick insulation"
+        },
+        {
+          "label": "Mat. of construction",
+          "value": "Inner chamber: Polished stainless steel 304 Outer chamber: CRC sheet with dual side powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
         }
       ],
       "featured": false,

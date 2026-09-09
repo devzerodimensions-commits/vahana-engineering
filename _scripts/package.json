@@ -1,1 +1,1 @@
-{"name":"ve-scripts","type":"module","private":true,"dependencies":{"@imgly/background-removal-node":"^1.4.5","sharp":"^0.35.3"}}
+{"name":"ve-scripts","type":"module","private":true,"dependencies":{"@imgly/background-removal-node":"^1.4.5","docx":"^9.7.1","sharp":"^0.35.3"}}

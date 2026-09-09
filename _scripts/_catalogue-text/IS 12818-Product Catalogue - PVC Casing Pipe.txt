@@ -1,0 +1,114 @@
+PIPE IMPACT TESTING MACHINE
+Technical Specification
+Model no.VE-PIT-01
+Falling height 2000 mm
+Height adjustment Manually
+Height adjustment resolution 2 mm
+Striker (Dart / Dead weight)Made from mild steel
+Striker (Dart / Dead weight) weight 0.250 kgf, 0.500 kgf &amp; 1.000 kgf one set of each weight
+Striker (Dart) release device Through D. C. magnet / Pull release free falling mechanism
+Max. dia. of test sampleTest up to pipe 315mm
+Sample clampingon 120 V block
+PaintPowder coated
+VSP (Vicat Softening Point) TEST APPARATUS
+Technical Specification
+Model no.VE-VSP-01
+Test station Single test station for VSP test
+System status Digital
+Temperature controller Micro processor based double display digital PID controller
+Heating Through high efficient stainless steel tubular heating system
+Temperature range Ambient to 200 C
+Temperature least count 0.1 C
+Temperature accuracy 0.5 C or better
+Temperature rampSelectable (50 C/Hr or 120 C/Hr.)
+Oil circulation Continuous stirring through stirrer motor
+Insulation50 mm thick cera-wool insulation
+Specimen thickness 3 mm 13 mm
+Displacement sensingthrough dial gauge of reputed make Displacement range0.00 mm 10.00 mm
+Displacement accuracy 0.01 mm
+Power supply230V AC, Single phase, 50 Hz
+TENSILE TESTING MACHINE
+(Computer interface system)
+Technical Specification
+Model no.VE-UTM-01xi
+Test capacity2000 kgf / 20kN
+System statusDigital with computer Interface, Blue color four line LDC display indicated the value of load &amp; extension, testing speed
+&amp; type of test
+No. of screwsDouble ball screw-nut assembly mechanism driven
+through reputed make gear-motor
+Test jawsVice type testing jaws for Tensile test are fitted on machine
+Load cell S Type load-cell of reputed make
+Load cell unitkg/cm / N / Mpa
+Cross head travel700 mm
+Displn. accuracy0.1 mm
+SpeedVariable speed through frequency controlled A.C. drive
+SoftwareThe Windows based software to interface the computer
+Data entryThrough software
+PC connectivityRS-232
+Reports &amp; printoutsGraphical data type reports can be printed through software
+Safety featuresMechanical safety by Limit switch, Equipments safety through software by feeding Max. Load &amp; Max. Extensions, Emergency stop facility &amp; also having Auto reverse facility to get machine at start position after completion of test
+Power supply440V AC, Three phase, 50 Hz
+CONTOUR CUTTER
+Technical Specification
+Model no.VE-CnCt-01
+Template size150mm dumbbell shape as per I.S. standard
+other Templates are available @ optional
+CutterEnd mill type cutter
+Cutting speedFixed speed of 1400 RPM,
+Variable speed available @ optional through
+frequency control A.C. drive
+Max. thickness of specimenMachining enable up to 35mm thick Test specimen
+PaintPowder coated
+Power supply415V AC, Three phase, 50Hz
+HUMIDITY CHAMBER (CONDITIONING CHAMBER)
+Technical Specification
+Model no.VE-HC-01
+Inner chamber dimensionLength 18 (45cm) x Width 18 (45cm) x Height 18 (45cm)
+System statusDigital
+Temperature controllerMicro processor based double display digital PID controller with Auto tune facility
+Temperature range-10 oC to 25oC
+Temperature resolution0.1 oC
+Accuracy 0.5 oC or better
+TimerMicro processor based double display digital timer
+Timer rangeRange from 0.1 minute to 999.9 minute
+Time resolution0.1 minute
+Cooling Through specially designed high efficient cooling mechanism
+Air circulationThrough blower fitted at the back side
+Humidity range45% Rh to 80% Rh
+Humidity least count1%
+Humidity accuracy +/- 5% or better
+Insulation75 mm thick PUF insulation
+to minimize the heating-cooling loses during test
+Mat. of constructionInner chamber: Polished stainless steel 304
+Outer chamber: CRC sheet with dual side powder coated
+Power supply230V AC, Single phase, 50Hz
+DIGITAL WEIGHT BALANCE
+(With Auto density test calculation program)
+Technical Specification
+Model no.VE-DWB-01Xi
+DisplayLCD with multi parameter display
+Weighing capacity220 gms
+Readability0.0001 gm / 0.1 mg
+Repeatability0.2 mg
+Linearity0.4 mg
+Pan size 100mm
+ResultAutomatic density calculation with auto tare facility
+AccessoriesMachine supply with complete specific gravity tool kit
+Power supply230V AC, Single phase, 50 Hz
+HOT AIR OVEN
+Technical Specification
+Model no.VE-HAO-01
+Internal chamber size Width 18 (45cm) x Depth 18 (45cm) x Height 18 (45cm)
+System statusDigital
+Temperature controllerMicro processor based double display digital PID controller
+HeatingThrough high grade nichrome wire placed in the ribs of both side and bottom for uniform temperature equilibrium
+Air circulationThrough Aluminum blower fitted at the top / at the back
+Temperature rangeAmbient to 250 oC
+Accuracy 0.5 oC or better
+TimerMicro processor based double display digital timer @ optional
+Timer rangeRange from 0.1 minute to 999.59 minute
+Smoke ventilationInstalled on top of both sides
+Insulation75 mm thick glass-wool
+Mat. of constructionInner chamber: Polished stainless steel 304
+Outer chamber: CRC sheet with dual side powder coated
+Power supply230V AC, Single phase, 50Hz

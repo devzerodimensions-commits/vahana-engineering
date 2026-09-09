@@ -22,3 +22,9 @@ _scripts/_stock2/
 .DS_Store
 Thumbs.db
 *.log
+
+# Image-recovery scratch: raw carves from the client's .doc/.docx catalogues.
+# ~90 MB of duplicates and Word link-previews. Anything worth keeping is
+# resized into frontend/public/products by add-catalogue-products.mjs.
+_scripts/_carved/
+_scripts/_docx-media/

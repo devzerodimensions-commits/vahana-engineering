@@ -5,9 +5,17 @@
 // Digital Weight Balance by 4.
 //
 // Only machines with a real photo are added here. The catalogues embed some
-// images and merely LINK others, so ESCR, Cold Water Bath and the 2-station
-// hydrostatic rig have specs but no picture; adding them would put empty cards
-// on the Products grid, so they wait for photos from the client.
+// images and merely LINK others, so ESCR and the 2-station hydrostatic rig have
+// specs but no picture; adding them would put empty cards on the Products grid,
+// so they wait for photos from the client.
+//
+// The Cold Water Bath was in that waiting list until a second carve of the .doc
+// files turned up its picture. Two things had hidden it: the sweep only kept
+// JPEGs over 120 KB (this one is a PNG), and it bounded each JPEG at the first
+// end-of-image marker, which truncates any photo carrying an EXIF preview. See
+// _carve-all.py. The find also settled the question of whether the Hot Water
+// Bath photo could stand in for it — the client's own catalogue prints the very
+// same image file on both pages, so it is their editorial choice, not ours.
 //
 // Run:  node add-catalogue-products.mjs   (then apply-catalogue-specs.mjs)
 import fs from "node:fs";
@@ -45,6 +53,20 @@ const NEW = [
     summary:
       "Analytical balance reading to 0.1 mg with an automatic density-calculation program, supplied with a complete specific-gravity tool kit.",
     standards: ["IS 4985", "IS 13592", "IS 12818", "IS 12701"],
+  },
+  {
+    model: "VE-CWB-01-H",
+    slug: "cold-water-bath",
+    name: "Cold Water Bath",
+    category: "thermal-ageing",
+    categoryName: "Thermal & Ageing",
+    // Same file the Hot Water Bath uses — byte-identical to the picture the
+    // client's own IS 4984 catalogue prints on the Cold Water Bath page, and
+    // already on disk, so copying it would only duplicate 200 KB.
+    reuseImage: "/products/hot-water-bath.jpg",
+    summary:
+      "Refrigerated conditioning bath with a 48\" x 36\" x 18\" stainless steel chamber, compressor cooling and a submersible circulation pump, holding ambient to 20°C within ±1°C.",
+    standards: ["IS 4984"],
   },
   {
     model: "VE-TTM-01xi",
