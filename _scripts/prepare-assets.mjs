@@ -242,8 +242,21 @@ const PRODUCTS = {
   },
 };
 
-// Technical specifications transcribed from the IS 4984 Product Catalogue.
-// Keyed by product slug. Attaches model no., accurate standards and a spec table.
+// Technical specifications transcribed by hand from the IS 4984 Product
+// Catalogue. Keyed by product slug. Attaches model no., standards and a spec
+// table.
+//
+// ⚠  SUPERSEDED — DO NOT TREAT AS THE SOURCE OF TRUTH.
+// These tables are summarised and cover only 9 products. The full tables now
+// come from the client's six catalogues via:
+//     python extract-specs.py          -> _catalogue-specs.json
+//     node   apply-catalogue-specs.mjs -> merges into products.json
+// That raises coverage to 16 products and 225 rows (from 106), and restores
+// rows dropped here — the Carbon Black table alone was missing End closures,
+// Pre/Post treatment attachments, Timer and Timer range.
+//
+// Running THIS script overwrites `specifications` from the constant below and
+// will silently undo that. Always re-run apply-catalogue-specs.mjs afterwards.
 const S = (label, value) => ({ label, value });
 const SPECS = {
   "melt-flow-index-mfi-test-apparatus": {
@@ -474,3 +487,12 @@ fs.writeFileSync(path.join(DATA_DIR, "products.json"), JSON.stringify(manifest, 
 console.log(`Copied ${products.length - missing.length}/${products.length} product images.`);
 if (missing.length) console.log("MISSING:", missing);
 console.log(`Wrote manifest: ${products.length} products, ${categories.length} categories.`);
+
+// This script has just replaced `specifications` with the summarised tables
+// above, so say so loudly rather than leaving the site quietly missing half its
+// spec rows.
+const specced = products.filter((p) => (p.specifications || []).length).length;
+console.log(
+  `\n⚠  Specifications reset to the built-in tables: ${specced}/${products.length} products.` +
+    `\n   Run  node apply-catalogue-specs.mjs  to restore the full catalogue specs (16 products, 225 rows).`
+);

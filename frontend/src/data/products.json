@@ -110,14 +110,67 @@
       "categoryName": "Thermal & Ageing",
       "image": "/products/ash-content-tester-muffle-furnace.jpg",
       "summary": "High-temperature muffle furnace for determining ash and filler content of polymers by incineration.",
-      "model": "",
+      "model": "VE-MF-01",
       "description": "High-temperature muffle furnace for determining ash and filler content of polymers by incineration. Manufactured by Vihaana Engineering, the Ash Content Tester (Muffle Furnace) is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
       "standards": [
         "IS 6307",
         "IS 4984",
         "IS 13360"
       ],
-      "specifications": [],
+      "specifications": [
+        {
+          "label": "Model No.",
+          "value": "VE-MF-01"
+        },
+        {
+          "label": "Internal chamber size",
+          "value": "Width 10cm x Height 10cm x Depth 22.5cm"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Microprocessor based double display digital PID controller"
+        },
+        {
+          "label": "Heating",
+          "value": "Through custom high grade nichrome wire"
+        },
+        {
+          "label": "Temperature range",
+          "value": "Ambient to 1100 °C"
+        },
+        {
+          "label": "Temperature accuracy",
+          "value": "±10 °C or better"
+        },
+        {
+          "label": "Timer",
+          "value": "Microprocessor based double display digital timer at optional"
+        },
+        {
+          "label": "Timer range",
+          "value": "up to 999.9 Seconds / Minutes"
+        },
+        {
+          "label": "Safety MCB / Fuse",
+          "value": "Available on electric panel"
+        },
+        {
+          "label": "Insulation",
+          "value": "100 mm double wall thick cera-wool insulation"
+        },
+        {
+          "label": "Mat. of construction",
+          "value": "Inner chamber: Tough treated ceramic"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50Hz"
+        }
+      ],
       "featured": false,
       "price": "On Request"
     },
@@ -157,52 +210,76 @@
           "value": "VE-CBC-01"
         },
         {
-          "label": "System",
+          "label": "System status",
           "value": "Digital"
         },
         {
-          "label": "Heating Element",
-          "value": "1000 W element wound on ceramic tube"
+          "label": "Heating element",
+          "value": "1000 watt heating element wounded on ceramic tube"
         },
         {
-          "label": "Temperature Controller",
-          "value": "Microprocessor-based double-display digital PID controller"
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
         },
         {
-          "label": "Temperature Range",
-          "value": "Ambient to 800 °C"
+          "label": "Temperature range",
+          "value": "Ambient to 800°C"
         },
         {
-          "label": "Least Count",
-          "value": "1 °C"
+          "label": "Temperature least count",
+          "value": "1°C"
         },
         {
           "label": "Accuracy",
-          "value": "± 5 °C or better"
+          "value": "± 5°C or better"
         },
         {
           "label": "Furnace",
-          "value": "Dual insulation; effective size Ø30 mm × 300 mm"
+          "value": "With dual insulations"
         },
         {
-          "label": "Pyrolysing Chamber",
-          "value": "Heat-resistant quartz glass tube"
+          "label": "Effective furnace size",
+          "value": "Ø30 mm x 300 mm"
         },
         {
-          "label": "Sample Holder",
-          "value": "Quartz boat Ø12 mm × 75 mm"
+          "label": "Pyrolyting chamber",
+          "value": "Heat resistant quartz glass tube"
+        },
+        {
+          "label": "End closures",
+          "value": "Silicon rubber corks with glass tubes to accept gas tubing"
+        },
+        {
+          "label": "Pre treatment attachment",
+          "value": "De-oxygenating unit and de-humidifying unit"
+        },
+        {
+          "label": "Sample holder",
+          "value": "Quartz boat of Ø12 mm x 75 mm Length"
+        },
+        {
+          "label": "Post treatment attachment",
+          "value": "Single dissolution unit"
+        },
+        {
+          "label": "Timer",
+          "value": "Micro processor based double display digital timer @ Optional"
+        },
+        {
+          "label": "Timer range",
+          "value": "999.59 Seconds, Minutes or Hours @ optional"
         },
         {
           "label": "Insulation",
-          "value": "100 mm triple-layer cera-wool"
+          "value": "100 mm thick triple layer cera-wool"
         },
         {
           "label": "Accessories",
-          "value": "Quartz tube, quartz/ceramic boat, gas-washing bottle with trap head & MS stand, desiccator, boat pulling rod, test chemicals"
+          "value": "Quartz tube, Quartz / Ceramic boat, Gas washing bottle with trap head & M.S. fabricated stand set, Rubber tube, Desiccator with porcelain plate, Boat pulling rod and related test Chemicals"
         },
         {
-          "label": "Power Supply",
-          "value": "230 V AC, single phase, 50 Hz"
+          "label": "Power supply",
+          "value": "230V, AC, Single phase, 50 Hz"
         }
       ],
       "featured": false,
@@ -232,13 +309,42 @@
       "categoryName": "Specimen Preparation & Cutters",
       "image": "/products/contour-cutter.jpg",
       "summary": "Cuts dumbbell and contour test specimens cleanly from moulded sheets for tensile testing.",
-      "model": "",
+      "model": "VE-CnCt-01",
       "description": "Cuts dumbbell and contour test specimens cleanly from moulded sheets for tensile testing. Manufactured by Vihaana Engineering, the Contour Cutter is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
       "standards": [
         "IS 13360-2-1",
         "IS 8543"
       ],
-      "specifications": [],
+      "specifications": [
+        {
+          "label": "Model No.",
+          "value": "VE-CnCt-01"
+        },
+        {
+          "label": "Template size",
+          "value": "150mm dumbbell shape as per I.S. standard"
+        },
+        {
+          "label": "Cutter",
+          "value": "End mill type cutter"
+        },
+        {
+          "label": "Cutting speed",
+          "value": "Fixed speed of 1400 RPM,"
+        },
+        {
+          "label": "Max. thickness of specimen",
+          "value": "Machining enable up to 35mm thick Test specimen"
+        },
+        {
+          "label": "Paint",
+          "value": "Powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "415V AC, Three phase, 50Hz"
+        }
+      ],
       "featured": false,
       "price": "On Request"
     },
@@ -330,13 +436,74 @@
       "categoryName": "Melt Flow & Rheology",
       "image": "/products/emission-flow-variation-test-apparatus.jpg",
       "summary": "Evaluates flow-rate variation of thermoplastics to monitor batch-to-batch consistency.",
-      "model": "",
+      "model": "K-EmFVT-01",
       "description": "Evaluates flow-rate variation of thermoplastics to monitor batch-to-batch consistency. Manufactured by Vihaana Engineering, the Emission Flow Variation Test Apparatus is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
       "standards": [
         "IS 2530",
         "IS 13360-4-1"
       ],
-      "specifications": [],
+      "specifications": [
+        {
+          "label": "Model No.",
+          "value": "K-EmFVT-01"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Model",
+          "value": "Rigid floor standing model"
+        },
+        {
+          "label": "Sample size",
+          "value": "Test up to 25 test sample at a time"
+        },
+        {
+          "label": "Tank",
+          "value": "Stainless Steel 304 tank fitted at bottom of capacity 250 Liter"
+        },
+        {
+          "label": "Filter",
+          "value": "10 micron filter inserted at the inlet of pump"
+        },
+        {
+          "label": "Pressure source",
+          "value": "Pressure created through high pressure pump of reputed make"
+        },
+        {
+          "label": "Working pressure",
+          "value": "Up to 4.50 kg/cm² / Bar"
+        },
+        {
+          "label": "Accuracy",
+          "value": "+ 0.01 kg/cm² / Bar"
+        },
+        {
+          "label": "Pressure control",
+          "value": "Precision pressure control through throttle valve"
+        },
+        {
+          "label": "Pressure indicator",
+          "value": "Double display digital pressure indicator with built in digital timer having range from 0.1 Sec. to 999.9 Sec."
+        },
+        {
+          "label": "Paint",
+          "value": "Powder coating"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
+        },
+        {
+          "label": "$ % = > H J",
+          "value": "b c d"
+        },
+        {
+          "label": "CJ OJ QJ aJ h =S CJ OJ QJ aJ h =S CJ OJ QJ aJ h =S 5 CJ OJ QJ aJ ! $ % = > R i !",
+          "value": "= V t ] > m 6 a b c Ø"
+        }
+      ],
       "featured": false,
       "price": "On Request"
     },
@@ -360,27 +527,27 @@
           "value": "VE-HAO-01"
         },
         {
-          "label": "Internal Chamber",
-          "value": "18\" × 18\" × 18\" (45 × 45 × 45 cm)"
+          "label": "Internal chamber size",
+          "value": "Width 14\" (35cm) x Depth 14\" (35cm) x Height 14\" (35cm)"
         },
         {
-          "label": "System",
+          "label": "System status",
           "value": "Digital"
         },
         {
-          "label": "Temperature Controller",
-          "value": "Microprocessor-based double-display digital PID controller"
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
         },
         {
           "label": "Heating",
-          "value": "High-grade nichrome wire in side & bottom ribs for uniform temperature"
+          "value": "Through high grade nichrome wire placed in the ribs of both side and bottom for uniform temperature equilibrium"
         },
         {
-          "label": "Air Circulation",
-          "value": "Aluminium blower (top / back)"
+          "label": "Air circulation",
+          "value": "Through Aluminum blower fitted at the top / at the back"
         },
         {
-          "label": "Temperature Range",
+          "label": "Temperature range",
           "value": "Ambient to 250 °C"
         },
         {
@@ -388,16 +555,28 @@
           "value": "± 0.5 °C or better"
         },
         {
+          "label": "Timer",
+          "value": "Micro processor based double display digital timer @ optional"
+        },
+        {
+          "label": "Timer range",
+          "value": "Range from 0.1 minute to 999.59 minute"
+        },
+        {
+          "label": "Smoke ventilation",
+          "value": "Installed on top of both sides"
+        },
+        {
           "label": "Insulation",
-          "value": "75 mm glass-wool"
+          "value": "75 mm thick glass-wool"
         },
         {
-          "label": "Construction",
-          "value": "Inner SS 304; outer CRC sheet, powder coated"
+          "label": "Mat. of construction",
+          "value": "Inner chamber: Polished stainless steel 304"
         },
         {
-          "label": "Power Supply",
-          "value": "230 V AC, single phase, 50 Hz"
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50Hz"
         }
       ],
       "featured": false,
@@ -410,14 +589,59 @@
       "categoryName": "Thermal & Ageing",
       "image": "/products/hot-oil-bath.jpg",
       "summary": "Stirred oil bath giving stable high-temperature conditioning for reversion and thermal tests.",
-      "model": "",
+      "model": "VE-HOB-01",
       "description": "Stirred oil bath giving stable high-temperature conditioning for reversion and thermal tests. Manufactured by Vihaana Engineering, the Hot Oil Bath is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
       "standards": [
         "IS 6307",
         "IS 4984",
         "IS 13360"
       ],
-      "specifications": [],
+      "specifications": [
+        {
+          "label": "Model No.",
+          "value": "VE-HOB-01"
+        },
+        {
+          "label": "Inner chamber dimension",
+          "value": "Length 36\" (90cm) x Width 12\" (30cm) x Height 14\" (35cm)"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
+        },
+        {
+          "label": "Heating",
+          "value": "Through high efficient stainless steel tubular heating system"
+        },
+        {
+          "label": "Oil circulation",
+          "value": "Continuous stirring through stirrer motor of 'REMI' make"
+        },
+        {
+          "label": "Temperature range",
+          "value": "Up to 180°C"
+        },
+        {
+          "label": "Resolution",
+          "value": "0.1°C"
+        },
+        {
+          "label": "Accuracy",
+          "value": "± 0.5°C or better"
+        },
+        {
+          "label": "Insulation",
+          "value": "50 mm thick cera-wool insulation"
+        },
+        {
+          "label": "Power supply",
+          "value": "440V AC, Three phase, 50 Hz"
+        }
+      ],
       "featured": false,
       "price": "On Request"
     },
@@ -441,44 +665,56 @@
           "value": "VE-WB-02-H"
         },
         {
-          "label": "Inner Chamber",
-          "value": "48\" × 36\" × 18\" (L × W × H)"
+          "label": "Inner chamber dimension",
+          "value": "Length 24'' x Width 18'' x Height 12''"
         },
         {
-          "label": "System",
+          "label": "System status",
           "value": "Digital"
         },
         {
-          "label": "Temperature Controller",
-          "value": "Microprocessor-based double-display digital PID controller"
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
         },
         {
           "label": "Heating",
-          "value": "High-efficiency SS tubular heating system"
+          "value": "Through high efficient S.S. tubular heating system"
         },
         {
-          "label": "Water Circulation",
-          "value": "Mono-block pump"
+          "label": "Water circulation",
+          "value": "Through mono-block type pump"
         },
         {
-          "label": "Temperature Range",
-          "value": "Ambient to 90 °C"
+          "label": "Temperature range",
+          "value": "Ambient to 90°C"
         },
         {
-          "label": "Least Count / Accuracy",
-          "value": "0.1 °C / ± 1 °C or better"
+          "label": "Temp. least count",
+          "value": "0.1°C"
+        },
+        {
+          "label": "Temp. accuracy",
+          "value": "± 0.5°C or better"
         },
         {
           "label": "Insulation",
-          "value": "50 mm glass-wool"
+          "value": "50 mm thick glass-wool"
         },
         {
-          "label": "Construction",
-          "value": "Inner SS 304; outer CRC sheet, powder coated"
+          "label": "Water drainage",
+          "value": "Water drainage through Ball valve at bottom of the tank"
         },
         {
-          "label": "Power Supply",
-          "value": "440 V AC, three phase, 50 Hz"
+          "label": "Mat. of construction",
+          "value": "Inner chamber: Polished stainless steel 304"
+        },
+        {
+          "label": "Power supply",
+          "value": "440V AC, Three phase, 50 Hz"
+        },
+        {
+          "label": "r circulation",
+          "value": "Through mono-block type pump"
         }
       ],
       "featured": false,
@@ -491,14 +727,87 @@
       "categoryName": "Thermal & Ageing",
       "image": "/products/humidity-chamber.jpg",
       "summary": "Temperature and humidity controlled chamber for conditioning and environmental ageing of materials.",
-      "model": "",
+      "model": "VE-HC-01",
       "description": "Temperature and humidity controlled chamber for conditioning and environmental ageing of materials. Manufactured by Vihaana Engineering, the Humidity Chamber is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
       "standards": [
         "IS 6307",
         "IS 4984",
         "IS 13360"
       ],
-      "specifications": [],
+      "specifications": [
+        {
+          "label": "Model No.",
+          "value": "VE-HC-01"
+        },
+        {
+          "label": "Inner chamber dimension",
+          "value": "Length 18\" (45cm) x Width 18\" (45cm) x Height 18\" (45cm)"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller with Auto tune facility"
+        },
+        {
+          "label": "Temperature range",
+          "value": "-10 °C to 25 °C"
+        },
+        {
+          "label": "Temperature resolution",
+          "value": "0.1 °C"
+        },
+        {
+          "label": "Accuracy",
+          "value": "±0.5 °C or better"
+        },
+        {
+          "label": "Timer",
+          "value": "Micro processor based double display digital timer"
+        },
+        {
+          "label": "Timer range",
+          "value": "Range from 0.1 minute to 999.9 minute"
+        },
+        {
+          "label": "Time resolution",
+          "value": "0.1 minute"
+        },
+        {
+          "label": "Cooling",
+          "value": "Through specially designed high efficient cooling mechanism"
+        },
+        {
+          "label": "Air circulation",
+          "value": "Through blower fitted at the back side"
+        },
+        {
+          "label": "Humidity range",
+          "value": "45% Rh to 80% Rh"
+        },
+        {
+          "label": "Humidity least count",
+          "value": "1%"
+        },
+        {
+          "label": "Humidity accuracy",
+          "value": "+/- 5% or better"
+        },
+        {
+          "label": "Insulation",
+          "value": "75 mm thick PUF insulation"
+        },
+        {
+          "label": "Mat. of construction",
+          "value": "Inner chamber: Polished stainless steel 304"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50Hz"
+        }
+      ],
       "featured": false,
       "price": "On Request"
     },
@@ -522,44 +831,52 @@
           "value": "VE-HYD-03"
         },
         {
-          "label": "Stations",
-          "value": "3 (three)"
+          "label": "No. of stations",
+          "value": "3 (Three)"
         },
         {
-          "label": "Outlets",
-          "value": "9 (nine) — 3 per station"
+          "label": "No. of outlets",
+          "value": "9 (Nine) each station having three outlets"
         },
         {
-          "label": "Pressure Range",
+          "label": "Unit of pressure",
+          "value": "kg/cm²"
+        },
+        {
+          "label": "Pressure range",
           "value": "0.00 to 60.0 kg/cm²"
         },
         {
-          "label": "Pressure Resolution",
+          "label": "Pressure resolution",
           "value": "0.01 kg/cm²"
         },
         {
-          "label": "Time Range",
-          "value": "999.59 hours (1 min resolution)"
+          "label": "Time range",
+          "value": "999.59 Hours"
         },
         {
-          "label": "Hydraulic Circuit",
-          "value": "Corrosion-free SS 304 tubing & fittings"
+          "label": "Time resolution",
+          "value": "1 Minute"
         },
         {
-          "label": "Compressed Air",
-          "value": "Min. 3.0 kg/cm² from compressor"
+          "label": "Hydraulic circuit",
+          "value": "Made from stainless steel 304 tubing"
         },
         {
-          "label": "Pressure System",
-          "value": "Hydro-pneumatic reciprocating pump (single)"
+          "label": "Pressure developing system",
+          "value": "through hydro-pneumatic piston pump"
         },
         {
-          "label": "Finish",
+          "label": "Pressure control system",
+          "value": "Hydro pressure regulating device"
+        },
+        {
+          "label": "Paint",
           "value": "Powder coated"
         },
         {
-          "label": "Power Supply",
-          "value": "230 V AC, single phase, 50 Hz"
+          "label": "Power supply",
+          "value": "415V AC, Single phase, 50Hz"
         }
       ],
       "featured": true,
@@ -602,27 +919,27 @@
           "value": "VE-MFI-01"
         },
         {
-          "label": "Reference Standards",
-          "value": "IS 2530, IS 13360 (Part 4/Sec 1)"
+          "label": "Reference standards",
+          "value": "ASTM - 1238, IS - 2530"
         },
         {
-          "label": "Test Method",
+          "label": "Test method",
           "value": "A"
         },
         {
-          "label": "System",
+          "label": "System status",
           "value": "Digital"
         },
         {
-          "label": "Temperature Controller",
-          "value": "Microprocessor-based double-display digital PID controller"
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
         },
         {
-          "label": "Temperature Range",
+          "label": "Temperature range",
           "value": "Ambient to 300 °C"
         },
         {
-          "label": "Temperature Resolution",
+          "label": "Temperature resolution",
           "value": "0.1 °C"
         },
         {
@@ -630,24 +947,36 @@
           "value": "± 0.1 °C"
         },
         {
-          "label": "Timer Range",
-          "value": "0.1 to 999.59 minute (0.1 min resolution)"
+          "label": "Timer",
+          "value": "Micro processor based double display digital timer"
         },
         {
-          "label": "Weight Lifting / Cutting",
+          "label": "Timer range",
+          "value": "Range from 0.1 minute to 999.59 minute"
+        },
+        {
+          "label": "Time resolution",
+          "value": "0.1 minute"
+        },
+        {
+          "label": "Weight lifting system",
+          "value": "Manual"
+        },
+        {
+          "label": "Sample cutting system",
           "value": "Manual"
         },
         {
           "label": "Accessories",
-          "value": "Orifice (die), piston, orifice cleaner & ejector, cylinder cleaner, extrudate cutter, forceps, dead weights 2.16 kgf & 5.00 kgf (other weights optional)"
+          "value": "Orifice (Die), Piston, Orifice cleaner, Orifice ejector, Cylinder cleaner, Extrudate (sample) cutter, Forcep, Dead weights of 2.16 kgf & 5.00 kgf other weights are available at optional"
         },
         {
-          "label": "Finish",
+          "label": "Paint",
           "value": "Powder coated"
         },
         {
-          "label": "Power Supply",
-          "value": "230 V AC, single phase, 50 Hz"
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50Hz"
         }
       ],
       "featured": true,
@@ -660,13 +989,62 @@
       "categoryName": "Composition & Optical",
       "image": "/products/opacity-test-apparatus.jpg",
       "summary": "Measures light transmission and opacity of pipes and films for carbon-black dispersion checks.",
-      "model": "",
+      "model": "VE-OTA-01",
       "description": "Measures light transmission and opacity of pipes and films for carbon-black dispersion checks. Manufactured by Vihaana Engineering, the Opacity Test Apparatus is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
       "standards": [
         "IS 2530",
         "IS 4984"
       ],
-      "specifications": [],
+      "specifications": [
+        {
+          "label": "Model No.",
+          "value": "VE-OTA-01"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Range",
+          "value": "0 – 100%"
+        },
+        {
+          "label": "Resolution",
+          "value": "0.01%"
+        },
+        {
+          "label": "Light filter",
+          "value": "Light filter of 540 nm to 550 nm wavelength fitting in M/c."
+        },
+        {
+          "label": "Light sensor",
+          "value": "High quality precision Photoelectric cell"
+        },
+        {
+          "label": "Result",
+          "value": "Light transmission displayed on indicator in terms of '%'"
+        },
+        {
+          "label": "Results in terms of",
+          "value": "Opacity / Light transmission"
+        },
+        {
+          "label": "Sample thickness",
+          "value": "Up to 15 mm"
+        },
+        {
+          "label": "Sample holding system",
+          "value": "With operational ease mechanism"
+        },
+        {
+          "label": "Paint",
+          "value": "Powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
+        }
+      ],
       "featured": false,
       "price": "On Request"
     },
@@ -689,52 +1067,60 @@
           "value": "VE-OIT-01"
         },
         {
-          "label": "Method",
-          "value": "Differential Thermal Analyzer (DTA)"
+          "label": "Reference standards",
+          "value": "I.S. 4984 & ASTM D 3895"
         },
         {
-          "label": "Reference Standards",
-          "value": "IS 4984 (Annex), IS 13360"
+          "label": "System status",
+          "value": "The windows based software to interface the computer,"
         },
         {
-          "label": "System",
-          "value": "Windows-based software; PC connectivity via RS-232; graphical reports"
-        },
-        {
-          "label": "Temperature Controller",
-          "value": "Microprocessor PID; shows process temp & Delta T"
+          "label": "Temperature controller",
+          "value": "Microprocessor based PID temperature controller indicates the process temperature & Delta T"
         },
         {
           "label": "Range",
-          "value": "Ambient to 300 °C (0.1 °C resolution)"
+          "value": "Ambient to 300 °C"
+        },
+        {
+          "label": "Resolution",
+          "value": "0.1 °C"
         },
         {
           "label": "Accuracy",
-          "value": "± 0.5 °C"
+          "value": "+ 0.5 °C"
         },
         {
-          "label": "Rate of Temperature Rise",
-          "value": "20 °C/min & 2 °C/min"
+          "label": "Rate of temperature rise",
+          "value": "20 °C/minute & 2 °C/minute"
         },
         {
-          "label": "Gas Flow Control",
-          "value": "Gas regulator + rotameters"
+          "label": "Gas flow control",
+          "value": "Through gas regulator fitted on cylinder"
         },
         {
-          "label": "Max. Test Time",
+          "label": "Max. test time range",
           "value": "0 to 300 minutes"
         },
         {
           "label": "Accessories",
-          "value": "50 aluminium pans, specimen holder; Indium & Tin for calibration"
+          "value": "Aluminium pan 50 nos. and Specimen holder"
         },
         {
-          "label": "Cooling",
-          "value": "Barrel cooling via circulated water"
+          "label": "Temperature calibration",
+          "value": "Indium & Tin material supplied for calibration of temperature"
         },
         {
-          "label": "Power Supply",
-          "value": "230 V AC, single phase, 50 Hz"
+          "label": "Cooling system",
+          "value": "Barrel cooling through circulated water is provided in machine"
+        },
+        {
+          "label": "Paint",
+          "value": "Dual side Powder coated"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
         }
       ],
       "featured": false,
@@ -759,44 +1145,56 @@
           "value": "VE-SMP-01"
         },
         {
-          "label": "Application",
-          "value": "Density-test specimen preparation"
+          "label": "System status",
+          "value": "Digital"
         },
         {
           "label": "Model",
-          "value": "Rigid floor-standing"
+          "value": "Rigid floor standing model"
         },
         {
-          "label": "Sample Mould",
-          "value": "Rectangular spacer-frame; 100 × 120 × 4 mm PE sheet (other sizes optional)"
+          "label": "Sample mould",
+          "value": "Rectangular spacer frame type mould"
         },
         {
-          "label": "Platen Type",
-          "value": "Twin-plate with heating & cooling"
+          "label": "Platen type",
+          "value": "Twin plate type mould with heating & cooling systems"
         },
         {
-          "label": "Heating",
-          "value": "Industrial flat heaters in both plates"
+          "label": "Heating system",
+          "value": "High efficient industrial flat heater in both heater plates"
         },
         {
-          "label": "Temperature Controller",
-          "value": "Microprocessor-based double-display digital PID controller"
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
         },
         {
-          "label": "Temperature Range",
-          "value": "Ambient to 200 °C"
+          "label": "Temperature range",
+          "value": "Ambient to 200°C"
         },
         {
-          "label": "Working Pressure",
-          "value": "Up to 150 kg/cm² via 16-ton hydraulic jack"
+          "label": "Working pressure",
+          "value": "Pressure up to 150 kg/cm² / BAR build-up through heavy duty"
         },
         {
-          "label": "Finish",
-          "value": "Powder coated"
+          "label": "Insulation",
+          "value": "Heat insulator inserted between heating & cooling plates"
         },
         {
-          "label": "Power Supply",
-          "value": "230 V AC, single phase, 50 Hz"
+          "label": "Paint",
+          "value": "Powder coating"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
+        },
+        {
+          "label": "9 : ; < I K m n o p x y z {",
+          "value": "> @ T V 8 > \" ³ / 0 µ ° — — — {n hS E 5 CJ OJ QJ aJ hS E h p j h p U h#h1 CJ OJ QJ aJ h4% CJ H* OJ QJ aJ h @| CJ OJ QJ aJ h p CJ OJ QJ aJ h4% CJ OJ QJ aJ h4% 5 CJ OJ QJ aJ h4% 5 CJ OJ QJ aJ h @| h ! 5 CJ OJ QJ aJ h ! 5 CJ OJ QJ aJ ) : < S ' \" B Y – % / Ø Ø Ø $ a$ gd"
+        },
+        {
+          "label": "ation",
+          "value": "Heat insulator inserted between heating & cooling plates"
         }
       ],
       "featured": false,
@@ -827,14 +1225,79 @@
       "categoryName": "Universal & Tensile Testing",
       "image": "/products/tensile-testing-machine-wst.jpg",
       "summary": "Weld-strength tensile tester for evaluating butt-fusion and electrofusion joints in pipes.",
-      "model": "",
+      "model": "VE-TTM-02-Wst",
       "description": "Weld-strength tensile tester for evaluating butt-fusion and electrofusion joints in pipes. Manufactured by Vihaana Engineering, the Tensile Testing Machine – WST is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
       "standards": [
         "IS 13360-5-1",
         "IS 8543",
         "IS 13360"
       ],
-      "specifications": [],
+      "specifications": [
+        {
+          "label": "Model No.",
+          "value": "VE-TTM-02-Wst"
+        },
+        {
+          "label": "Test capacity",
+          "value": "Load cell – 1: 500 kgf / 5000 N,"
+        },
+        {
+          "label": "System status",
+          "value": "Digitally controlled, Blue color four line LDC display indicated the value of"
+        },
+        {
+          "label": "No. of screws",
+          "value": "Ball screw-nut assembly driven through reputed make gear-motor"
+        },
+        {
+          "label": "Test jaws",
+          "value": "Individual test jaws for Tensile test & Flexural modulus test"
+        },
+        {
+          "label": "Load cell",
+          "value": "'S Type' load-cell"
+        },
+        {
+          "label": "Load cell unit",
+          "value": "kg/cm²"
+        },
+        {
+          "label": "Cross head travel",
+          "value": "600mm"
+        },
+        {
+          "label": "Displn. Accuracy",
+          "value": "0.1mm"
+        },
+        {
+          "label": "Speed control",
+          "value": "through frequency controlled A.C. drive"
+        },
+        {
+          "label": "Speed",
+          "value": "Variable testing speed for Flexural modulus test as 5mm/minute"
+        },
+        {
+          "label": "Software",
+          "value": "The Windows based software to interface the computer"
+        },
+        {
+          "label": "Data entry",
+          "value": "Through software"
+        },
+        {
+          "label": "PC connectivity",
+          "value": "RS-232"
+        },
+        {
+          "label": "Reports & printouts",
+          "value": "Graphical data type reports can be printed through software"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
+        }
+      ],
       "featured": false,
       "price": "On Request"
     },
@@ -858,48 +1321,68 @@
           "value": "VE-UTM-01xi"
         },
         {
-          "label": "Test Capacity",
-          "value": "2000 kgf / 20 kN"
+          "label": "Test capacity",
+          "value": "2000 kgf / 20kN"
         },
         {
-          "label": "System",
-          "value": "Digital with computer interface; 4-line LCD (load, extension, speed, test type)"
+          "label": "System status",
+          "value": "Digital with computer Interface, Blue color four line LDC display indicated the value of load & extension, testing speed"
         },
         {
-          "label": "Drive",
-          "value": "Double ball-screw & nut assembly, reputed-make gear motor"
+          "label": "No. of screws",
+          "value": "Double ball screw-nut assembly mechanism driven"
         },
         {
-          "label": "Test Jaws",
-          "value": "Vice-type tensile jaws"
+          "label": "Test jaws",
+          "value": "Vice type testing jaws for Tensile test are fitted on machine"
         },
         {
-          "label": "Load Cell",
-          "value": "'S-type', reputed make — kg / N / MPa"
+          "label": "Load cell",
+          "value": "'S Type' load-cell of reputed make"
         },
         {
-          "label": "Cross-head Travel",
+          "label": "Load cell unit",
+          "value": "kg/cm² / N / Mpa"
+        },
+        {
+          "label": "Cross head travel",
           "value": "800 mm"
         },
         {
-          "label": "Displacement Accuracy",
+          "label": "Displn. accuracy",
           "value": "0.1 mm"
         },
         {
           "label": "Speed",
-          "value": "Variable via frequency-controlled AC drive"
+          "value": "Variable speed through frequency controlled A.C. drive"
         },
         {
-          "label": "Software / Connectivity",
-          "value": "Windows-based software; RS-232; graphical printouts"
+          "label": "Software",
+          "value": "The Windows based software to interface the computer"
         },
         {
-          "label": "Safety",
-          "value": "Limit-switch & software load/extension limits, emergency stop, auto-reverse"
+          "label": "Data entry",
+          "value": "Through software"
         },
         {
-          "label": "Power Supply",
-          "value": "440 V AC, three phase, 50 Hz"
+          "label": "PC connectivity",
+          "value": "RS-232"
+        },
+        {
+          "label": "Reports & printouts",
+          "value": "Graphical data type reports can be printed through software"
+        },
+        {
+          "label": "Safety features",
+          "value": "Mechanical safety by Limit switch, Equipments safety through software by feeding Max. Load & Max. Extensions, Emergency stop facility & also having Auto reverse facility to get machine at start position after completion of test"
+        },
+        {
+          "label": "Power supply",
+          "value": "440V AC, Three phase, 50 Hz"
+        },
+        {
+          "label": "Reports &amp; printouts",
+          "value": "Graphical data type reports can be printed through software"
         }
       ],
       "featured": false,
