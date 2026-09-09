@@ -104,54 +104,37 @@ export default function Home() {
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {standards.map((s) => (
-              <div key={s.product} className="card group flex flex-col p-6 transition hover:shadow-card-hover">
+              // The instrument list lives on the standard's own page now, so the
+              // card carries no inner links — which means the WHOLE card can be
+              // one link rather than just its heading. Bigger target, and the
+              // affordance is obvious on touch.
+              <Link
+                key={s.product}
+                to={`/standards/${s.slug}`}
+                className="card group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-card-hover"
+              >
                 <div className="flex flex-wrap gap-1.5">
                   {s.codes.map((c) => (
                     <span key={c} className="badge">{c}</span>
                   ))}
                 </div>
-                {/* The heading is the link, not the whole card: the instrument
-                    list below contains its own links, and nesting anchors is
-                    invalid HTML — the browser closes the outer one, which breaks
-                    both. */}
-                <h3 className="mt-3 text-lg font-bold text-brand-navy">
-                  <Link to={`/standards/${s.slug}`} className="transition group-hover:text-brand-red">
-                    {s.product}
-                  </Link>
+
+                <h3 className="mt-3 text-lg font-bold text-brand-navy transition group-hover:text-brand-red">
+                  {s.product}
                 </h3>
                 <p className="text-sm text-slate-500">{s.note}</p>
 
-                <p className="mt-4 text-xs font-bold uppercase tracking-wider text-slate-400">
-                  {s.instrumentCount} instruments required
+                <p className="mt-4 text-3xl font-extrabold text-brand-navy">
+                  {s.instrumentCount}
                 </p>
-                {/* Links are padded to a 24px+ tap target. At the natural 20px
-                    line height, ten links 6px apart is an easy row to mis-tap on
-                    a phone — WCAG 2.5.8 sets 24x24 CSS px as the minimum. */}
-                <ul className="mt-2 space-y-1 text-sm">
-                  {s.instruments.map((i) => (
-                    <li key={i.model} className="flex gap-2">
-                      <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-brand-red" />
-                      {i.slug ? (
-                        <Link
-                          to={`/products/${i.slug}`}
-                          className="block py-1 text-slate-600 transition hover:text-brand-red"
-                        >
-                          {i.name}
-                        </Link>
-                      ) : (
-                        <span className="block py-1 text-slate-600">{i.name}</span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                  instruments required
+                </p>
 
-                <Link
-                  to={`/standards/${s.slug}`}
-                  className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-red-dark hover:underline"
-                >
-                  View full requirement <Icon name="arrowRight" className="h-4 w-4" />
-                </Link>
-              </div>
+                <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-red-dark">
+                  View full requirement <Icon name="arrowRight" className="h-4 w-4 transition group-hover:translate-x-1" />
+                </span>
+              </Link>
             ))}
           </div>
         </div>
