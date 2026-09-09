@@ -9,7 +9,7 @@
         "IS 8543",
         "IS 13360"
       ],
-      "count": 6
+      "count": 8
     },
     {
       "slug": "impact",
@@ -1632,6 +1632,154 @@
         {
           "label": "Power supply",
           "value": "230V AC, Single phase, 50 Hz"
+        }
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Tensile Testing Machine – 500 kgf",
+      "slug": "tensile-testing-machine-500-kgf",
+      "category": "universal-tensile",
+      "categoryName": "Universal & Tensile Testing",
+      "image": "/products/tensile-testing-machine.jpg",
+      "summary": "500 kgf computer-interfaced tensile tester with single screw-nut drive, vice-type tensile jaws and flat round compression jaws.",
+      "model": "VE-TTM-01xi",
+      "description": "500 kgf computer-interfaced tensile tester with single screw-nut drive, vice-type tensile jaws and flat round compression jaws. Manufactured by Vihaana Engineering, the Tensile Testing Machine – 500 kgf is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "IS 4984",
+        "IS 13592"
+      ],
+      "specifications": [
+        {
+          "label": "Model No.",
+          "value": "VE-TTM-01xi"
+        },
+        {
+          "label": "Test capacity",
+          "value": "500 kgf"
+        },
+        {
+          "label": "System status",
+          "value": "Digital with computer Interface, Blue color four-line LDC display indicated the value of load & extension, testing speed & type of test"
+        },
+        {
+          "label": "No. of screws",
+          "value": "Single screw-nut assembly mechanism driven through reputed make gear-motor"
+        },
+        {
+          "label": "Test jaws",
+          "value": "Vice type jaws for Tensile & Flat round jaws for Compression test"
+        },
+        {
+          "label": "Load cell",
+          "value": "'S Type' load-cell of reputed make"
+        },
+        {
+          "label": "Load cell unit",
+          "value": "kg/cm² / N / Mpa"
+        },
+        {
+          "label": "Cross head travel",
+          "value": "700 mm"
+        },
+        {
+          "label": "Displn. accuracy",
+          "value": "0.1 mm"
+        },
+        {
+          "label": "Extensometer",
+          "value": "Electro-mechanical device fitted on machine"
+        },
+        {
+          "label": "Speed",
+          "value": "Speed variation thru duplex pulley attachment and speed adjustment through frequency controlled A.C. drive"
+        },
+        {
+          "label": "Software",
+          "value": "The Windows based software to interface the computer"
+        },
+        {
+          "label": "Data entry",
+          "value": "Through software"
+        },
+        {
+          "label": "PC connectivity",
+          "value": "RS-232"
+        },
+        {
+          "label": "Reports & printouts",
+          "value": "Graphical data type reports can be printed through software"
+        },
+        {
+          "label": "Safety features",
+          "value": "Mechanical safety by Limit switch, Equipments safety through software by feeding Max. Load & Max. Extensions, Emergency stop facility & also having Auto reverse facility to get machine at start position after completion of test"
+        },
+        {
+          "label": "Power supply",
+          "value": "415V AC, Three phase, 50 Hz INCLUDEPICTURE \"D:\\\\Vihaana Photo\\\\part-2\\\\Tensile Testing Machine.jpg\" \\* MERGEFORMATINET"
+        }
+      ],
+      "featured": false,
+      "price": "On Request"
+    },
+    {
+      "name": "Tensile Testing Machine – 500 kgf LC",
+      "slug": "tensile-testing-machine-500-kgf-lc",
+      "category": "universal-tensile",
+      "categoryName": "Universal & Tensile Testing",
+      "image": "/products/tensile-testing-machine.jpg",
+      "summary": "500 kgf tensile tester with four-line LCD readout for load, elongation and speed — the load-cell variant used for LLDPE drip pipe testing.",
+      "model": "VE-TTM-01LC",
+      "description": "500 kgf tensile tester with four-line LCD readout for load, elongation and speed — the load-cell variant used for LLDPE drip pipe testing. Manufactured by Vihaana Engineering, the Tensile Testing Machine – 500 kgf LC is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
+      "standards": [
+        "IS 12786",
+        "IS 13488"
+      ],
+      "specifications": [
+        {
+          "label": "Model No.",
+          "value": "VE-TTM-01LC"
+        },
+        {
+          "label": "Test capacity",
+          "value": "500 kgf"
+        },
+        {
+          "label": "System status",
+          "value": "Blue color four line LCD display indicate the value of load, extension, testing speed & type of test, machine operate through manual function only"
+        },
+        {
+          "label": "Test jaws",
+          "value": "Vice type single test jaws for Tensile test are fitted on machine"
+        },
+        {
+          "label": "No. of screws",
+          "value": "Screw-nut (Ball screw at optional) mechanism driven through reputed make motor and gear box"
+        },
+        {
+          "label": "Load cell",
+          "value": "'S' type loadcell of reputed make"
+        },
+        {
+          "label": "Load cell unit",
+          "value": "kgf"
+        },
+        {
+          "label": "Cross head travel",
+          "value": "600 mm"
+        },
+        {
+          "label": "Displn. accuracy",
+          "value": "0.1 mm"
+        },
+        {
+          "label": "Speed",
+          "value": "Available fix speed of 100 mm/minute or 300 mm/minute Variable speed through frequency controlled A.C. drive available as optional"
+        },
+        {
+          "label": "Power supply",
+          "value": "440V AC, Three phase, 50 Hz"
         }
       ],
       "featured": false,

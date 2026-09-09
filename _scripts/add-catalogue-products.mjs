@@ -18,6 +18,11 @@ const PRODUCTS = path.resolve("../frontend/src/data/products.json");
 const IMG_DIR = path.resolve("../frontend/public/products");
 const SPECS = JSON.parse(fs.readFileSync(path.resolve("_catalogue-specs.json"), "utf-8")).machines;
 
+// `source` = extract a photo from the catalogue media dump.
+// `reuseImage` = point at an existing product photo. Used for the tensile
+// variants: they are genuinely different machines (500 kgf vs 2000 kgf, single
+// vs double ball screw) but the client confirmed the photo is the same unit, so
+// duplicating the file would only add weight.
 const NEW = [
   {
     model: "VE-PIT-01",
@@ -41,6 +46,28 @@ const NEW = [
       "Analytical balance reading to 0.1 mg with an automatic density-calculation program, supplied with a complete specific-gravity tool kit.",
     standards: ["IS 4985", "IS 13592", "IS 12818", "IS 12701"],
   },
+  {
+    model: "VE-TTM-01xi",
+    slug: "tensile-testing-machine-500-kgf",
+    name: "Tensile Testing Machine – 500 kgf",
+    category: "universal-tensile",
+    categoryName: "Universal & Tensile Testing",
+    reuseImage: "/products/tensile-testing-machine.jpg",
+    summary:
+      "500 kgf computer-interfaced tensile tester with single screw-nut drive, vice-type tensile jaws and flat round compression jaws.",
+    standards: ["IS 4984", "IS 13592"],
+  },
+  {
+    model: "VE-TTM-01LC",
+    slug: "tensile-testing-machine-500-kgf-lc",
+    name: "Tensile Testing Machine – 500 kgf LC",
+    category: "universal-tensile",
+    categoryName: "Universal & Tensile Testing",
+    reuseImage: "/products/tensile-testing-machine.jpg",
+    summary:
+      "500 kgf tensile tester with four-line LCD readout for load, elongation and speed — the load-cell variant used for LLDPE drip pipe testing.",
+    standards: ["IS 12786", "IS 13488"],
+  },
 ];
 
 const manifest = JSON.parse(fs.readFileSync(PRODUCTS, "utf-8"));
@@ -57,20 +84,26 @@ for (const item of NEW) {
     continue;
   }
 
-  // Match the existing product images: max 1100px, quality 82. The catalogue
-  // originals are 1-6 MB, which would undo the earlier 106MB -> 1.1MB work.
-  const out = path.join(IMG_DIR, `${item.slug}.jpg`);
-  const info = await sharp(path.resolve(item.source))
-    .resize(1100, 1100, { fit: "inside", withoutEnlargement: true })
-    .jpeg({ quality: 82, mozjpeg: true })
-    .toFile(out);
+  let image = item.reuseImage;
+  let note = "reused existing photo";
+  if (!image) {
+    // Match the existing product images: max 1100px, quality 82. The catalogue
+    // originals are 1-6 MB, which would undo the earlier 106MB -> 1.1MB work.
+    const out = path.join(IMG_DIR, `${item.slug}.jpg`);
+    const info = await sharp(path.resolve(item.source))
+      .resize(1100, 1100, { fit: "inside", withoutEnlargement: true })
+      .jpeg({ quality: 82, mozjpeg: true })
+      .toFile(out);
+    image = `/products/${item.slug}.jpg`;
+    note = `image ${Math.round(info.size / 1024)} KB`;
+  }
 
   manifest.products.push({
     name: item.name,
     slug: item.slug,
     category: item.category,
     categoryName: item.categoryName,
-    image: `/products/${item.slug}.jpg`,
+    image,
     summary: item.summary,
     model: item.model,
     description:
@@ -85,7 +118,7 @@ for (const item of NEW) {
   });
 
   console.log(
-    `added ${item.slug.padEnd(30)} ${spec.specs.length} spec rows  image ${Math.round(info.size / 1024)} KB`
+    `added ${item.slug.padEnd(36)} ${String(spec.specs.length).padStart(2)} spec rows  ${note}`
   );
 }
 

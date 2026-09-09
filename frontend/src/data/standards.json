@@ -71,8 +71,8 @@
         {
           "name": "Tensile Testing Machine",
           "model": "VE-TTM-01xi",
-          "slug": "tensile-testing-machine",
-          "productName": "Tensile Testing Machine",
+          "slug": "tensile-testing-machine-500-kgf",
+          "productName": "Tensile Testing Machine – 500 kgf",
           "image": "/products/tensile-testing-machine.jpg"
         },
         {
@@ -223,8 +223,8 @@
         {
           "name": "Tensile Testing Machine",
           "model": "VE-TTM-01xi",
-          "slug": "tensile-testing-machine",
-          "productName": "Tensile Testing Machine",
+          "slug": "tensile-testing-machine-500-kgf",
+          "productName": "Tensile Testing Machine – 500 kgf",
           "image": "/products/tensile-testing-machine.jpg"
         },
         {
@@ -410,8 +410,8 @@
         {
           "name": "Tensile Testing Machine",
           "model": "VE-TTM-01LC",
-          "slug": "tensile-testing-machine",
-          "productName": "Tensile Testing Machine",
+          "slug": "tensile-testing-machine-500-kgf-lc",
+          "productName": "Tensile Testing Machine – 500 kgf LC",
           "image": "/products/tensile-testing-machine.jpg"
         }
       ]
