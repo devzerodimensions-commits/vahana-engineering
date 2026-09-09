@@ -1,0 +1,342 @@
+{
+  "count": 6,
+  "standards": [
+    {
+      "codes": [
+        "IS 4984"
+      ],
+      "product": "HDPE Pipe",
+      "note": "Up to 110 mm",
+      "order": 1,
+      "instrumentCount": 9,
+      "instruments": [
+        {
+          "name": "Melt Flow Index Test Apparatus",
+          "model": "VE-MFI-01",
+          "slug": "melt-flow-index-mfi-test-apparatus",
+          "productName": "Melt Flow Index (MFI) Test Apparatus"
+        },
+        {
+          "name": "Carbon Black Content Test Apparatus",
+          "model": "VE-CBC-01",
+          "slug": "carbon-black-content-test-apparatus",
+          "productName": "Carbon Black Content Test Apparatus"
+        },
+        {
+          "name": "Hot Air Oven",
+          "model": "VE-HAO-01",
+          "slug": "hot-air-oven",
+          "productName": "Hot Air Oven"
+        },
+        {
+          "name": "Hydro-Static Pressure Testing Machine",
+          "model": "VE-HYD-03",
+          "slug": "hydrostatic-pressure-testing-machine-3-station",
+          "productName": "Hydrostatic Pressure Testing Machine – 3 Station"
+        },
+        {
+          "name": "Cold Water Bath",
+          "model": "VE-CWB-01-H",
+          "slug": null,
+          "productName": null
+        },
+        {
+          "name": "Oxidation Induction Time Tester",
+          "model": "VE-OIT-01",
+          "slug": "oxidation-induction-time-oit-test-apparatus",
+          "productName": "Oxidation Induction Time (OIT) Test Apparatus"
+        },
+        {
+          "name": "Tensile Testing Machine",
+          "model": "VE-TTM-01xi",
+          "slug": "tensile-testing-machine",
+          "productName": "Tensile Testing Machine"
+        },
+        {
+          "name": "Tensile Testing Machine",
+          "model": "VE-UTM-01xi",
+          "slug": "tensile-testing-machine",
+          "productName": "Tensile Testing Machine"
+        },
+        {
+          "name": "Sheet Moulding Press",
+          "model": "VE-SMP-01",
+          "slug": "sheet-moulding-press",
+          "productName": "Sheet Moulding Press"
+        }
+      ]
+    },
+    {
+      "codes": [
+        "IS 4985"
+      ],
+      "product": "PVC Pipe",
+      "note": "Rigid PVC pressure pipe",
+      "order": 2,
+      "instrumentCount": 8,
+      "instruments": [
+        {
+          "name": "Ash Content Tester (Muffle furnace)",
+          "model": "VE-MF-01",
+          "slug": "ash-content-tester-muffle-furnace",
+          "productName": "Ash Content Tester (Muffle Furnace)"
+        },
+        {
+          "name": "Digital Weight Balance",
+          "model": "VE-DWB-01Xi",
+          "slug": null,
+          "productName": null
+        },
+        {
+          "name": "Hot Oil Bath",
+          "model": "VE-HOB-01",
+          "slug": "hot-oil-bath",
+          "productName": "Hot Oil Bath"
+        },
+        {
+          "name": "Hot Water Bath",
+          "model": "VE-WB-02-H",
+          "slug": "hot-water-bath",
+          "productName": "Hot Water Bath"
+        },
+        {
+          "name": "Hydro-Static Pressure Testing Machine",
+          "model": "VE-HYD-03",
+          "slug": "hydrostatic-pressure-testing-machine-3-station",
+          "productName": "Hydrostatic Pressure Testing Machine – 3 Station"
+        },
+        {
+          "name": "Opacity Test Apparatus",
+          "model": "VE-OTA-01",
+          "slug": "opacity-test-apparatus",
+          "productName": "Opacity Test Apparatus"
+        },
+        {
+          "name": "Pipe Impact Testing Machine",
+          "model": "VE-PIT-01",
+          "slug": null,
+          "productName": null
+        },
+        {
+          "name": "VSP (Vicat Softening Point) Test Apparatus",
+          "model": "VE-VSP-01",
+          "slug": null,
+          "productName": null
+        }
+      ]
+    },
+    {
+      "codes": [
+        "IS 13592"
+      ],
+      "product": "PVC SWR Pipe",
+      "note": "Soil, waste & rainwater",
+      "order": 3,
+      "instrumentCount": 10,
+      "instruments": [
+        {
+          "name": "Ash Content Tester (Muffle furnace)",
+          "model": "VE-MF-01",
+          "slug": "ash-content-tester-muffle-furnace",
+          "productName": "Ash Content Tester (Muffle Furnace)"
+        },
+        {
+          "name": "Digital Weight Balance",
+          "model": "VE-DWB-01Xi",
+          "slug": null,
+          "productName": null
+        },
+        {
+          "name": "Hot Oil Bath",
+          "model": "VE-HOB-01",
+          "slug": "hot-oil-bath",
+          "productName": "Hot Oil Bath"
+        },
+        {
+          "name": "Hot Water Bath",
+          "model": "VE-WB-02-H",
+          "slug": "hot-water-bath",
+          "productName": "Hot Water Bath"
+        },
+        {
+          "name": "Humidity Chamber (Conditioning Chamber)",
+          "model": "VE-HC-01",
+          "slug": "humidity-chamber",
+          "productName": "Humidity Chamber"
+        },
+        {
+          "name": "Hydro-Static Pressure Testing Machine",
+          "model": "VE-HYD-03",
+          "slug": "hydrostatic-pressure-testing-machine-3-station",
+          "productName": "Hydrostatic Pressure Testing Machine – 3 Station"
+        },
+        {
+          "name": "Opacity Test Apparatus",
+          "model": "VE-OTA-01",
+          "slug": "opacity-test-apparatus",
+          "productName": "Opacity Test Apparatus"
+        },
+        {
+          "name": "Pipe Impact Testing Machine",
+          "model": "VE-PIT-01",
+          "slug": null,
+          "productName": null
+        },
+        {
+          "name": "VSP (Vicat Softening Point) Test Apparatus",
+          "model": "VE-VSP-01",
+          "slug": null,
+          "productName": null
+        },
+        {
+          "name": "Tensile Testing Machine",
+          "model": "VE-TTM-01xi",
+          "slug": "tensile-testing-machine",
+          "productName": "Tensile Testing Machine"
+        }
+      ]
+    },
+    {
+      "codes": [
+        "IS 12818"
+      ],
+      "product": "PVC Casing Pipe",
+      "note": "Borewell casing",
+      "order": 4,
+      "instrumentCount": 7,
+      "instruments": [
+        {
+          "name": "Pipe Impact Testing Machine",
+          "model": "VE-PIT-01",
+          "slug": null,
+          "productName": null
+        },
+        {
+          "name": "VSP (Vicat Softening Point) Test Apparatus",
+          "model": "VE-VSP-01",
+          "slug": null,
+          "productName": null
+        },
+        {
+          "name": "Tensile Testing Machine",
+          "model": "VE-UTM-01xi",
+          "slug": "tensile-testing-machine",
+          "productName": "Tensile Testing Machine"
+        },
+        {
+          "name": "Contour Cutter",
+          "model": "VE-CnCt-01",
+          "slug": "contour-cutter",
+          "productName": "Contour Cutter"
+        },
+        {
+          "name": "Humidity Chamber (Conditioning Chamber)",
+          "model": "VE-HC-01",
+          "slug": "humidity-chamber",
+          "productName": "Humidity Chamber"
+        },
+        {
+          "name": "Digital Weight Balance",
+          "model": "VE-DWB-01Xi",
+          "slug": null,
+          "productName": null
+        },
+        {
+          "name": "Hot Air Oven",
+          "model": "VE-HAO-01",
+          "slug": "hot-air-oven",
+          "productName": "Hot Air Oven"
+        }
+      ]
+    },
+    {
+      "codes": [
+        "IS 12701"
+      ],
+      "product": "Water Storage Tank",
+      "note": "Rotational moulded",
+      "order": 5,
+      "instrumentCount": 6,
+      "instruments": [
+        {
+          "name": "Melt Flow Index Test Apparatus",
+          "model": "VE-MFI-01",
+          "slug": "melt-flow-index-mfi-test-apparatus",
+          "productName": "Melt Flow Index (MFI) Test Apparatus"
+        },
+        {
+          "name": "Carbon Black Content Test Apparatus",
+          "model": "VE-CBC-01",
+          "slug": "carbon-black-content-test-apparatus",
+          "productName": "Carbon Black Content Test Apparatus"
+        },
+        {
+          "name": "Hot Air Oven",
+          "model": "VE-HAO-01",
+          "slug": "hot-air-oven",
+          "productName": "Hot Air Oven"
+        },
+        {
+          "name": "Tensile Testing Machine",
+          "model": "VE-TTM-02-Wst",
+          "slug": "tensile-testing-machine-wst",
+          "productName": "Tensile Testing Machine – WST"
+        },
+        {
+          "name": "Sheet Moulding Press",
+          "model": "VE-SMP-01",
+          "slug": "sheet-moulding-press",
+          "productName": "Sheet Moulding Press"
+        },
+        {
+          "name": "Digital Weight Balance",
+          "model": "VE-DWB-01Xi",
+          "slug": null,
+          "productName": null
+        }
+      ]
+    },
+    {
+      "codes": [
+        "IS 12786",
+        "IS 13488"
+      ],
+      "product": "LLDPE Drip Pipe",
+      "note": "Drip irrigation",
+      "order": 6,
+      "instrumentCount": 5,
+      "instruments": [
+        {
+          "name": "Carbon Black Content Test Apparatus",
+          "model": "VE-CBC-01",
+          "slug": "carbon-black-content-test-apparatus",
+          "productName": "Carbon Black Content Test Apparatus"
+        },
+        {
+          "name": "Hot Air Oven",
+          "model": "VE-HAO-01",
+          "slug": "hot-air-oven",
+          "productName": "Hot Air Oven"
+        },
+        {
+          "name": "Hydrostatic Pressure Testing Machine",
+          "model": "VE-HYD-02",
+          "slug": null,
+          "productName": null
+        },
+        {
+          "name": "Tensile Testing Machine",
+          "model": "VE-TTM-01LC",
+          "slug": "tensile-testing-machine",
+          "productName": "Tensile Testing Machine"
+        },
+        {
+          "name": "Environmental Stress Cracking Resistance Test Apparatus",
+          "model": "VE-ESCR-01",
+          "slug": null,
+          "productName": null
+        }
+      ]
+    }
+  ]
+}

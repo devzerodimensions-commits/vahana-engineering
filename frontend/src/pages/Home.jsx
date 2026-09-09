@@ -1,21 +1,20 @@
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch.js";
 import {
-  getCategories,
   getServices,
   getTestimonials,
   getClients,
 } from "../services/api.js";
 import { site } from "../data/site.js";
 import manifest from "../data/products.json";
-import { categoryIcon, serviceIcon, industryIcon } from "../lib/ui.js";
+import { standards } from "../data/standards.json";
+import { serviceIcon, industryIcon } from "../lib/ui.js";
 import Icon from "../components/ui/Icon.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
 import HeroSlider from "../components/HeroSlider.jsx";
 import Counter from "../components/ui/Counter.jsx";
 
 export default function Home() {
-  const { data: categories } = useFetch(getCategories, []);
   const { data: services } = useFetch(getServices, []);
   const { data: testimonials } = useFetch(getTestimonials, []);
   const { data: clients } = useFetch(getClients, []);
@@ -88,33 +87,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- Testing Categories ---------------- */}
+      {/* ---------------- Instruments by product standard ----------------
+          Built from the client's six product catalogues (see
+          _scripts/make-standards.mjs). This answers the question a pipe
+          manufacturer actually arrives with — "I make PVC pipe to IS 4985,
+          which machines do I need?" — which the old testing-domain cards could
+          not. Instruments that exist as products link to their page; the rest
+          are listed as plain text rather than linking somewhere wrong. */}
       <section className="bg-slate-50 py-16 sm:py-20">
         <div className="container-x">
           <SectionHeading
             center
             eyebrow="What we test"
-            title="Testing Domains We Cover"
-            subtitle="From tensile strength to melt flow, our instruments span every major polymer and pipe testing standard."
+            title="Instruments by Product Standard"
+            subtitle="Manufacturing to an Indian Standard? Here is the complete set of testing instruments each one calls for."
           />
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {(categories || []).map((c) => (
-              <Link
-                key={c.slug}
-                to={`/products?category=${c.slug}`}
-                className="card group p-6 hover:-translate-y-1 hover:shadow-card-hover"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-navy/5 text-brand-navy transition group-hover:bg-brand-red group-hover:text-white">
-                  <Icon name={categoryIcon(c.slug)} className="h-6 w-6" />
-                </div>
-                <h3 className="text-base font-bold text-brand-navy">{c.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-500 line-clamp-3">{c.blurb}</p>
-                <div className="mt-3 flex flex-wrap gap-1.5">
-                  {(c.standards || []).slice(0, 3).map((s) => (
-                    <span key={s} className="badge">{s}</span>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {standards.map((s) => (
+              <div key={s.product} className="card flex flex-col p-6">
+                <div className="flex flex-wrap gap-1.5">
+                  {s.codes.map((c) => (
+                    <span key={c} className="badge">{c}</span>
                   ))}
                 </div>
-              </Link>
+                <h3 className="mt-3 text-lg font-bold text-brand-navy">{s.product}</h3>
+                <p className="text-sm text-slate-500">{s.note}</p>
+
+                <p className="mt-4 text-xs font-bold uppercase tracking-wider text-slate-400">
+                  {s.instrumentCount} instruments required
+                </p>
+                <ul className="mt-2 space-y-1.5 text-sm">
+                  {s.instruments.map((i) => (
+                    <li key={i.model} className="flex gap-2">
+                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-red" />
+                      {i.slug ? (
+                        <Link to={`/products/${i.slug}`} className="text-slate-600 transition hover:text-brand-red">
+                          {i.name}
+                        </Link>
+                      ) : (
+                        <span className="text-slate-600">{i.name}</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>
