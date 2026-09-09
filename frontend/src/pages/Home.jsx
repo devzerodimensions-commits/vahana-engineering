@@ -104,13 +104,21 @@ export default function Home() {
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {standards.map((s) => (
-              <div key={s.product} className="card flex flex-col p-6">
+              <div key={s.product} className="card group flex flex-col p-6 transition hover:shadow-card-hover">
                 <div className="flex flex-wrap gap-1.5">
                   {s.codes.map((c) => (
                     <span key={c} className="badge">{c}</span>
                   ))}
                 </div>
-                <h3 className="mt-3 text-lg font-bold text-brand-navy">{s.product}</h3>
+                {/* The heading is the link, not the whole card: the instrument
+                    list below contains its own links, and nesting anchors is
+                    invalid HTML — the browser closes the outer one, which breaks
+                    both. */}
+                <h3 className="mt-3 text-lg font-bold text-brand-navy">
+                  <Link to={`/standards/${s.slug}`} className="transition group-hover:text-brand-red">
+                    {s.product}
+                  </Link>
+                </h3>
                 <p className="text-sm text-slate-500">{s.note}</p>
 
                 <p className="mt-4 text-xs font-bold uppercase tracking-wider text-slate-400">
@@ -136,6 +144,13 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+
+                <Link
+                  to={`/standards/${s.slug}`}
+                  className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-red-dark hover:underline"
+                >
+                  View full requirement <Icon name="arrowRight" className="h-4 w-4" />
+                </Link>
               </div>
             ))}
           </div>
