@@ -1442,14 +1442,79 @@
       "categoryName": "Thermal & Ageing",
       "image": "/products/vicat-softening-point-test-apparatus.jpg",
       "summary": "Determines Vicat softening temperature (VST) and heat-deflection behaviour of thermoplastics.",
-      "model": "",
+      "model": "VE-VSP-01",
       "description": "Determines Vicat softening temperature (VST) and heat-deflection behaviour of thermoplastics. Manufactured by Vihaana Engineering, the Vicat Softening Point Test Apparatus is built for laboratories, QC departments and R&D centres that demand accurate, repeatable results. Robust construction, digital control and compliance with recognised test standards make it a dependable choice for polymer, pipe, film and geosynthetic testing.",
       "standards": [
         "IS 6307",
         "IS 4984",
         "IS 13360"
       ],
-      "specifications": [],
+      "specifications": [
+        {
+          "label": "Model No.",
+          "value": "VE-VSP-01"
+        },
+        {
+          "label": "Test station",
+          "value": "Single test station for VSP test"
+        },
+        {
+          "label": "System status",
+          "value": "Digital"
+        },
+        {
+          "label": "Temperature controller",
+          "value": "Micro processor based double display digital PID controller"
+        },
+        {
+          "label": "Heating",
+          "value": "Through high efficient stainless steel tubular heating system"
+        },
+        {
+          "label": "Temperature range",
+          "value": "Ambient to 200°C"
+        },
+        {
+          "label": "Temperature least count",
+          "value": "0.1°C"
+        },
+        {
+          "label": "Temperature accuracy",
+          "value": "± 0.5°C or better"
+        },
+        {
+          "label": "Temperature ramp",
+          "value": "Selectable (50°C/Hr or 120°C/Hr.)"
+        },
+        {
+          "label": "Oil circulation",
+          "value": "Continuous stirring through stirrer motor"
+        },
+        {
+          "label": "Insulation",
+          "value": "50 mm thick cera-wool insulation"
+        },
+        {
+          "label": "Specimen thickness",
+          "value": "3 mm – 13 mm"
+        },
+        {
+          "label": "Displacement sensing",
+          "value": "through dial gauge of reputed make"
+        },
+        {
+          "label": "Displacement range",
+          "value": "0.00 mm – 10.00 mm"
+        },
+        {
+          "label": "Displacement accuracy",
+          "value": "0.01 mm"
+        },
+        {
+          "label": "Power supply",
+          "value": "230V AC, Single phase, 50 Hz"
+        }
+      ],
       "featured": true,
       "price": "On Request"
     }

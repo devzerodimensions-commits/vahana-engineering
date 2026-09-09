@@ -36,6 +36,11 @@ const OVERRIDES = {
   "ve-ttm-02-wst": "tensile-testing-machine-wst",
   "ve-cnct-01": "contour-cutter",
   "k-emfvt-01": "emission-flow-variation-test-apparatus",
+  // The catalogue calls it "VSP (Vicat Softening Point) TEST APPARATUS"; the
+  // site calls it "Vicat Softening Point Test Apparatus". Normalising names
+  // reduces the catalogue's to just "vsp", so they never matched automatically —
+  // and the product sat with no specs while a 16-row table existed for it.
+  "ve-vsp-01": "vicat-softening-point-test-apparatus",
 };
 
 // Strong match: the product's own model number, or a verified override.
